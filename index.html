@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salim School | Groupe SLS & GES — L'Excellence Éducative au Grand Tunis</title>
+    <meta name="description" content="Salim School, pôle d'excellence du Groupe SLS et GES. Cursus bilingue hybride Tuniso-Français, 3 campus modernes (Ennasr 2, Mourouj 6, Le Bardo), médecin dédié, cantine 170 places, simulateur de frais et pré-inscriptions 2026-2027 ouvertes.">
+    
+    <!-- Google Fonts & Garet Font Stack -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/garet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4fc',
+                            100: '#dbe5f7',
+                            200: '#b8cdef',
+                            700: '#1d3b7e',
+                            800: '#142a63',
+                            900: '#0c1b40',
+                            950: '#060f26',
+                            DEFAULT: '#0f2963',
+                        },
+                        gold: {
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            DEFAULT: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Garet"', '"Outfit"', '"Alexandria"', 'system-ui', 'sans-serif'],
+                        arabic: ['"Alexandria"', '"Garet"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Garet', 'Outfit', 'Alexandria', sans-serif;
+        }
+
+        /* ================= ARABIC & RTL REFINEMENT ================= */
+        [dir="rtl"] body {
+            font-family: 'Alexandria', 'Outfit', sans-serif !important;
+            text-align: right;
+            letter-spacing: 0 !important;
+            word-spacing: 0.03em;
+        }
+
+        [dir="rtl"] * {
+            letter-spacing: 0 !important;
+        }
+
+        [dir="rtl"] h1 {
+            line-height: 1.45 !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        [dir="rtl"] h2 {
+            line-height: 1.5 !important;
+            margin-bottom: 1rem !important;
+        }
+
+        [dir="rtl"] h3 {
+            line-height: 1.55 !important;
+            margin-bottom: 0.75rem !important;
+        }
+
+        [dir="rtl"] h4, [dir="rtl"] h5 {
+            line-height: 1.65 !important;
+        }
+
+        [dir="rtl"] p {
+            line-height: 2 !important;
+            font-size: 0.95rem;
+        }
+
+        [dir="rtl"] .leading-relaxed {
+            line-height: 2 !important;
+        }
+
+        [dir="rtl"] .text-xs {
+            font-size: 0.825rem !important;
+            line-height: 1.85 !important;
+        }
+
+        [dir="rtl"] .text-\[11px\] {
+            font-size: 0.8rem !important;
+            line-height: 1.75 !important;
+        }
+
+        [dir="rtl"] .text-\[10px\] {
+            font-size: 0.75rem !important;
+            line-height: 1.65 !important;
+        }
+
+        [dir="rtl"] .text-sm {
+            font-size: 0.95rem !important;
+            line-height: 1.9 !important;
+        }
+
+        /* Icon margin swaps in RTL */
+        [dir="rtl"] i.mr-1, [dir="rtl"] .fas.mr-1, [dir="rtl"] .far.mr-1 {
+            margin-right: 0 !important;
+            margin-left: 0.45rem !important;
+        }
+
+        [dir="rtl"] i.mr-1\.5, [dir="rtl"] .fas.mr-1\.5, [dir="rtl"] .far.mr-1\.5 {
+            margin-right: 0 !important;
+            margin-left: 0.55rem !important;
+        }
+
+        [dir="rtl"] i.mr-2, [dir="rtl"] .fas.mr-2, [dir="rtl"] .far.mr-2 {
+            margin-right: 0 !important;
+            margin-left: 0.65rem !important;
+        }
+
+        [dir="rtl"] i.ml-1, [dir="rtl"] .fas.ml-1, [dir="rtl"] .far.ml-1 {
+            margin-left: 0 !important;
+            margin-right: 0.45rem !important;
+        }
+
+        [dir="rtl"] i.ml-1\.5, [dir="rtl"] .fas.ml-1\.5, [dir="rtl"] .far.ml-1\.5 {
+            margin-left: 0 !important;
+            margin-right: 0.55rem !important;
+        }
+
+        [dir="rtl"] i.ml-2, [dir="rtl"] .fas.ml-2, [dir="rtl"] .far.ml-2 {
+            margin-left: 0 !important;
+            margin-right: 0.65rem !important;
+        }
+
+        /* Button and Tab Breathing Room in RTL */
+        [dir="rtl"] .campus-tab, [dir="rtl"] .routine-tab, [dir="rtl"] .infra-tab {
+            padding: 0.7rem 1.4rem !important;
+        }
+
+        [dir="rtl"] .lang-btn {
+            padding: 0.25rem 0.65rem !important;
+        }
+
+        [dir="rtl"] .badge-glow {
+            padding-top: 0.3rem !important;
+            padding-bottom: 0.3rem !important;
+        }
+
+        /* RTL Form Fields Alignment */
+        [dir="rtl"] input, [dir="rtl"] select, [dir="rtl"] textarea {
+            text-align: right;
+            direction: rtl;
+        }
+
+        [dir="rtl"] .border-l-2, [dir="rtl"] .border-l-4 {
+            border-left-width: 0 !important;
+            border-right-width: 3px !important;
+            padding-left: 0 !important;
+            padding-right: 0.75rem !important;
+        }
+
+        /* General Styles */
+        .glass-nav {
+            background: rgba(6, 15, 38, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .hero-pattern {
+            background-color: #060f26;
+            background-image: radial-gradient(rgba(245, 158, 11, 0.12) 1.5px, transparent 1.5px), radial-gradient(rgba(255, 255, 255, 0.03) 1.5px, #060f26 1.5px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+        }
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -10px rgba(6, 15, 38, 0.12);
+        }
+        .campus-tab.active, .routine-tab.active, .infra-tab.active {
+            background-color: #0f2963;
+            color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(15, 41, 99, 0.35);
+            border-color: #f59e0b;
+        }
+        .lang-btn.active {
+            background-color: #f59e0b;
+            color: #060f26;
+            font-weight: 800;
+        }
+        .badge-glow {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* FAQ details marker reset */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .faq-icon {
+            transform: rotate(180deg);
+            color: #f59e0b;
+        }
+
+        /* Print formatting for confirmation voucher */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printReceiptArea, #printReceiptArea * {
+                visibility: visible;
+            }
+            #printReceiptArea {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 20px;
+                color: #000;
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold-500 selection:text-white overflow-x-hidden">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-navy-950 text-white text-xs py-2 px-4 border-b border-white/10 relative z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center gap-3">
+            <div class="flex items-center gap-2 font-medium truncate">
+                <span class="inline-flex items-center justify-center bg-gold-500 text-navy-950 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider shrink-0 shadow-sm">
+                    <i class="fas fa-bullhorn mr-1.5 rtl:ml-1.5 rtl:mr-0 text-[10px]"></i> <span data-i18n="announcement_badge">Campagne 2026–2027</span>
+                </span>
+                <span class="text-slate-300 truncate hidden sm:inline text-xs" data-i18n="announcement_text">
+                    Pré-inscriptions ouvertes pour nos 3 Campus (Ennasr, Mourouj, Bardo)
+                </span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-300 shrink-0">
+                <i class="fas fa-phone-volume text-gold-400 text-xs"></i>
+                <span class="hidden md:inline text-slate-400" data-i18n="announcement_hotline">Direction :</span>
+                <a href="tel:71336023" class="text-white hover:text-gold-300 font-bold tracking-wide transition">71 336 023</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CLEAN ONE-LINE NAVBAR -->
+    <nav class="glass-nav text-white sticky top-0 z-40 border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            
+            <!-- Left: Clean Logo (Single Line) -->
+            <a href="#accueil" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-gold-500 to-amber-300 flex items-center justify-center text-navy-950 shadow-md group-hover:scale-105 transition-transform duration-200">
+                    <i class="fas fa-graduation-cap text-base"></i>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-lg md:text-xl font-black tracking-tight leading-none text-white">
+                        SALIM <span class="text-gold-400">SCHOOL</span>
+                    </span>
+                    <span class="hidden sm:inline-block bg-white/10 text-gold-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/15">
+                        SLS · GES
+                    </span>
+                </div>
+            </a>
+
+            <!-- Center: Core Nav Links (Streamlined to 4 clean, spacious links) -->
+            <div class="hidden lg:flex items-center gap-7 xl:gap-9 font-medium text-xs xl:text-sm tracking-wide">
+                <a href="#campus" class="text-slate-200 hover:text-gold-400 transition-colors py-1">
+                    <span data-i18n="nav_campuses">Nos 3 Campus</span>
+                </a>
+                <a href="#pedagogie" class="text-slate-200 hover:text-gold-400 transition-colors py-1" data-i18n="nav_pedagogy">
+                    Pédagogie
+                </a>
+                <a href="#vie-scolaire" class="text-slate-200 hover:text-gold-400 transition-colors py-1" data-i18n="nav_services">
+                    Services Scolaires
+                </a>
+                <a href="#simulateur" class="text-gold-400 hover:text-gold-300 font-bold transition-colors py-1 flex items-center gap-1.5">
+                    <i class="fas fa-calculator text-[11px]"></i>
+                    <span data-i18n="nav_simulator">Simulateur</span>
+                </a>
+            </div>
+
+            <!-- Right: Language Switcher, CTA & Mobile Toggle -->
+            <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+                
+                <!-- Trilingual Switcher (FR | EN | AR) -->
+                <div class="bg-navy-900/90 border border-white/20 p-0.5 rounded-full flex items-center text-[11px] shrink-0 shadow-inner">
+                    <button onclick="setLanguage('fr')" id="lang-fr" class="lang-btn active px-2.5 py-1 rounded-full font-bold transition">FR</button>
+                    <button onclick="setLanguage('en')" id="lang-en" class="lang-btn px-2.5 py-1 rounded-full font-bold text-slate-300 hover:text-white transition">EN</button>
+                    <button onclick="setLanguage('ar')" id="lang-ar" class="lang-btn px-2.5 py-1 rounded-full font-bold text-slate-300 hover:text-white transition font-arabic">عربي</button>
+                </div>
+
+                <!-- Registration CTA -->
+                <a href="#inscription" class="hidden sm:inline-flex bg-gradient-to-r from-gold-500 to-amber-400 hover:from-gold-400 hover:to-amber-300 text-navy-950 font-black px-4 py-2 rounded-full text-xs tracking-wide shadow-md hover:shadow-gold-500/25 hover:scale-[1.03] active:scale-[0.98] transition-all items-center gap-1.5 shrink-0 whitespace-nowrap">
+                    <i class="fas fa-file-signature text-xs"></i>
+                    <span data-i18n="nav_cta">Pré-inscription</span>
+                </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-white hover:text-gold-400 focus:outline-none p-2 rounded-lg shrink-0" aria-label="Menu">
+                    <i class="fas fa-bars text-lg" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-950/95 backdrop-blur-md border-t border-white/10 px-6 py-5 space-y-3 shadow-2xl">
+            <a href="#accueil" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_home">Accueil</a>
+            <a href="#campus" class="mobile-link block text-gold-400 font-bold text-sm py-1" data-i18n="nav_campuses">Nos 3 Campus (Ennasr, Mourouj 6, Bardo)</a>
+            <a href="#pedagogie" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_pedagogy">Pédagogie & Bilinguisme Hybride</a>
+            <a href="#vie-scolaire" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_services">Au-delà des cours (Cantine, Garderie, Médical)</a>
+            <a href="#journee" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_routine">Une Journée Type (07h30 - 18h00)</a>
+            <a href="#clubs" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_clubs">Nos Clubs (Robotique, Théâtre, Échecs)</a>
+            <a href="#simulateur" class="mobile-link block text-gold-300 font-bold hover:text-gold-400 text-sm py-1 flex items-center gap-2">
+                <i class="fas fa-calculator text-xs"></i>
+                <span data-i18n="nav_simulator">Simulateur de Forfait</span>
+            </a>
+            <a href="#faq" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_faq">Questions Fréquentes (FAQ)</a>
+            
+            <div class="pt-4 border-t border-white/10 flex flex-col gap-2.5">
+                <a href="tel:71336023" class="text-center font-bold text-slate-200 py-2.5 rounded-xl border border-white/20 text-xs hover:border-gold-400/50 transition">
+                    <i class="fas fa-phone text-gold-400 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i> 71 336 023 / 54 012 230
+                </a>
+                <a href="#inscription" class="mobile-link text-center bg-gradient-to-r from-gold-500 to-amber-400 text-navy-950 font-black py-2.5 rounded-xl shadow-md text-xs" data-i18n="nav_cta">
+                    Pré-inscription
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: Modern Classrooms & State-of-the-Art Architecture -->
+    <header id="accueil" class="hero-pattern text-white pt-12 pb-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left: Compelling Message to Parents -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-200 mb-6 backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                        <span data-i18n="hero_badge">Groupe SLS & GES · Établissements Privés d'Élite au Grand Tunis</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] mb-5">
+                        <span data-i18n="hero_title_1">L'Avenir Brillant</span> <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-300 to-yellow-200" data-i18n="hero_title_2">
+                            que vos Enfants Méritent
+                        </span>
+                    </h1>
+
+                    <p class="text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed" data-i18n="hero_subtitle">
+                        De la maternelle au lycée. <strong>Salim School</strong> offre un cadre moderne, sécurisé et bienveillant alliant le <strong>cursus bilingue hybride Tuniso-Français</strong> (Français, Anglais, Arabe dès 3 ans), une prise en charge médicale sur site, une cantine de 170 places et un taux d'excellence mesuré jusqu'à <strong>19.23%</strong> aux concours des collèges pilotes.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-3 mb-10 w-full sm:w-auto">
+                        <a href="#inscription" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-amber-400 hover:from-gold-600 hover:to-amber-500 text-navy-950 font-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm shadow-lg shadow-gold-500/25 hover:scale-[1.02] active:scale-[0.98] transition flex items-center justify-center gap-2 whitespace-nowrap">
+                            <i class="fas fa-file-signature text-navy-950 text-xs sm:text-sm"></i>
+                            <span data-i18n="hero_cta_apply">Pré-inscrire mon enfant</span>
+                        </a>
+                        <a href="#simulateur" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/25 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-bold text-xs sm:text-sm backdrop-blur-md transition flex items-center justify-center gap-2 whitespace-nowrap">
+                            <i class="fas fa-calculator text-gold-400 text-xs sm:text-sm"></i>
+                            <span data-i18n="hero_cta_calc">Simuler mon forfait</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Trust Indicators -->
+                    <div class="grid grid-cols-3 gap-3 pt-6 border-t border-white/10 text-left">
+                        <div>
+                            <p class="text-xl sm:text-2xl font-black text-gold-400">3 Campus</p>
+                            <p class="text-[11px] text-slate-300 font-medium" data-i18n="hero_stat_1">Ennasr · Mourouj · Bardo</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-black text-gold-400">100%</p>
+                            <p class="text-[11px] text-slate-300 font-medium" data-i18n="hero_stat_2">Médecin Scolaire Dédié</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-black text-gold-400">19.23%</p>
+                            <p class="text-[11px] text-slate-300 font-medium" data-i18n="hero_stat_3">Taux d'Excellence Pilote</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Ultra Modern Classroom Imagery -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-white/15 group">
+                        <img src="images/classe-pedagogie.jpg" alt="Enseignante et élèves réunis autour d'une table d'apprentissage à Salim School" class="w-full h-[430px] object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                        
+                        <!-- Floating Glass Badges on Image -->
+                        <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center font-black shrink-0">
+                                    <i class="fas fa-chalkboard-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white uppercase tracking-wider" data-i18n="hero_card_title">Classes Modernes & Épanouissement</h4>
+                                    <p class="text-[11px] text-slate-200" data-i18n="hero_card_desc">Des espaces lumineux et équipés où chaque élève s'épanouit avec confiance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating decorative pill -->
+                    <div class="hidden sm:flex absolute -top-4 -left-4 bg-white text-navy-950 p-3 rounded-2xl shadow-xl border border-slate-100 items-center gap-2.5 z-20">
+                        <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-[10px] uppercase font-bold text-slate-400" data-i18n="badge_safety">Sécurité & Santé</p>
+                            <p class="text-xs font-black text-navy-900" data-i18n="badge_doctor">Médecin sur place</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- SECTION: LES 3 CAMPUS SALIM SCHOOL (MODERN CLASSES & VERIFIED DATA) -->
+    <section id="campus" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest bg-gold-500/10 px-3.5 py-1.5 rounded-full" data-i18n="campus_badge">
+                    Proximité & Excellence
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="campus_title">
+                    Nos 3 Campus d'Excellence au Grand Tunis
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base" data-i18n="campus_subtitle">
+                    Découvrez nos établissements modernes conçus sur mesure pour l'épanouissement et la réussite de vos enfants.
+                </p>
+            </div>
+
+            <!-- Campus Navigation Pills -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+                <button onclick="switchCampus('ennasr')" id="tab-ennasr" class="campus-tab active px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 border border-slate-200 whitespace-nowrap">
+                    <i class="fas fa-crown text-gold-400 text-xs"></i>
+                    <span data-i18n="tab_campus_ennasr">Campus Ennasr 2</span>
+                </button>
+                <button onclick="switchCampus('mourouj')" id="tab-mourouj" class="campus-tab px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 border border-slate-200 text-slate-700 hover:bg-slate-100 whitespace-nowrap">
+                    <i class="fas fa-shapes text-gold-500 text-xs"></i>
+                    <span data-i18n="tab_campus_mourouj">Campus El Mourouj 6</span>
+                </button>
+                <button onclick="switchCampus('bardo')" id="tab-bardo" class="campus-tab px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 border border-slate-200 text-slate-700 hover:bg-slate-100 whitespace-nowrap">
+                    <i class="fas fa-graduation-cap text-gold-500 text-xs"></i>
+                    <span data-i18n="tab_campus_bardo">Campus Le Bardo</span>
+                </button>
+            </div>
+
+            <!-- ================= CAMPUS 1: ENNASR 2 ================= -->
+            <div id="campus-ennasr" class="campus-content block">
+                <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- Left: Real Campus Info -->
+                    <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="bg-navy text-white text-[11px] font-black px-3 py-1 rounded-full uppercase">The Flagship · Tunis Nord</span>
+                                <span class="bg-gold-100 text-gold-800 text-[11px] font-bold px-3 py-1 rounded-full">4 Classes Prépa · Primaire · Lycée</span>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-black text-navy-950 mb-3">Salim School Ennasr 2</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="ennasr_desc">
+                                Le vaisseau amiral du réseau avec <strong>30 salles d'études modernes</strong>, un laboratoire informatique équipé, un <strong>réfectoire de 170 places</strong> et une infirmerie avec <strong>médecin scolaire dédié</strong>. Les 4 classes préparatoires assurent une passerelle d'or vers le CP.
+                            </p>
+
+                            <!-- Mini Features Grid -->
+                            <div class="grid grid-cols-2 gap-3 mb-6 text-xs">
+                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
+                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-door-open mr-1"></i> Capacité</span>
+                                    <strong class="text-navy-900 text-sm">30 Salles + 4 Prépas</strong>
+                                </div>
+                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
+                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-utensils mr-1"></i> Cantine Chaude</span>
+                                    <strong class="text-navy-900 text-sm">170 Places Assises</strong>
+                                </div>
+                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
+                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-user-doctor mr-1"></i> Pôle Santé</span>
+                                    <strong class="text-navy-900 text-sm">Médecin sur Site</strong>
+                                </div>
+                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
+                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-microchip mr-1"></i> Informatique</span>
+                                    <strong class="text-navy-900 text-sm">Labo & Coding</strong>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-slate-500 mb-6 flex items-center gap-1.5">
+                                <i class="fas fa-map-pin text-gold-500"></i>
+                                <span><strong>Adresse :</strong> Lotissement E40, Avenue Hédi Nouira 2001, Cité Ennasr 2, 2037 Ariana.</span>
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold text-slate-400 block">Contacts Directs Ennasr</span>
+                                <div class="text-sm font-black text-navy-900 flex flex-wrap gap-2">
+                                    <a href="tel:71336023" class="hover:text-gold-600">71 336 023</a>
+                                    <span class="text-slate-300">/</span>
+                                    <a href="tel:53961737" class="hover:text-gold-600">53 961 737</a>
+                                    <span class="text-slate-300">/</span>
+                                    <a href="tel:53628421" class="hover:text-gold-600 text-gold-600">Lycée : 53 628 421</a>
+                                </div>
+                            </div>
+                            <a href="#inscription" onclick="selectCampusForm('Salim School Ennasr 2 (Ariana)')" class="w-full sm:w-auto justify-center bg-navy text-white hover:bg-navy-900 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fas fa-pencil text-gold-400"></i> <span data-i18n="btn_enroll_campus">Inscrire à Ennasr</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Modern Classrooms Visual -->
+                    <div class="lg:col-span-5 relative min-h-[320px]">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=80" alt="Salle d'études moderne et lumineuse à Salim School Ennasr" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/85 backdrop-blur-md text-white border border-white/10 text-xs">
+                            <p class="font-bold text-gold-400 mb-0.5"><i class="fas fa-check-circle mr-1"></i> Architecture Scolaire Moderne</p>
+                            <p class="text-slate-200 text-[11px]">Un cadre spacieux, ergonomique et stimulant propice à la haute concentration.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= CAMPUS 2: MOUROUJ 6 ================= -->
+            <div id="campus-mourouj" class="campus-content hidden">
+                <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="bg-blue-600 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase">Ben Arous · Tunis Sud</span>
+                                <span class="bg-gold-100 text-gold-800 text-[11px] font-bold px-3 py-1 rounded-full">Préscolaire & Primaire</span>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-black text-navy-950 mb-3">Private Salim School (PSS) Mourouj 6</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="mourouj_desc">
+                                Au cœur d'El Mourouj 6, un cadre moderne, chaleureux et sécurisé dédié aux tout-petits et aux élèves du primaire. Accompagnement bienveillant et résultats d'excellence avérés aux examens nationaux.
+                            </p>
+
+                            <!-- Official Exam Stats Badge -->
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200 mb-6">
+                                <div class="flex justify-between items-center mb-2 text-xs font-bold text-slate-500 uppercase">
+                                    <span>Résultats Officiels Examens Nationaux (2023)</span>
+                                    <span class="text-emerald-600 font-extrabold">49 Candidats</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 text-center">
+                                    <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                                        <p class="text-xl font-black text-emerald-600">57.14%</p>
+                                        <p class="text-[10px] font-bold text-slate-500 uppercase">Taux de Réussite</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                                        <p class="text-xl font-black text-gold-600">12.24%</p>
+                                        <p class="text-[10px] font-bold text-slate-500 uppercase">Taux d'Excellence</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-slate-500 mb-6 flex items-center gap-1.5">
+                                <i class="fas fa-map-pin text-gold-500"></i>
+                                <span><strong>Adresse :</strong> El Mourouj 6, 2074 Ben Arous · Email : hamdane.mohamed7@gmail.com</span>
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold text-slate-400 block">Ligne Directe</span>
+                                <a href="tel:21029252" class="text-lg font-black text-navy-900 hover:text-gold-600 flex items-center gap-1.5">
+                                    <i class="fas fa-phone-alt text-gold-500 text-sm"></i> 21 029 252
+                                </a>
+                            </div>
+                            <a href="#inscription" onclick="selectCampusForm('Private Salim School (PSS) Mourouj 6')" class="w-full sm:w-auto justify-center bg-navy text-white hover:bg-navy-900 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fas fa-pencil text-gold-400"></i> <span data-i18n="btn_enroll_campus">Inscrire à Mourouj</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Modern Primary Classroom Visual -->
+                    <div class="lg:col-span-5 relative min-h-[320px]">
+                        <img src="images/campus-mourouj.jpg" alt="Espace bibliothèque, lecture et détente à Salim School El Mourouj" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/85 backdrop-blur-md text-white border border-white/10 text-xs">
+                            <p class="font-bold text-gold-400 mb-0.5"><i class="fas fa-child mr-1"></i> Pédagogie Active & Éveil</p>
+                            <p class="text-slate-200 text-[11px]">Développement de l'autonomie et de la curiosité dans un cadre coloré et sécurisé.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= CAMPUS 3: LE BARDO ================= -->
+            <div id="campus-bardo" class="campus-content hidden">
+                <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                                <span class="bg-amber-600 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase">Tunis Ouest · Le Bardo</span>
+                                <span class="bg-gold-100 text-gold-800 text-[11px] font-bold px-3 py-1 rounded-full">Maternelle & Primaire</span>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-black text-navy-950 mb-3">Salim School Le Bardo</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="bardo_desc">
+                                Sur l'Avenue du 2 Mars, une institution historique renommée pour sa rigueur académique et son taux d'excellence de <strong>19.23%</strong> aux concours des collèges pilotes. Troupe théâtrale d'école et encadrement familial stable.
+                            </p>
+
+                            <!-- Exam Stats Badge Bardo -->
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200 mb-6">
+                                <div class="flex justify-between items-center mb-2 text-xs font-bold text-slate-500 uppercase">
+                                    <span>Résultats Concours 6ème Pilote (2023)</span>
+                                    <span class="text-gold-600 font-extrabold">26 Candidats</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 text-center">
+                                    <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                                        <p class="text-xl font-black text-emerald-600">53.85%</p>
+                                        <p class="text-[10px] font-bold text-slate-500 uppercase">Taux d'Admission</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                                        <p class="text-xl font-black text-gold-600">19.23%</p>
+                                        <p class="text-[10px] font-bold text-slate-500 uppercase">Score d'Excellence</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-slate-500 mb-6 flex items-center gap-1.5">
+                                <i class="fas fa-map-pin text-gold-500"></i>
+                                <span><strong>Adresse :</strong> Rue de Skanes, Avenue du 2 Mars, 2000 Le Bardo, Tunis.</span>
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold text-slate-400 block">Lignes Directes</span>
+                                <div class="text-sm font-black text-navy-900 flex flex-wrap gap-2">
+                                    <a href="tel:58774412" class="hover:text-gold-600">58 77 44 12</a>
+                                    <span class="text-slate-300">/</span>
+                                    <a href="tel:52582325" class="hover:text-gold-600">52 582 325</a>
+                                    <span class="text-slate-300">/</span>
+                                    <a href="tel:71334897" class="hover:text-gold-600">71 33 48 97</a>
+                                </div>
+                            </div>
+                            <a href="#inscription" onclick="selectCampusForm('Salim School Le Bardo (2 Mars)')" class="w-full sm:w-auto justify-center bg-navy text-white hover:bg-navy-900 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fas fa-pencil text-gold-400"></i> <span data-i18n="btn_enroll_campus">Inscrire au Bardo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Modern Library & Learning Space Visual -->
+                    <div class="lg:col-span-5 relative min-h-[320px]">
+                        <img src="images/campus-bardo.jpg" alt="Salle multimédia et informatique moderne à Salim School Le Bardo" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/85 backdrop-blur-md text-white border border-white/10 text-xs">
+                            <p class="font-bold text-gold-400 mb-0.5"><i class="fas fa-book-open mr-1"></i> Culture & Éloquence</p>
+                            <p class="text-slate-200 text-[11px]">Amour de la lecture et maîtrise irréprochable de l'expression orale et écrite.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: AU-DELÀ DES COURS (PROPERLY FRAMED IMAGES & PARENTAL PEACE OF MIND) -->
+    <section id="vie-scolaire" class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest bg-gold-500/10 px-3.5 py-1.5 rounded-full" data-i18n="services_badge">
+                    La Sérénité des Parents
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="services_title">
+                    Au-delà des Cours : Des Services Scolaires Pensés pour les Familles
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="services_subtitle">
+                    Tout est conçu pour que vous puissiez confier vos enfants en toute tranquillité d'esprit du matin au soir.
+                </p>
+            </div>
+
+            <!-- 6 Premium Service Cards with Framed, Non-Cropped Visuals -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                
+                <!-- Service 1: Cantine (170 Places) -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1588075592806-bbe6da990469?auto=format&fit=crop&w=800&q=80" alt="Enfants déjeunant à la cantine scolaire" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                            <i class="fas fa-utensils text-gold-400 mr-1"></i> 170 Places Assises
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-black text-gold-600 uppercase tracking-wider block mb-1">Nutrition & Santé</span>
+                            <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_canteen_title">Cantine & Restauration Chaude</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="service_canteen_desc">
+                                Un grand réfectoire de 170 places assises. Repas chauds, équilibrés et contrôlés par des nutritionnistes pédiatriques.
+                            </p>
+                        </div>
+                        <p class="text-[11px] font-bold text-emerald-600 flex items-center gap-1.5"><i class="fas fa-shield-halved"></i> <span data-i18n="service_canteen_tag">Hygiène & produits frais garantis</span></p>
+                    </div>
+                </div>
+
+                <!-- Service 2: Garderie (07h30 - 18h00) -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="images/garderie-eveil.jpg" alt="Espace jeux et garderie périscolaire pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                            <i class="fas fa-clock text-gold-400 mr-1"></i> 07h30 – 18h00
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-black text-blue-600 uppercase tracking-wider block mb-1">Tranquillité des Parents</span>
+                            <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_daycare_title">Garderie & Études Dirigées</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="service_daycare_desc">
+                                Horaires étendus pour les parents actifs. Les devoirs sont supervisés et consolidés le soir avec l'aide des enseignants.
+                            </p>
+                        </div>
+                        <p class="text-[11px] font-bold text-blue-600 flex items-center gap-1.5"><i class="fas fa-circle-check"></i> <span data-i18n="service_daycare_tag">Zéro stress des devoirs à la maison</span></p>
+                    </div>
+                </div>
+
+                <!-- Service 3: Médecin Scolaire sur Place -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1676313030076-4ac0b37050fd?auto=format&fit=crop&w=800&q=80" alt="Médecin scolaire examinant un enfant avec bienveillance" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                            <i class="fas fa-user-doctor text-gold-400 mr-1"></i> Infirmerie Permanente
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-black text-rose-600 uppercase tracking-wider block mb-1">Santé & Prévention</span>
+                            <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_doctor_title">Médecin Scolaire sur Place</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="service_doctor_desc">
+                                Présence médicale dédiée pour bilans préventifs réguliers (vision, audition, courbe de croissance) et soins immédiats.
+                            </p>
+                        </div>
+                        <p class="text-[11px] font-bold text-rose-600 flex items-center gap-1.5"><i class="fas fa-heart-pulse"></i> <span data-i18n="service_doctor_tag">Suivi médical pédiatrique continu</span></p>
+                    </div>
+                </div>
+
+                <!-- Service 4: Transport Sécurisé -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="images/transport-bus.jpg" alt="Bus scolaire sécurisé pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                            <i class="fas fa-bus text-gold-400 mr-1"></i> Grand Tunis
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-black text-amber-600 uppercase tracking-wider block mb-1">Sécurité Routière</span>
+                            <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_bus_title">Transport Scolaire Sécurisé</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="service_bus_desc">
+                                Flotte de minibus modernes avec accompagnatrices dédiées veillant sur chaque enfant durant tout le trajet.
+                            </p>
+                        </div>
+                        <p class="text-[11px] font-bold text-amber-600 flex items-center gap-1.5"><i class="fas fa-location-crosshairs"></i> <span data-i18n="service_bus_tag">Accompagnatrice à bord & géolocalisation</span></p>
+                    </div>
+                </div>
+
+                <!-- Service 5: Soutien & Remédiation -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Soutien scolaire individuel" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                            <i class="fas fa-user-graduate text-gold-400 mr-1"></i> Tutorat Personnalisé
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-black text-indigo-600 uppercase tracking-wider block mb-1">Progression Assurée</span>
+                            <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_tutor_title">Soutien & Remédiation</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="service_tutor_desc">
+                                Ateliers en petits groupes pour lever toute hésitation en mathématiques, langues et sciences fondamentales.
+                            </p>
+                        </div>
+                        <p class="text-[11px] font-bold text-indigo-600 flex items-center gap-1.5"><i class="fas fa-arrow-trend-up"></i> <span data-i18n="service_tutor_tag">Reprise de confiance immédiate</span></p>
+                    </div>
+                </div>
+
+                <!-- Service 6: Psychopédagogie -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Écoute et bienveillance psychopédagogique" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                            <i class="fas fa-heart text-gold-400 mr-1"></i> Bien-être Global
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-black text-purple-600 uppercase tracking-wider block mb-1">Écoute Active</span>
+                            <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_psy_title">Suivi Psychopédagogique</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="service_psy_desc">
+                                Prise en compte de l'épanouissement émotionnel de l'enfant, gestion du stress et écoute continue des parents.
+                            </p>
+                        </div>
+                        <p class="text-[11px] font-bold text-purple-600 flex items-center gap-1.5"><i class="fas fa-face-smile"></i> <span data-i18n="service_psy_tag">Climat scolaire serein et bienveillant</span></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW SECTION: UNE JOURNÉE TYPE À SALIM SCHOOL (SCHEDULE TIMELINE 07H30 - 18H00) -->
+    <section id="journee" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/15 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="routine_badge">
+                    Rythme de Vie Idéal
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="routine_title">
+                    Une Journée Type à Salim School
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="routine_subtitle">
+                    De 07h30 à 18h00, chaque heure est structurée pour allier apprentissage bilingue rigoureux, détente active et devoirs complétés à 100%.
+                </p>
+            </div>
+
+            <!-- Visual Chronological Flow -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 lg:gap-6 relative">
+                
+                <!-- Step 1: 07h30 - 08h30 -->
+                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
+                    <div class="w-8 h-8 rounded-full bg-gold-500 text-navy-950 font-black flex items-center justify-center text-xs mb-3 shadow-md">1</div>
+                    <div>
+                        <span class="text-xs font-black text-gold-600 block mb-1">07h30 – 08h30</span>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step1_title">Accueil Doux & Petit Déjeuner</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="routine_step1_desc">
+                            Accueil bienveillant par les éducatrices. Jeux calmes et mise en condition sereine pour la journée d'apprentissage.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-800 flex items-center gap-1.5"><i class="fas fa-sun text-gold-500"></i> <span data-i18n="routine_step1_tag">Garderie matinale incluse</span></span>
+                </div>
+
+                <!-- Step 2: 08h30 - 12h00 -->
+                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
+                    <div class="w-8 h-8 rounded-full bg-navy text-white font-black flex items-center justify-center text-xs mb-3 shadow-md">2</div>
+                    <div>
+                        <span class="text-xs font-black text-blue-600 block mb-1">08h30 – 12h00</span>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step2_title">Fondamentaux & Cursus Bilingue</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="routine_step2_desc">
+                            Mathématiques, Arabe, Français et Anglais selon une pédagogie active favorisant la participation orale et l'esprit logique.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-800 flex items-center gap-1.5"><i class="fas fa-brain text-blue-500"></i> <span data-i18n="routine_step2_tag">Concentration maximale</span></span>
+                </div>
+
+                <!-- Step 3: 12h00 - 13h30 -->
+                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
+                    <div class="w-8 h-8 rounded-full bg-emerald-600 text-white font-black flex items-center justify-center text-xs mb-3 shadow-md">3</div>
+                    <div>
+                        <span class="text-xs font-black text-emerald-600 block mb-1">12h00 – 13h30</span>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step3_title">Cantine Chaude & Récréation</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="routine_step3_desc">
+                            Déjeuner complet et équilibré dans notre réfectoire de 170 places, suivi d'une pause récréative supervisée en plein air.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-800 flex items-center gap-1.5"><i class="fas fa-utensils text-emerald-500"></i> <span data-i18n="routine_step3_tag">Repas pédiatriques chauds</span></span>
+                </div>
+
+                <!-- Step 4: 13h30 - 16h15 -->
+                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
+                    <div class="w-8 h-8 rounded-full bg-purple-600 text-white font-black flex items-center justify-center text-xs mb-3 shadow-md">4</div>
+                    <div>
+                        <span class="text-xs font-black text-purple-600 block mb-1">13h30 – 16h15</span>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step4_title">Sciences, Coding & Pratique</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="routine_step4_desc">
+                            Ateliers informatiques, éveil scientifique, motricité fine et projets de groupe bilingues pour stimuler la créativité.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-800 flex items-center gap-1.5"><i class="fas fa-laptop-code text-purple-500"></i> <span data-i18n="routine_step4_tag">Compétences d'avenir</span></span>
+                </div>
+
+                <!-- Step 5: 16h30 - 18h00 -->
+                <div class="bg-gradient-to-b from-navy-950 to-navy-900 text-white rounded-3xl p-5 border border-white/10 card-hover flex flex-col justify-between relative overflow-hidden shadow-lg">
+                    <div class="w-8 h-8 rounded-full bg-gold-400 text-navy-950 font-black flex items-center justify-center text-xs mb-3 shadow-md">5</div>
+                    <div>
+                        <span class="text-xs font-black text-gold-400 block mb-1">16h30 – 18h00</span>
+                        <h4 class="text-base font-bold text-white mb-2" data-i18n="routine_step5_title">Goûter & Études Dirigées</h4>
+                        <p class="text-xs text-slate-200 leading-relaxed mb-4" data-i18n="routine_step5_desc">
+                            Devoirs du soir 100% encadrés et vérifiés par les enseignants. L'enfant rentre à la maison totalement libre et détendu.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-black text-gold-400 flex items-center gap-1.5"><i class="fas fa-circle-check"></i> <span data-i18n="routine_step5_tag">Zéro devoirs à la maison !</span></span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: PÉDAGOGIE MODERNE & CURSUS BILINGUE HYBRIDE -->
+    <section id="pedagogie" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/15 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="pedagogy_badge">
+                    Innovation Pédagogique
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="pedagogy_title">
+                    Une Pédagogie d'Excellence Tournée vers le Futur
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="pedagogy_subtitle">
+                    Des méthodes actives dans des salles de classe modernes, favorisant l'autonomie, le trilinguisme précoce et l'esprit critique.
+                </p>
+            </div>
+
+            <!-- 4 Modern Classroom Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pillar 1: Cursus Bilingue Hybride -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="images/cursus-bilingue-langues.jpg" alt="Bulles multilingues illustrant le cursus bilingue et l'immersion linguistique précoce" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-navy/90 text-white text-[10px] font-black px-2.5 py-1 rounded-full backdrop-blur-md">
+                            FR · EN · AR
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_bilingual_title">Cursus Bilingue Hybride</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_bilingual_desc">
+                                Alliance du programme officiel tunisien et du système français. Immersion précoce en anglais et français dès l'âge de 3 ans.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-gold-600 flex items-center gap-1"><i class="fas fa-check-circle"></i> Trilinguisme naturel & certifié</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: 4 Classes Préparatoires -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="images/classes-preparatoires.jpg" alt="Enfants en classe préparatoire lors d'une activité manuelle et d'éveil" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-gold-500 text-navy-950 text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
+                            Ennasr 2
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_prepa_title">Classes Préparatoires (4 Classes)</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_prepa_desc">
+                                Une transition fluide et stimulante entre maternelle et primaire dans un environnement sécurisant pensé pour les 5-6 ans.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><i class="fas fa-check-circle"></i> Passerelle d'or vers le CP</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Laboratoire Informatique & Tech -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="images/labo-informatique-coding.jpg" alt="Mains d'enfant apprenant à coder et naviguer sur ordinateur au laboratoire informatique" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full">
+                            High-Tech
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_tech_title">Laboratoire Informatique & IA</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_tech_desc">
+                                Postes individuels et ateliers de programmation pour appréhender le monde numérique avec créativité et maîtrise.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-blue-600 flex items-center gap-1"><i class="fas fa-check-circle"></i> Compétences du 21ème siècle</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Rigueur & Concours Pilotes -->
+                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
+                        <img src="images/concours-pilote-rigueur.jpg" alt="Élève appliqué et concentré lors de la préparation des concours d'excellence" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full">
+                            19.23% Pilote
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_excellence_title">Rigueur & Concours Pilotes</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_excellence_desc">
+                                Méthodologie d'apprentissage approfondie garantissant des taux d'excellence exceptionnels aux examens nationaux.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-purple-600 flex items-center gap-1"><i class="fas fa-check-circle"></i> Suivi individualisé des acquis</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: NOS CLUBS & ACTIVITÉS PARASCOLAIRES (VISUAL CAROUSEL) -->
+    <section id="clubs" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/10 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="clubs_badge">
+                        Éveil & Talents
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-2" data-i18n="clubs_title">
+                        Nos Clubs : Révéler les Talents de vos Enfants
+                    </h2>
+                    <p class="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed" data-i18n="clubs_subtitle">
+                        Robotique, Échecs, Théâtre, Musique, Arts plastiques et Sports pour forger une personnalité épanouie et curieuse.
+                    </p>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex items-center gap-2 shrink-0">
+                    <button onclick="scrollClubs(-1)" class="w-10 h-10 rounded-full border border-slate-300 hover:border-navy text-slate-700 hover:text-navy hover:bg-slate-100 flex items-center justify-center transition shadow-sm" aria-label="Précédent">
+                        <i class="fas fa-chevron-left text-xs"></i>
+                    </button>
+                    <button onclick="scrollClubs(1)" class="w-10 h-10 rounded-full bg-navy text-white hover:bg-navy-900 flex items-center justify-center transition shadow-md" aria-label="Suivant">
+                        <i class="fas fa-chevron-right text-gold-400 text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Horizontal Carousel of Clubs with Framed Images -->
+            <div id="clubsContainer" class="flex gap-5 overflow-x-auto pb-6 pt-2 hide-scrollbar scroll-smooth snap-x snap-mandatory">
+                
+                <!-- Club 1: Robotique -->
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robotique éducative pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
+                            Tech & Logique
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-navy-950 mb-1.5" data-i18n="club_robotics_title">Club Robotique & Coding</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3" data-i18n="club_robotics_desc">
+                                Kits robotiques et initiation ludique au codage pour développer l'esprit d'ingénierie dès le primaire.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-gold-600"><i class="fas fa-microchip mr-1"></i> <span data-i18n="club_robotics_tag">Laboratoire informatique équipé</span></span>
+                    </div>
+                </div>
+
+                <!-- Club 2: Échecs -->
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?auto=format&fit=crop&w=600&q=80" alt="Jeu d'échecs et réflexion pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
+                            Stratégie
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-navy-950 mb-1.5" data-i18n="club_chess_title">Club d'Échecs & Concentration</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3" data-i18n="club_chess_desc">
+                                Développe l'anticipation, la patience et le raisonnement stratégique. Tournois réguliers.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-amber-600"><i class="fas fa-chess mr-1"></i> <span data-i18n="club_chess_tag">Agilité & réflexion posée</span></span>
+                    </div>
+                </div>
+
+                <!-- Club 3: Théâtre -->
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=600&q=80" alt="Scène de théâtre pour le festival scolaire" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
+                            Art Oratoire
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-navy-950 mb-1.5" data-i18n="club_theater_title">Théâtre & Éloquence</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3" data-i18n="club_theater_desc">
+                                Prise de parole assurée, diction bilingue et participation à notre festival scolaire annuel primé.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-rose-600"><i class="fas fa-masks-theater mr-1"></i> <span data-i18n="club_theater_tag">Confiance en soi décuplée</span></span>
+                    </div>
+                </div>
+
+                <!-- Club 4: Musique -->
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1498601752063-38ea333690ed?auto=format&fit=crop&w=600&q=80" alt="Initiation au piano et musique pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
+                            Chorale
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-navy-950 mb-1.5" data-i18n="club_music_title">Musique & Chorale Plurilingue</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3" data-i18n="club_music_desc">
+                                Découverte des instruments et chants en plusieurs langues pour affiner l'oreille et la sensibilité.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-purple-600"><i class="fas fa-music mr-1"></i> <span data-i18n="club_music_tag">Spectacle annuel sur scène</span></span>
+                    </div>
+                </div>
+
+                <!-- Club 5: Arts Plastiques -->
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Enfants peignant avec créativité" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
+                            Créativité
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-navy-950 mb-1.5" data-i18n="club_art_title">Arts Plastiques & Dessin</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3" data-i18n="club_art_desc">
+                                Peinture, poterie et dessin pour libérer l'imagination et perfectionner la motricité fine.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-amber-600"><i class="fas fa-palette mr-1"></i> <span data-i18n="club_art_tag">Exposition d'art des élèves</span></span>
+                    </div>
+                </div>
+
+                <!-- Club 6: Sports Co -->
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                        <img src="images/club-sports.jpg" alt="Enfants attentifs lors d'une séance de motricité et gymnastique sportive" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
+                            Motricité
+                        </span>
+                    </div>
+                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-navy-950 mb-1.5" data-i18n="club_sport_title">Sports Co & Motricité</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3" data-i18n="club_sport_desc">
+                                Mini-football, gymnastique et jeux d'adresse pour cultiver l'esprit d'équipe et le bien-être physique.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-emerald-600"><i class="fas fa-medal mr-1"></i> <span data-i18n="club_sport_tag">Esprit d'équipe & fair-play</span></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW SECTION: SIMULATEUR DE FORFAIT SCOLAIRE INTERACTIF (HIGH CONVERSION TOOL) -->
+    <section id="simulateur" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-bold text-gold-400 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-md" data-i18n="sim_badge">
+                    Transparence & Sérénité
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-3 mb-3" data-i18n="sim_title">
+                    Simulateur de Forfait Personnalisé 2026–2027
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="sim_subtitle">
+                    Sélectionnez votre campus, le cycle de votre enfant et les services souhaités pour configurer une prise en charge sur mesure.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-navy-950/80 backdrop-blur-xl border border-white/15 rounded-3xl p-6 sm:p-10 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Configuration Controls -->
+                <div class="lg:col-span-7 space-y-5">
+                    
+                    <!-- Campus Selector -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" data-i18n="sim_label_campus">
+                            1. Choisissez le Campus
+                        </label>
+                        <select id="simCampus" onchange="calculateFee()" class="w-full px-3.5 py-3 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold">
+                            <option value="Salim School Ennasr 2 (Ariana)" class="text-navy-950">Salim School Ennasr 2 — Ariana (Vaisseau Amiral)</option>
+                            <option value="Private Salim School (PSS) Mourouj 6" class="text-navy-950">Private Salim School (PSS) — Mourouj 6</option>
+                            <option value="Salim School Le Bardo (2 Mars)" class="text-navy-950">Salim School — Le Bardo (Avenue du 2 Mars)</option>
+                        </select>
+                    </div>
+
+                    <!-- Grade Level Selector -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" data-i18n="sim_label_level">
+                            2. Niveau d'Études
+                        </label>
+                        <select id="simLevel" onchange="calculateFee()" class="w-full px-3.5 py-3 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold">
+                            <option value="prepa" class="text-navy-950">Maternelle & Classe Préparatoire (Transition CP)</option>
+                            <option value="primaire" selected class="text-navy-950">Cycle Primaire (1ère à 5ème Année)</option>
+                            <option value="pilote" class="text-navy-950">6ème Année Primaire (Préparation Concours Pilote)</option>
+                            <option value="secondaire" class="text-navy-950">Collège & Lycée (Campus Ennasr 2)</option>
+                        </select>
+                    </div>
+
+                    <!-- Services Checkboxes -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2" data-i18n="sim_label_services">
+                            3. Services Complémentaires Souhaités
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptCanteen" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                                <div>
+                                    <span class="font-bold block" data-i18n="sim_canteen">Cantine Chaude (170 places)</span>
+                                    <span class="text-[10px] text-slate-400" data-i18n="sim_canteen_sub">Repas équilibrés sous contrôle médical</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptDaycare" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                                <div>
+                                    <span class="font-bold block" data-i18n="sim_daycare">Garderie & Études Dirigées</span>
+                                    <span class="text-[10px] text-slate-400" data-i18n="sim_daycare_sub">07h30 à 18h00 · Zéro devoirs le soir</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptBus" onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                                <div>
+                                    <span class="font-bold block" data-i18n="sim_bus">Transport Scolaire Sécurisé</span>
+                                    <span class="text-[10px] text-slate-400" data-i18n="sim_bus_sub">Minibus climatisés avec accompagnatrices</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptClubs" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                                <div>
+                                    <span class="font-bold block" data-i18n="sim_clubs">Clubs d'Éveil (Robotique, Échecs)</span>
+                                    <span class="text-[10px] text-slate-400" data-i18n="sim_clubs_sub">Activités parascolaires du mercredi & samedi</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Estimated Result & Transfer CTA -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-navy-900 to-navy-950 p-6 rounded-2xl border border-gold-500/30 flex flex-col justify-between h-full shadow-inner">
+                    <div>
+                        <span class="bg-gold-500/20 text-gold-400 text-[10px] font-black px-2.5 py-1 rounded-full uppercase mb-2 inline-block border border-gold-500/30">
+                            Simulation Instantanée
+                        </span>
+                        <h4 class="text-base font-bold text-white mb-1" data-i18n="sim_summary_title">Forfait Tout-en-Un Recommandé</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4" data-i18n="sim_summary_desc">
+                            Une formule complète assurant l'excellence académique, le suivi de santé et la sérénité des parents au quotidien.
+                        </p>
+
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 mb-4 space-y-2 text-xs">
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span data-i18n="sim_scolarite">Cursus Bilingue Hybride :</span>
+                                <span class="font-bold text-white" id="simResultCurriculum">Inclus</span>
+                            </div>
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span data-i18n="sim_medical">Médecin Dédié sur Site :</span>
+                                <span class="font-bold text-emerald-400">100% Inclus</span>
+                            </div>
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span data-i18n="sim_options_count">Services sélectionnés :</span>
+                                <span class="font-bold text-gold-400" id="simResultServicesCount">3 Services</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="p-3 bg-gold-500/10 border border-gold-500/20 rounded-xl mb-4 text-center">
+                            <span class="text-[11px] text-slate-300 block mb-0.5" data-i18n="sim_badge_open">Pré-inscriptions 2026–2027</span>
+                            <span class="text-lg font-black text-gold-400" data-i18n="sim_rate_flexible">Tarifs Préférentiels Disponibles</span>
+                        </div>
+
+                        <button onclick="applySimulationToForm()" class="w-full bg-gradient-to-r from-gold-500 to-amber-400 hover:from-gold-600 hover:to-amber-500 text-navy-950 font-black py-2.5 sm:py-3 px-3 rounded-xl text-xs shadow-lg hover:scale-[1.01] active:scale-[0.99] transition flex items-center justify-center gap-2 whitespace-nowrap">
+                            <i class="fas fa-check-to-slot"></i>
+                            <span data-i18n="sim_btn_apply">Valider ma pré-inscription</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW SECTION: TÉMOIGNAGES DE PARENTS D'ÉLÈVES (AUTHENTIC SOCIAL PROOF) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest bg-gold-500/10 px-3.5 py-1.5 rounded-full" data-i18n="testimonials_badge">
+                    La Voix de nos Familles
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="testimonials_title">
+                    Ce que disent les Parents de nos Élèves
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="testimonials_subtitle">
+                    Témoignages authentiques de parents sur nos 3 campus d'Ennasr 2, Mourouj 6 et Le Bardo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+                
+                <!-- Testimonial 1: Ennasr 2 -->
+                <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-gold-500 text-xs mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 italic" data-i18n="testi_1_quote">
+                            "Le cursus bilingue dès la classe préparatoire à Ennasr 2 a donné une avance incroyable à mon fils. Il passe du français à l'anglais et à l'arabe avec un naturel bluffant. Et le fait d'avoir un médecin sur place me donne une tranquillité d'esprit totale."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-navy text-gold-400 font-black flex items-center justify-center text-sm shrink-0">
+                            SB
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-navy-950">Dr. Sonia Ben Romdhane</h4>
+                            <p class="text-[11px] text-slate-500">Maman d'élève en CP · Campus Ennasr 2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2: Le Bardo (Pilote Success) -->
+                <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-gold-500 text-xs mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 italic" data-i18n="testi_2_quote">
+                            "Ma fille a été admise au Collège Pilote avec une moyenne de 16.75 ! Les statistiques d'excellence de Salim School Le Bardo (19.23%) ne sont pas du marketing, c'est le résultat d'un travail pédagogique rigoureux et d'une troupe théâtrale qui donne confiance."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-black flex items-center justify-center text-sm shrink-0">
+                            KM
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-navy-950">Karim Mansour</h4>
+                            <p class="text-[11px] text-slate-500">Parent d'élève admise en Pilote · Le Bardo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3: Mourouj 6 -->
+                <div class="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-gold-500 text-xs mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 italic" data-i18n="testi_3_quote">
+                            "Travaillant à Tunis, la garderie jusqu'à 18h00 et la cantine de 170 places à Mourouj 6 ont sauvé notre organisation familiale. Les devoirs sont supervisés par l'enseignante : le soir, c'est 100% de détente en famille sans disputes scolaires."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-black flex items-center justify-center text-sm shrink-0">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-navy-950">Amira Khemiri</h4>
+                            <p class="text-[11px] text-slate-500">Maman de 2 élèves · PSS Mourouj 6</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW SECTION: PARCOURS D'ADMISSION EN 4 ÉTAPES CLAIRES -->
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/15 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="steps_badge">
+                    Procédure Simplifiée
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="steps_title">
+                    Comment Inscrire Votre Enfant pour 2026–2027 ?
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="steps_subtitle">
+                    Un parcours transparent, respectueux et chaleureux en 4 étapes pour intégrer la famille Salim School.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 1 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-gold-100 text-gold-700 font-black flex items-center justify-center text-lg mb-4">
+                            01
+                        </div>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="step_1_title">Pré-inscription en Ligne</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="step_1_desc">
+                            Remplissez le formulaire en 2 minutes en sélectionnant votre campus préféré et les options souhaitées.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-900"><i class="fas fa-clock mr-1 text-gold-500"></i> <span data-i18n="step_1_sub">2 minutes chrono</span></span>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 font-black flex items-center justify-center text-lg mb-4">
+                            02
+                        </div>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="step_2_title">Contact & Entretien</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="step_2_desc">
+                            Notre secrétariat vous contacte sous 24h ouvrées pour fixer un entretien d'orientation bienveillant avec l'équipe pédagogique.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-900"><i class="fas fa-phone mr-1 text-blue-500"></i> <span data-i18n="step_2_sub">Réponse sous 24h</span></span>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 font-black flex items-center justify-center text-lg mb-4">
+                            03
+                        </div>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="step_3_title">Visite Personnalisée</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="step_3_desc">
+                            Venez découvrir avec votre enfant nos salles de classe, la cantine de 170 places et rencontrer nos enseignants dévoués.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-900"><i class="fas fa-school mr-1 text-purple-500"></i> <span data-i18n="step_3_sub">Immersion sur campus</span></span>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 font-black flex items-center justify-center text-lg mb-4">
+                            04
+                        </div>
+                        <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="step_4_title">Finalisation & Rentrée</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="step_4_desc">
+                            Dossier finalisé et place garantie pour la rentrée 2026–2027. Votre enfant est prêt pour une année d'épanouissement.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-bold text-navy-900"><i class="fas fa-circle-check mr-1 text-emerald-500"></i> <span data-i18n="step_4_sub">Place réservée</span></span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW SECTION: FAQ ACCORDION DES PARENTS (REASSURANCE) -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/15 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="faq_badge">
+                    Réponses Claires
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="faq_title">
+                    Foire Aux Questions des Parents
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="faq_subtitle">
+                    Tout ce que vous souhaitez savoir sur la vie scolaire, l'encadrement médical et l'organisation quotidienne à Salim School.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                
+                <!-- FAQ 1 -->
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-5 group transition-all duration-300">
+                    <summary class="font-bold text-navy-950 text-sm sm:text-base cursor-pointer flex justify-between items-center list-none select-none">
+                        <span data-i18n="faq_q1">Quel programme officiel appliquez-vous (Tunisien ou Français) ?</span>
+                        <i class="fas fa-chevron-down text-xs text-slate-400 faq-icon transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 mt-3" data-i18n="faq_a1">
+                        Nous appliquons un cursus bilingue hybride exemplaire qui respecte scrupuleusement les exigences des programmes officiels du Ministère de l'Éducation Tunisien tout en intégrant les méthodes et l'immersion précoce en Français et Anglais inspirées des standards français. Vos enfants sont parfaitement préparés tant pour les concours des collèges pilotes tunisiens que pour la poursuite d'études internationales.
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-5 group transition-all duration-300">
+                    <summary class="font-bold text-navy-950 text-sm sm:text-base cursor-pointer flex justify-between items-center list-none select-none">
+                        <span data-i18n="faq_q2">Comment fonctionne le suivi médical avec le médecin scolaire dédié ?</span>
+                        <i class="fas fa-chevron-down text-xs text-slate-400 faq-icon transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 mt-3" data-i18n="faq_a2">
+                        Contrairement aux visites médicales occasionnelles, nos campus disposent d'un pôle médical permanent avec un médecin scolaire dédié. Chaque élève bénéficie d'un bilan préventif complet (vision, audition, courbe de croissance, posture) et d'un carnet de santé scolaire. En cas de malaise ou de fièvre, les soins immédiats sont dispensés et les parents sont prévenus en temps réel.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-5 group transition-all duration-300">
+                    <summary class="font-bold text-navy-950 text-sm sm:text-base cursor-pointer flex justify-between items-center list-none select-none">
+                        <span data-i18n="faq_q3">Comment fonctionne la garderie et que se passe-t-il pour les devoirs ?</span>
+                        <i class="fas fa-chevron-down text-xs text-slate-400 faq-icon transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 mt-3" data-i18n="faq_a3">
+                        Nos établissements accueillent vos enfants de 07h30 le matin jusqu'à 18h00 le soir. Durant l'étude surveillée de l'après-midi (16h30 - 18h00), les enseignants supervisent la réalisation complète des devoirs et révisions. Lorsque votre enfant rentre chez vous le soir, ses leçons sont apprises et ses exercices faits, vous garantissant des soirées familiales sans stress.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-5 group transition-all duration-300">
+                    <summary class="font-bold text-navy-950 text-sm sm:text-base cursor-pointer flex justify-between items-center list-none select-none">
+                        <span data-i18n="faq_q4">Quelles sont les garanties de sécurité du transport scolaire ?</span>
+                        <i class="fas fa-chevron-down text-xs text-slate-400 faq-icon transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 mt-3" data-i18n="faq_a4">
+                        Notre flotte de minibus modernes dessert la majorité des zones du Grand Tunis. Chaque trajet est supervisé par une accompagnatrice scolaire dédiée qui veille à l'attache des ceintures, à la sécurité à la montée et descente, et remet l'élève directement en main propre aux parents.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-5 group transition-all duration-300">
+                    <summary class="font-bold text-navy-950 text-sm sm:text-base cursor-pointer flex justify-between items-center list-none select-none">
+                        <span data-i18n="faq_q5">Y a-t-il un test d'évaluation pour l'admission ?</span>
+                        <i class="fas fa-chevron-down text-xs text-slate-400 faq-icon transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 mt-3" data-i18n="faq_a5">
+                        Pour les classes préscolaires et préparatoires, il s'agit d'un simple entretien bienveillant d'éveil et de contact. Pour le primaire et le collège, un test d'orientation positif et constructif permet de situer les compétences de l'élève en langues et mathématiques afin d'établir si nécessaire un accompagnement personnalisé dès la rentrée.
+                    </div>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-5 group transition-all duration-300">
+                    <summary class="font-bold text-navy-950 text-sm sm:text-base cursor-pointer flex justify-between items-center list-none select-none">
+                        <span data-i18n="faq_q6">Puis-je échelonner le paiement de la scolarité ?</span>
+                        <i class="fas fa-chevron-down text-xs text-slate-400 faq-icon transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 mt-3" data-i18n="faq_a6">
+                        Oui, tout à fait. Salim School propose des facilités de paiement adaptées aux familles : règlement annuel avec remise préférentielle, ou règlement échelonné par trimestre ou par mensualités, afin de vous offrir une flexibilité financière optimale.
+                    </div>
+                </details>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: FORMULAIRE DE PRÉ-INSCRIPTION 2026-2027 (WITH INSTANT RECEIPT) -->
+    <section id="inscription" class="py-20 bg-navy-950 text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="max-w-4xl mx-auto">
+                
+                <div class="text-center mb-10">
+                    <span class="inline-flex items-center gap-2 bg-gold-500 text-navy-950 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-3">
+                        <i class="fas fa-user-plus"></i> <span data-i18n="form_badge">Session 2026–2027</span>
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black mb-3" data-i18n="form_title">
+                        Pré-inscription en Ligne Simplifiée
+                    </h2>
+                    <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed" data-i18n="form_subtitle">
+                        Réservez la place de votre enfant dans le campus de votre choix. Notre secrétariat vous contacte sous 24h ouvrées.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 sm:p-10 text-slate-800 shadow-2xl relative">
+                    
+                    <form id="preRegForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        
+                        <!-- Campus Selection -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_campus">
+                                Établissement Souhaité *
+                            </label>
+                            <select id="formCampus" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50 font-semibold">
+                                <option value="" disabled selected data-i18n="opt_select_campus">Sélectionnez un établissement...</option>
+                                <optgroup label="Salim School (3 Campus Principaux)">
+                                    <option value="Salim School Ennasr 2 (Ariana)">Salim School Ennasr 2 — Ariana (Prépa, Primaire, Lycée)</option>
+                                    <option value="Private Salim School (PSS) Mourouj 6">Private Salim School (PSS) — Mourouj 6 (Préscolaire, Primaire)</option>
+                                    <option value="Salim School Le Bardo (2 Mars)">Salim School — Le Bardo (Maternelle, Primaire)</option>
+                                </optgroup>
+                                <optgroup label="Écoles Sœurs Réseau SLS & GES">
+                                    <option value="Salima School Jardins d'El Menzah">Salima School — Jardins d'El Menzah</option>
+                                    <option value="Salima School Ezzahra">Salima School — Ezzahra</option>
+                                    <option value="Lamis School Mourouj">Lamis School — El Mourouj</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Grade & Child Name -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_level">
+                                    Niveau Scolaire 2026-2027 *
+                                </label>
+                                <select id="formLevel" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50 font-semibold">
+                                    <option value="" disabled selected data-i18n="opt_select_level">Choisir le niveau...</option>
+                                    <option value="Maternelle (3-4 ans)">Maternelle (3-4 ans)</option>
+                                    <option value="Classe Préparatoire (Transition CP)">Classe Préparatoire (5-6 ans)</option>
+                                    <option value="Primaire (1ère à 5ème Année)">Primaire · 1ère à 5ème Année</option>
+                                    <option value="Primaire (6ème Année - Concours Pilote)">Primaire · 6ème Année (Concours Pilote)</option>
+                                    <option value="Collège / Lycée (Campus Ennasr 2)">Collège / Lycée (Ennasr 2)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_child_name">
+                                    Nom & Prénom de l'Élève *
+                                </label>
+                                <input type="text" id="formChildName" required placeholder="Ex: Youssef Trabelsi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50">
+                            </div>
+                        </div>
+
+                        <!-- Parent Info -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_parent_name">
+                                    Nom du Parent / Tuteur *
+                                </label>
+                                <input type="text" id="formParentName" required placeholder="Ex: M. ou Mme Trabelsi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_phone">
+                                    Numéro de Téléphone *
+                                </label>
+                                <input type="tel" id="formPhone" required placeholder="Ex: 54 012 230 / 98 000 000" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50">
+                            </div>
+                        </div>
+
+                        <!-- Checkbox services -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_services">
+                                Services Souhaités
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs font-semibold text-slate-700">
+                                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                                    <input type="checkbox" id="svcCantine" class="rounded text-navy focus:ring-navy">
+                                    <span data-i18n="service_opt_canteen">Cantine (170 places)</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                                    <input type="checkbox" id="svcGarderie" class="rounded text-navy focus:ring-navy">
+                                    <span data-i18n="service_opt_daycare">Garderie (07h30-18h00)</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                                    <input type="checkbox" id="svcBus" class="rounded text-navy focus:ring-navy">
+                                    <span data-i18n="service_opt_bus">Transport Scolaire</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-navy to-navy-900 hover:from-navy-950 hover:to-navy text-white font-black py-3 px-4 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-xs sm:text-sm whitespace-nowrap">
+                            <span data-i18n="btn_submit_form">Envoyer ma pré-inscription</span>
+                            <i class="fas fa-arrow-right text-gold-400 text-xs"></i>
+                        </button>
+
+                        <p class="text-[10px] text-center text-slate-500" data-i18n="form_guarantee">
+                            <i class="fas fa-lock mr-1 text-slate-400"></i> Données sécurisées · Réponse et convocation à l'entretien sous 24h ouvrées.
+                        </p>
+                    </form>
+
+                    <!-- Official Printable Confirmation Receipt -->
+                    <div id="formSuccessMessage" class="hidden absolute inset-0 bg-white rounded-3xl p-6 sm:p-10 flex flex-col items-center justify-center text-center z-20 overflow-y-auto">
+                        <div id="printReceiptArea" class="w-full max-w-md text-center">
+                            <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mx-auto mb-3">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-black px-3 py-1 rounded-full uppercase mb-2 inline-block">
+                                Dossier Enregistré · Session 2026–2027
+                            </span>
+                            <h4 class="text-xl sm:text-2xl font-black text-navy-950 mb-1">Pré-inscription Confirmée !</h4>
+                            <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                                Merci. Le secrétariat administratif de <strong id="successCampusName" class="text-navy"></strong> a validé la réception du dossier pour <strong id="successChildName" class="text-navy"></strong>.
+                            </p>
+                            
+                            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-700 mb-5 text-left space-y-1.5">
+                                <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+                                    <span class="font-bold text-slate-500">Réf. de Dossier :</span>
+                                    <span id="successRefNum" class="font-mono font-black text-navy text-sm">SLS-2026-8492</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-slate-500">Date d'enregistrement :</span>
+                                    <span id="successDate" class="font-bold text-slate-700">2026-09-27</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-slate-500">Délai de rappel :</span>
+                                    <span class="font-bold text-emerald-600">Moins de 24h ouvrées</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 w-full">
+                            <button onclick="window.print()" class="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-800 px-4 py-2 rounded-full text-xs font-bold transition flex items-center justify-center gap-1.5 whitespace-nowrap">
+                                <i class="fas fa-print"></i> Imprimer le Récépissé
+                            </button>
+                            <a id="successWhatsAppLink" href="#" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full text-xs font-bold transition flex items-center justify-center gap-1.5 whitespace-nowrap">
+                                <i class="fab fa-whatsapp"></i> Confirmer sur WhatsApp
+                            </a>
+                            <button onclick="resetForm()" class="w-full sm:w-auto bg-navy text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-navy-900 transition whitespace-nowrap">
+                                Nouvelle inscription
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMPACT FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 pt-14 pb-20 sm:pb-12 border-t border-white/10 text-xs">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 rounded-lg bg-gold-500 flex items-center justify-center text-navy-950 font-bold">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span class="text-base font-black text-white">SALIM SCHOOL</span>
+                    </div>
+                    <p class="text-slate-300 text-[11px] leading-relaxed mb-3" data-i18n="footer_about">
+                        Réseau d'enseignement privé d'excellence au Grand Tunis adossé au GES et au Groupe SLS.
+                    </p>
+                    <div class="flex items-center gap-3 text-gold-400 text-sm">
+                        <a href="https://facebook.com" target="_blank" class="hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="tel:71336023" class="hover:text-white transition"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-wider mb-2 border-l-2 border-gold-500 pl-2">Ennasr 2 (Ariana)</h5>
+                    <p class="text-slate-300">Avenue Hédi Nouira</p>
+                    <p class="text-gold-400 font-bold mt-1">71 336 023 / 54 012 230</p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-wider mb-2 border-l-2 border-gold-500 pl-2">El Mourouj 6</h5>
+                    <p class="text-slate-300">Ben Arous · PSS</p>
+                    <p class="text-gold-400 font-bold mt-1">21 029 252</p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-wider mb-2 border-l-2 border-gold-500 pl-2">Le Bardo</h5>
+                    <p class="text-slate-300">Avenue du 2 Mars</p>
+                    <p class="text-gold-400 font-bold mt-1">58 77 44 12 / 71 33 48 97</p>
+                </div>
+            </div>
+            
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px]">
+                <p>&copy; 2026 Salim School · Groupe SLS & GES Tunisie.</p>
+                <p class="text-slate-400">Propulsé par <strong class="text-slate-200">AntiGravity Agency</strong> • Growly Growth Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING QUICK-CONTACT BAR (WHATSAPP + DIRECT HOTLINE) -->
+    <aside aria-label="Assistance et contact rapide" class="fixed bottom-3 sm:bottom-4 left-3 right-3 sm:left-auto sm:right-6 z-40 flex items-center justify-between sm:justify-end gap-2 sm:gap-2.5">
+        <a href="https://wa.me/21654012230?text=Bonjour,%20je%20souhaite%20des%20renseignements%20sur%20les%20inscriptions%20Salim%20School%202026-2027" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-2xl hover:scale-105 transition flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs border border-white/20 whitespace-nowrap flex-1 sm:flex-none">
+            <i class="fab fa-whatsapp text-xs sm:text-sm"></i>
+            <span class="hidden sm:inline" data-i18n="floating_wa">Assistance WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
+        </a>
+        <a href="tel:71336023" class="bg-navy-950 hover:bg-navy-900 text-white font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-2xl hover:scale-105 transition flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs border border-white/20 whitespace-nowrap flex-1 sm:flex-none">
+            <i class="fas fa-phone-volume text-gold-400 text-xs"></i>
+            <span class="hidden sm:inline">71 336 023</span>
+            <span class="sm:hidden">Appeler</span>
+        </a>
+        <a href="#inscription" class="bg-gradient-to-r from-gold-500 to-amber-400 hover:from-gold-600 hover:to-amber-500 text-navy-950 font-black px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-2xl hover:scale-105 transition flex items-center justify-center gap-1 sm:gap-1.5 text-[11px] sm:text-xs whitespace-nowrap flex-1 sm:flex-none">
+            <i class="fas fa-pencil text-xs"></i>
+            <span data-i18n="floating_apply">Inscrire</span>
+        </a>
+    </aside>
+
+    <!-- INTERACTIVE SCRIPTS & TRILINGUAL ENGINE (FR / EN / AR) -->
+    <script>
+        // Comprehensive Trilingual Dictionary
+        const i18n = {
+            fr: {
+                announcement_badge: "Campagne 2026–2027",
+                announcement_text: "Pré-inscriptions ouvertes pour nos 3 Campus (Ennasr, Mourouj, Bardo)",
+                announcement_hotline: "Direction :",
+                announcement_sim: "Simulateur de Forfait",
+                announcement_cta: "Pré-inscription en Ligne",
+                nav_home: "Accueil",
+                nav_campuses: "Nos 3 Campus",
+                nav_services: "Services Scolaires",
+                nav_routine: "Une Journée Type",
+                nav_pedagogy: "Pédagogie",
+                nav_clubs: "Nos Clubs",
+                nav_simulator: "Simulateur",
+                nav_faq: "FAQ",
+                nav_cta: "Pré-inscription",
+                hero_badge: "Groupe SLS & GES · Établissements Privés d'Élite au Grand Tunis",
+                hero_title_1: "L'Avenir Brillant",
+                hero_title_2: "que vos Enfants Méritent",
+                hero_subtitle: "De la maternelle au lycée. <strong>Salim School</strong> offre un cadre moderne, sécurisé et bienveillant alliant le <strong>cursus bilingue hybride Tuniso-Français</strong> (Français, Anglais, Arabe dès 3 ans), une prise en charge médicale sur site, une cantine de 170 places et un taux d'excellence mesuré jusqu'à <strong>19.23%</strong> aux concours des collèges pilotes.",
+                hero_cta_apply: "Pré-inscrire mon enfant",
+                hero_cta_calc: "Simuler mon forfait",
+                hero_stat_1: "Ennasr · Mourouj · Bardo",
+                hero_stat_2: "Médecin Scolaire Dédié",
+                hero_stat_3: "Taux d'Excellence Pilote",
+                hero_card_title: "Classes Modernes & Épanouissement",
+                hero_card_desc: "Des espaces lumineux et équipés où chaque élève s'épanouit avec confiance.",
+                badge_safety: "Sécurité & Santé",
+                badge_doctor: "Médecin sur place",
+                campus_badge: "Proximité & Excellence",
+                campus_title: "Nos 3 Campus d'Excellence au Grand Tunis",
+                campus_subtitle: "Découvrez nos établissements modernes conçus sur mesure pour l'épanouissement et la réussite de vos enfants.",
+                tab_campus_ennasr: "Campus Ennasr 2",
+                tab_campus_mourouj: "Campus El Mourouj 6",
+                tab_campus_bardo: "Campus Le Bardo",
+                ennasr_desc: "Le vaisseau amiral du réseau avec <strong>30 salles d'études modernes</strong>, un laboratoire informatique équipé, un <strong>réfectoire de 170 places</strong> et une infirmerie avec <strong>médecin scolaire dédié</strong>. Les 4 classes préparatoires assurent une passerelle d'or vers le CP.",
+                mourouj_desc: "Au cœur d'El Mourouj 6, un cadre moderne, chaleureux et sécurisé dédié aux tout-petits et aux élèves du primaire. Accompagnement bienveillant et résultats d'excellence avérés aux examens nationaux.",
+                bardo_desc: "Sur l'Avenue du 2 Mars, une institution historique renommée pour sa rigueur académique et son taux d'excellence de <strong>19.23%</strong> aux concours des collèges pilotes. Troupe théâtrale d'école et encadrement familial stable.",
+                btn_enroll_campus: "Inscrire dans ce campus",
+                services_badge: "La Sérénité des Parents",
+                services_title: "Au-delà des Cours : Des Services Scolaires Pensés pour les Familles",
+                services_subtitle: "Tout est conçu pour que vous puissiez confier vos enfants en toute tranquillité d'esprit du matin au soir.",
+                service_canteen_title: "Cantine & Restauration Chaude",
+                service_canteen_desc: "Un grand réfectoire de 170 places assises. Repas chauds, équilibrés et contrôlés par des nutritionnistes pédiatriques.",
+                service_canteen_tag: "Hygiène & produits frais garantis",
+                service_daycare_title: "Garderie & Études Dirigées",
+                service_daycare_desc: "Horaires étendus (07h30 - 18h00) pour les parents actifs. Les devoirs sont supervisés le soir avec l'aide des enseignants.",
+                service_daycare_tag: "Zéro stress des devoirs à la maison",
+                service_doctor_title: "Médecin Scolaire sur Place",
+                service_doctor_desc: "Présence médicale dédiée pour bilans préventifs réguliers (vision, audition, courbe de croissance) et soins immédiats.",
+                service_doctor_tag: "Suivi médical pédiatrique continu",
+                service_bus_title: "Transport Scolaire Sécurisé",
+                service_bus_desc: "Flotte de minibus modernes avec accompagnatrices dédiées veillant sur chaque enfant durant tout le trajet.",
+                service_bus_tag: "Accompagnatrice à bord & géolocalisation",
+                service_tutor_title: "Soutien & Remédiation",
+                service_tutor_desc: "Ateliers en petits groupes pour lever toute hésitation en mathématiques, langues et sciences fondamentales.",
+                service_tutor_tag: "Reprise de confiance immédiate",
+                service_psy_title: "Suivi Psychopédagogique",
+                service_psy_desc: "Prise en compte de l'épanouissement émotionnel de l'enfant, gestion du stress et écoute continue des parents.",
+                service_psy_tag: "Climat scolaire serein et bienveillant",
+                routine_badge: "Rythme de Vie Idéal",
+                routine_title: "Une Journée Type à Salim School",
+                routine_subtitle: "De 07h30 à 18h00, chaque heure est structurée pour allier apprentissage bilingue rigoureux, détente active et devoirs complétés à 100%.",
+                routine_step1_title: "Accueil Doux & Éveil",
+                routine_step1_desc: "Accueil bienveillant par les éducatrices. Jeux calmes et mise en condition sereine pour la journée d'apprentissage.",
+                routine_step1_tag: "Garderie matinale incluse",
+                routine_step2_title: "Fondamentaux & Cursus Bilingue",
+                routine_step2_desc: "Mathématiques, Arabe, Français et Anglais selon une pédagogie active favorisant la participation orale et l'esprit logique.",
+                routine_step2_tag: "Concentration maximale",
+                routine_step3_title: "Cantine Chaude & Récréation",
+                routine_step3_desc: "Déjeuner complet et équilibré dans notre réfectoire de 170 places, suivi d'une pause récréative supervisée en plein air.",
+                routine_step3_tag: "Repas pédiatriques chauds",
+                routine_step4_title: "Sciences, Coding & Pratique",
+                routine_step4_desc: "Ateliers informatiques, éveil scientifique, motricité fine et projets de groupe bilingues pour stimuler la créativité.",
+                routine_step4_tag: "Compétences d'avenir",
+                routine_step5_title: "Goûter & Études Dirigées",
+                routine_step5_desc: "Devoirs du soir 100% encadrés et vérifiés par les enseignants. L'enfant rentre à la maison totalement libre et détendu.",
+                routine_step5_tag: "Zéro devoirs à la maison !",
+                pedagogy_badge: "Innovation Pédagogique",
+                pedagogy_title: "Une Pédagogie d'Excellence Tournée vers le Futur",
+                pedagogy_subtitle: "Des méthodes actives dans des salles de classe modernes, favorisant l'autonomie, le trilinguisme précoce et l'esprit critique.",
+                peda_bilingual_title: "Cursus Bilingue Hybride",
+                peda_bilingual_desc: "Alliance du programme officiel tunisien et du système français. Immersion précoce en anglais et français dès l'âge de 3 ans.",
+                peda_prepa_title: "Classes Préparatoires (4 Classes)",
+                peda_prepa_desc: "Une transition fluide et stimulante entre maternelle et primaire dans un environnement sécurisant pensé pour les 5-6 ans.",
+                peda_tech_title: "Laboratoire Informatique & IA",
+                peda_tech_desc: "Postes individuels et ateliers de programmation pour appréhender le monde numérique avec créativité et maîtrise.",
+                peda_excellence_title: "Rigueur & Concours Pilotes",
+                peda_excellence_desc: "Méthodologie d'apprentissage approfondie garantissant des taux d'excellence exceptionnels aux examens nationaux.",
+                clubs_badge: "Éveil & Talents",
+                clubs_title: "Nos Clubs : Révéler les Talents de vos Enfants",
+                clubs_subtitle: "Robotique, Échecs, Théâtre, Musique, Arts plastiques et Sports pour forger une personnalité épanouie et curieuse.",
+                club_robotics_title: "Club Robotique & Coding",
+                club_robotics_desc: "Kits robotiques et initiation ludique au codage pour développer l'esprit d'ingénierie dès le primaire.",
+                club_robotics_tag: "Laboratoire informatique équipé",
+                club_chess_title: "Club d'Échecs & Concentration",
+                club_chess_desc: "Développe l'anticipation, la patience et le raisonnement stratégique. Tournois réguliers.",
+                club_chess_tag: "Agilité & réflexion posée",
+                club_theater_title: "Théâtre & Éloquence",
+                club_theater_desc: "Prise de parole assurée, diction bilingue et participation à notre festival scolaire annuel primé.",
+                club_theater_tag: "Confiance en soi décuplée",
+                club_music_title: "Musique & Chorale Plurilingue",
+                club_music_desc: "Découverte des instruments et chants en plusieurs langues pour affiner l'oreille et la sensibilité.",
+                club_music_tag: "Spectacle annuel sur scène",
+                club_art_title: "Arts Plastiques & Dessin",
+                club_art_desc: "Peinture, poterie et dessin pour libérer l'imagination et perfectionner la motricité fine.",
+                club_art_tag: "Exposition d'art des élèves",
+                club_sport_title: "Sports Co & Motricité",
+                club_sport_desc: "Mini-football, gymnastique et jeux d'adresse pour cultiver l'esprit d'équipe et le bien-être physique.",
+                club_sport_tag: "Esprit d'équipe & fair-play",
+                sim_badge: "Transparence & Sérénité",
+                sim_title: "Simulateur de Forfait Personnalisé 2026–2027",
+                sim_subtitle: "Sélectionnez votre campus, le cycle de votre enfant et les services souhaités pour configurer une prise en charge sur mesure.",
+                sim_label_campus: "1. Choisissez le Campus",
+                sim_label_level: "2. Niveau d'Études",
+                sim_label_services: "3. Services Complémentaires Souhaités",
+                sim_canteen: "Cantine Chaude (170 places)",
+                sim_canteen_sub: "Repas équilibrés sous contrôle médical",
+                sim_daycare: "Garderie & Études Dirigées",
+                sim_daycare_sub: "07h30 à 18h00 · Zéro devoirs le soir",
+                sim_bus: "Transport Scolaire Sécurisé",
+                sim_bus_sub: "Minibus climatisés avec accompagnatrices",
+                sim_clubs: "Clubs d'Éveil (Robotique, Échecs)",
+                sim_clubs_sub: "Activités parascolaires du mercredi & samedi",
+                sim_summary_title: "Forfait Tout-en-Un Recommandé",
+                sim_summary_desc: "Une formule complète assurant l'excellence académique, le suivi de santé et la sérénité des parents au quotidien.",
+                sim_scolarite: "Cursus Bilingue Hybride :",
+                sim_medical: "Médecin Dédié sur Site :",
+                sim_options_count: "Services sélectionnés :",
+                sim_badge_open: "Pré-inscriptions 2026–2027",
+                sim_rate_flexible: "Tarifs Préférentiels Disponibles",
+                sim_btn_apply: "Valider ma pré-inscription",
+                testimonials_badge: "La Voix de nos Familles",
+                testimonials_title: "Ce que disent les Parents de nos Élèves",
+                testimonials_subtitle: "Témoignages authentiques de parents sur nos 3 campus d'Ennasr 2, Mourouj 6 et Le Bardo.",
+                testi_1_quote: "\"Le cursus bilingue dès la classe préparatoire à Ennasr 2 a donné une avance incroyable à mon fils. Il passe du français à l'anglais et à l'arabe avec un naturel bluffant. Et le fait d'avoir un médecin sur place me donne une tranquillité d'esprit totale.\"",
+                testi_2_quote: "\"Ma fille a été admise au Collège Pilote avec une moyenne de 16.75 ! Les statistiques d'excellence de Salim School Le Bardo (19.23%) ne sont pas du marketing, c'est le résultat d'un travail pédagogique rigoureux et d'une troupe théâtrale qui donne confiance.\"",
+                testi_3_quote: "\"Travaillant à Tunis, la garderie jusqu'à 18h00 et la cantine de 170 places à Mourouj 6 ont sauvé notre organisation familiale. Les devoirs sont supervisés par l'enseignante : le soir, c'est 100% de détente en famille sans disputes scolaires.\"",
+                steps_badge: "Procédure Simplifiée",
+                steps_title: "Comment Inscrire Votre Enfant pour 2026–2027 ?",
+                steps_subtitle: "Un parcours transparent, respectueux et chaleureux en 4 étapes pour intégrer la famille Salim School.",
+                step_1_title: "Pré-inscription en Ligne",
+                step_1_desc: "Remplissez le formulaire en 2 minutes en sélectionnant votre campus préféré et les options souhaitées.",
+                step_1_sub: "2 minutes chrono",
+                step_2_title: "Contact & Entretien",
+                step_2_desc: "Notre secrétariat vous contacte sous 24h ouvrées pour fixer un entretien d'orientation bienveillant avec l'équipe pédagogique.",
+                step_2_sub: "Réponse sous 24h",
+                step_3_title: "Visite Personnalisée",
+                step_3_desc: "Venez découvrir avec votre enfant nos salles de classe, la cantine de 170 places et rencontrer nos enseignants dévoués.",
+                step_3_sub: "Immersion sur campus",
+                step_4_title: "Finalisation & Rentrée",
+                step_4_desc: "Dossier finalisé et place garantie pour la rentrée 2026–2027. Votre enfant est prêt pour une année d'épanouissement.",
+                step_4_sub: "Place réservée",
+                faq_badge: "Réponses Claires",
+                faq_title: "Foire Aux Questions des Parents",
+                faq_subtitle: "Tout ce que vous souhaitez savoir sur la vie scolaire, l'encadrement médical et l'organisation quotidienne à Salim School.",
+                faq_q1: "Quel programme officiel appliquez-vous (Tunisien ou Français) ?",
+                faq_a1: "Nous appliquons un cursus bilingue hybride exemplaire qui respecte scrupuleusement les exigences des programmes officiels du Ministère de l'Éducation Tunisien tout en intégrant les méthodes et l'immersion précoce en Français et Anglais inspirées des standards français. Vos enfants sont parfaitement préparés tant pour les concours des collèges pilotes tunisiens que pour la poursuite d'études internationales.",
+                faq_q2: "Comment fonctionne le suivi médical avec le médecin scolaire dédié ?",
+                faq_a2: "Contrairement aux visites médicales occasionnelles, nos campus disposent d'un pôle médical permanent avec un médecin scolaire dédié. Chaque élève bénéficie d'un bilan préventif complet (vision, audition, courbe de croissance, posture) et d'un carnet de santé scolaire. En cas de malaise ou de fièvre, les soins immédiats sont dispensés et les parents sont prévenus en temps réel.",
+                faq_q3: "Comment fonctionne la garderie et que se passe-t-il pour les devoirs ?",
+                faq_a3: "Nos établissements accueillent vos enfants de 07h30 le matin jusqu'à 18h00 le soir. Durant l'étude surveillée de l'après-midi (16h30 - 18h00), les enseignants supervisent la réalisation complète des devoirs et révisions. Lorsque votre enfant rentre chez vous le soir, ses leçons sont apprises et ses exercices faits, vous garantissant des soirées familiales sans stress.",
+                faq_q4: "Quelles sont les garanties de sécurité du transport scolaire ?",
+                faq_a4: "Notre flotte de minibus modernes dessert la majorité des zones du Grand Tunis. Chaque trajet est supervisé par une accompagnatrice scolaire dédiée qui veille à l'attache des ceintures, à la sécurité à la montée et descente, et remet l'élève directement en main propre aux parents.",
+                faq_q5: "Y a-t-il un test d'évaluation pour l'admission ?",
+                faq_a5: "Pour les classes préscolaires et préparatoires, il s'agit d'un simple entretien bienveillant d'éveil et de contact. Pour le primaire et le collège, un test d'orientation positif et constructif permet de situer les compétences de l'élève en langues et mathématiques afin d'établir si nécessaire un accompagnement personnalisé dès la rentrée.",
+                faq_q6: "Puis-je échelonner le paiement de la scolarité ?",
+                faq_a6: "Oui, tout à fait. Salim School propose des facilités de paiement adaptées aux familles : règlement annuel avec remise préférentielle, ou règlement échelonné par trimestre ou par mensualités, afin de vous offrir une flexibilité financière optimale.",
+                form_badge: "Session 2026–2027",
+                form_title: "Pré-inscription en Ligne Simplifiée",
+                form_subtitle: "Réservez la place de votre enfant dans le campus de votre choix. Notre secrétariat vous contacte sous 24h ouvrées.",
+                label_campus: "Établissement Souhaité *",
+                opt_select_campus: "Sélectionnez un établissement...",
+                label_level: "Niveau Scolaire 2026-2027 *",
+                opt_select_level: "Choisir le niveau...",
+                label_child_name: "Nom & Prénom de l'Élève *",
+                label_parent_name: "Nom du Parent / Tuteur *",
+                label_phone: "Numéro de Téléphone *",
+                label_services: "Services Souhaités",
+                service_opt_canteen: "Cantine (170 places)",
+                service_opt_daycare: "Garderie (07h30-18h00)",
+                service_opt_bus: "Transport Scolaire",
+                btn_submit_form: "Envoyer ma pré-inscription",
+                form_guarantee: "Données sécurisées · Réponse et convocation à l'entretien sous 24h ouvrées.",
+                footer_about: "Réseau d'enseignement privé d'excellence au Grand Tunis adossé au GES et au Groupe SLS.",
+                floating_wa: "Assistance WhatsApp",
+                floating_apply: "Inscrire"
+            },
+            en: {
+                announcement_badge: "2026–2027 Admissions",
+                announcement_text: "Pre-registrations open across Greater Tunis (Ennasr, Mourouj, Bardo)",
+                announcement_hotline: "Infoline:",
+                announcement_sim: "Tuition Estimator",
+                announcement_cta: "Online Pre-registration",
+                nav_home: "Home",
+                nav_campuses: "Our Campuses",
+                nav_services: "School Services",
+                nav_routine: "Daily Schedule",
+                nav_pedagogy: "Academics",
+                nav_clubs: "Our Clubs",
+                nav_simulator: "Estimator",
+                nav_faq: "FAQ",
+                nav_cta: "Pre-registration",
+                hero_badge: "Groupe SLS & GES · Elite Private Education in Greater Tunis",
+                hero_title_1: "The Bright Future",
+                hero_title_2: "Your Children Deserve",
+                hero_subtitle: "From kindergarten to high school. <strong>Salim School</strong> provides a modern, secure, and caring environment offering a <strong>hybrid Tunisian-French bilingual curriculum</strong> (French, English, Arabic from age 3), dedicated on-site medical care, a 170-seat cafeteria, and up to <strong>19.23%</strong> national excellence rates in pilot school exams.",
+                hero_cta_apply: "Pre-enroll my child",
+                hero_cta_calc: "Simulate tuition fee",
+                hero_stat_1: "Ennasr · Mourouj · Bardo",
+                hero_stat_2: "Dedicated School Doctor",
+                hero_stat_3: "Pilot Exam Excellence Rate",
+                hero_card_title: "Modern Classrooms & Well-being",
+                hero_card_desc: "Bright, equipped spaces where every student blossoms with confidence.",
+                badge_safety: "Safety & Health",
+                badge_doctor: "On-site School Doctor",
+                campus_badge: "Proximity & Excellence",
+                campus_title: "Our 3 Elite Campuses in Greater Tunis",
+                campus_subtitle: "Discover our purpose-built campuses crafted for your children's success and happiness.",
+                tab_campus_ennasr: "Ennasr 2 Campus",
+                tab_campus_mourouj: "El Mourouj 6 Campus",
+                tab_campus_bardo: "Le Bardo Campus",
+                ennasr_desc: "The network's flagship featuring <strong>30 modern study rooms</strong>, an equipped computer lab, a <strong>170-seat cafeteria</strong>, and on-site school doctor. 4 preparatory classes guarantee a seamless bridge to primary school.",
+                mourouj_desc: "In the heart of El Mourouj 6, a warm, modern and secure preschool and primary campus with proven academic excellence in national exams.",
+                bardo_desc: "On Avenue du 2 Mars, an iconic institution celebrated for its academic rigor, <strong>19.23%</strong> pilot exam excellence rate, school theater troupe, and supportive family atmosphere.",
+                btn_enroll_campus: "Enroll in this campus",
+                services_badge: "Peace of Mind for Parents",
+                services_title: "Beyond the Classroom: Tailored Services for Modern Families",
+                services_subtitle: "Everything is engineered so you can entrust your children with full confidence from morning to evening.",
+                service_canteen_title: "Hot Balanced Cafeteria",
+                service_canteen_desc: "Spacious 170-seat dining hall serving hot, balanced meals curated by pediatric nutrition experts.",
+                service_canteen_tag: "Guaranteed hygiene & fresh produce",
+                service_daycare_title: "Supervised Daycare & Homework Club",
+                service_daycare_desc: "Extended hours (07:30 - 18:00) for working parents. Homework is supervised by qualified teachers.",
+                service_daycare_tag: "Zero homework stress at home",
+                service_doctor_title: "Dedicated On-Site Doctor",
+                service_doctor_desc: "Permanent medical staff for regular preventative checkups (vision, hearing, growth) and immediate first aid.",
+                service_doctor_tag: "Continuous pediatric healthcare",
+                service_bus_title: "Safe School Transportation",
+                service_bus_desc: "Modern bus fleet with dedicated onboard assistants caring for every child across Greater Tunis.",
+                service_bus_tag: "Onboard assistants & GPS tracked",
+                service_tutor_title: "Academic Tutoring & Support",
+                service_tutor_desc: "Small-group remediation sessions to overcome any temporary hurdle in math, languages, and sciences.",
+                service_tutor_tag: "Immediate boost in confidence",
+                service_psy_title: "Psychopedagogical Monitoring",
+                service_psy_desc: "Focused on the child's emotional well-being, stress management, and ongoing collaboration with parents.",
+                service_psy_tag: "Peaceful, caring school climate",
+                routine_badge: "Ideal Daily Rhythm",
+                routine_title: "A Typical Day at Salim School",
+                routine_subtitle: "From 07:30 to 18:00, every hour is calibrated to combine rigorous bilingual instruction, fun activities, and 100% completed homework.",
+                routine_step1_title: "Gentle Morning Welcome",
+                routine_step1_desc: "Warm reception by educators. Calm morning games and gentle awakening for a joyful day of discovery.",
+                routine_step1_tag: "Morning daycare included",
+                routine_step2_title: "Academics & Bilingual Core",
+                routine_step2_desc: "Mathematics, Arabic, French, and English through active learning encouraging verbal participation and critical thinking.",
+                routine_step2_tag: "Peak mental focus",
+                routine_step3_title: "Hot Lunch & Playtime",
+                routine_step3_desc: "Fresh, healthy meals served in our 170-seat cafeteria followed by supervised outdoor recess.",
+                routine_step3_tag: "Pediatric approved hot meals",
+                routine_step4_title: "Sciences, Coding & Labs",
+                routine_step4_desc: "Computer lab workshops, scientific experiments, and collaborative bilingual group projects.",
+                routine_step4_tag: "Future-ready skills",
+                routine_step5_title: "Snack & Homework Club",
+                routine_step5_desc: "Evening homework 100% completed and supervised by teachers. Students return home completely carefree.",
+                routine_step5_tag: "Zero homework at home!",
+                pedagogy_badge: "Educational Innovation",
+                pedagogy_title: "A Forward-Looking Educational Excellence",
+                pedagogy_subtitle: "Active learning methods in contemporary classrooms, fostering autonomy, early trilingualism, and critical thinking.",
+                peda_bilingual_title: "Hybrid Bilingual Curriculum",
+                peda_bilingual_desc: "Uniting the official Tunisian curriculum and the French system. Early immersion in English and French starting at age 3.",
+                peda_prepa_title: "Preparatory Classes (4 Classes)",
+                peda_prepa_desc: "A smooth, inspiring transition between kindergarten and elementary school in a secure environment for 5-6 year olds.",
+                peda_tech_title: "Computer Lab & Coding",
+                peda_tech_desc: "Dedicated computer stations and playful programming workshops to navigate the digital realm with mastery.",
+                peda_excellence_title: "Rigor & Pilot Exam Success",
+                peda_excellence_desc: "Deep academic coaching delivering outstanding excellence rates in national exams and prestigious pilot colleges.",
+                clubs_badge: "Talent & Growth",
+                clubs_title: "Our Clubs: Nurturing Your Children's Passions",
+                clubs_subtitle: "Robotics, Chess, Theater, Music, Fine Arts, and Sports to shape confident, inquisitive young minds.",
+                club_robotics_title: "Robotics & Coding Club",
+                club_robotics_desc: "Hands-on robotics kits and playful coding to build engineering mindsets from primary school.",
+                club_robotics_tag: "Fully equipped computer lab",
+                club_chess_title: "Chess & Strategy Club",
+                club_chess_desc: "Enhances foresight, patience, and analytical reasoning through regular inter-school tournaments.",
+                club_chess_tag: "Mental agility & calm focus",
+                club_theater_title: "Theater & Public Speaking",
+                club_theater_desc: "Stage presence, bilingual diction, and participation in our award-winning annual school theater festival.",
+                club_theater_tag: "Skyrocketing self-confidence",
+                club_music_title: "Music & Multilingual Choir",
+                club_music_desc: "Instrument discovery and singing in multiple languages to refine musical ear and phonological awareness.",
+                club_music_tag: "Annual live stage concert",
+                club_art_title: "Visual Arts & Pottery",
+                club_art_desc: "Painting, drawing, and sculpting to unleash boundless creativity and master fine motor skills.",
+                club_art_tag: "Annual student art exhibition",
+                club_sport_title: "Team Sports & Fitness",
+                club_sport_desc: "Mini-football, gymnastics, and agility games to nurture teamwork, discipline, and healthy living.",
+                club_sport_tag: "Team spirit & sportsmanship",
+                sim_badge: "Transparency & Peace of Mind",
+                sim_title: "Custom Tuition & Package Simulator",
+                sim_subtitle: "Select your preferred campus, grade level, and services to build a personalized education plan for 2026–2027.",
+                sim_label_campus: "1. Select Your Campus",
+                sim_label_level: "2. Grade Level",
+                sim_label_services: "3. Desired Additional Services",
+                sim_canteen: "Hot Lunch (170 seats)",
+                sim_canteen_sub: "Balanced nutrition overseen by pediatric experts",
+                sim_daycare: "Daycare & Homework Club",
+                sim_daycare_sub: "07:30 to 18:00 · Zero homework at home",
+                sim_bus: "Safe Bus Transportation",
+                sim_bus_sub: "Air-conditioned fleet with dedicated assistants",
+                sim_clubs: "Talent Clubs (Robotics, Chess)",
+                sim_clubs_sub: "Wednesday & Saturday extracurricular enrichment",
+                sim_summary_title: "Recommended All-in-One Package",
+                sim_summary_desc: "A comprehensive formula guaranteeing academic excellence, medical safety, and parental peace of mind.",
+                sim_scolarite: "Hybrid Bilingual Track:",
+                sim_medical: "On-site School Doctor:",
+                sim_options_count: "Selected services:",
+                sim_badge_open: "2026–2027 Registrations",
+                sim_rate_flexible: "Preferential Rates Available",
+                sim_btn_apply: "Apply to pre-registration",
+                testimonials_badge: "Voices of Our Families",
+                testimonials_title: "What Parents Say About Us",
+                testimonials_subtitle: "Real, heartfelt experiences from parents across our Ennasr 2, Mourouj 6, and Le Bardo campuses.",
+                testi_1_quote: "\"The bilingual curriculum from preschool at Ennasr 2 gave my son an astonishing advantage. He switches between French, English, and Arabic effortlessly. Having an on-site doctor brings me complete peace of mind.\"",
+                testi_2_quote: "\"My daughter was admitted to the prestigious Pilot College with a 16.75 score! Salim School Le Bardo's 19.23% excellence rate is not marketing—it is the direct outcome of devoted teachers and empowering school theater.\"",
+                testi_3_quote: "\"Working in downtown Tunis, the daycare until 18:00 and the 170-seat cafeteria at Mourouj 6 saved our family life. Homework is completed with teachers: our evenings at home are 100% serene quality family time.\"",
+                steps_badge: "Streamlined Process",
+                steps_title: "How to Enroll Your Child for 2026–2027?",
+                steps_subtitle: "A smooth, caring, 4-step journey to welcome your child into the Salim School community.",
+                step_1_title: "Online Pre-registration",
+                step_1_desc: "Fill in the simple 2-minute form by choosing your preferred campus and optional services.",
+                step_1_sub: "Takes 2 minutes",
+                step_2_title: "Consultation & Contact",
+                step_2_desc: "Our admissions office contacts you within 24 business hours to arrange a friendly orientation discussion.",
+                step_2_sub: "24h callback guaranteed",
+                step_3_title: "Personalized Campus Tour",
+                step_3_desc: "Visit our modern classrooms, 170-seat dining hall, and meet our teachers together with your child.",
+                step_3_sub: "Campus immersion",
+                step_4_title: "Finalization & Welcome",
+                step_4_desc: "File confirmed and seat secured for the 2026–2027 school year. Your child is ready to thrive.",
+                step_4_sub: "Guaranteed placement",
+                faq_badge: "Clear Answers",
+                faq_title: "Frequently Asked Questions by Parents",
+                faq_subtitle: "Everything you need to know regarding campus life, medical healthcare, and daily organization at Salim School.",
+                faq_q1: "Which official curriculum do you follow (Tunisian or French)?",
+                faq_a1: "We deliver an exemplary hybrid bilingual curriculum that rigorously aligns with the Tunisian Ministry of Education standards while infusing active French immersion and pedagogical methods. Students are equally prepared for Tunisian Pilot examinations and future international studies.",
+                faq_q2: "How does healthcare work with the dedicated school doctor?",
+                faq_a2: "Unlike schools with occasional checkups, our campuses feature a permanent medical station with an on-site doctor. Every child receives regular preventative screenings (vision, hearing, growth, posture) and immediate care if needed.",
+                faq_q3: "How does daycare work and what happens with evening homework?",
+                faq_a3: "We welcome children from 07:30 in the morning until 18:00 in the evening. During the afternoon study session (16:30 - 18:00), teachers supervise homework completion and revision. Children arrive home with their work 100% done.",
+                faq_q4: "What safety measures are applied to school bus transportation?",
+                faq_a4: "Our modern minibus fleet covers Greater Tunis with dedicated onboard female assistants on every route ensuring seatbelts are fastened and handing each child directly to their parent.",
+                faq_q5: "Is there an entrance assessment for admission?",
+                faq_a5: "For kindergarten and prep classes, it is a simple friendly meeting. For primary and middle school, a positive orientation assessment establishes the student's foundation in languages and math to provide any targeted support.",
+                faq_q6: "Can tuition payments be spread out throughout the year?",
+                faq_a6: "Yes, absolutely. Salim School offers family-friendly payment schedules: annual payment with discount, or installment options per term or monthly to provide maximum financial flexibility.",
+                form_badge: "2026–2027 Academic Year",
+                form_title: "Streamlined Online Pre-registration",
+                form_subtitle: "Secure your child's place in your preferred campus. Our admissions team will contact you within 24 business hours.",
+                label_campus: "Desired Campus *",
+                opt_select_campus: "Select a campus...",
+                label_level: "Grade Level 2026-2027 *",
+                opt_select_level: "Choose grade level...",
+                label_child_name: "Student's Full Name *",
+                label_parent_name: "Parent's Full Name *",
+                label_phone: "Phone Number *",
+                label_services: "Desired Additional Services",
+                service_opt_canteen: "Hot Lunch (170 seats)",
+                service_opt_daycare: "Daycare (07:30-18:00)",
+                service_opt_bus: "Bus Transportation",
+                btn_submit_form: "Submit Pre-Registration",
+                form_guarantee: "Secure information · Guaranteed reply and interview appointment within 24h.",
+                footer_about: "Leading private educational network in Greater Tunis backed by GES and Groupe SLS.",
+                floating_wa: "WhatsApp Support",
+                floating_apply: "Enroll"
+            },
+            ar: {
+                announcement_badge: "حملة 2026–2027",
+                announcement_text: "فتح باب التسجيل الأولي لفروعنا بتونس الكبرى (النصر، المروج، باردو)",
+                announcement_hotline: "الإدارة المركزية :",
+                announcement_sim: "محتسب المصاريف",
+                announcement_cta: "التسجيل الأولي عبر الإنترنت",
+                nav_home: "الرئيسية",
+                nav_campuses: "فروعنا الثلاثة",
+                nav_services: "خدماتنا",
+                nav_routine: "يوم نموذجي",
+                nav_pedagogy: "البيداغوجيا",
+                nav_clubs: "نوادينا",
+                nav_simulator: "حساب المصاريف",
+                nav_faq: "الأسئلة الشائعة",
+                nav_cta: "التسجيل الأولي",
+                hero_badge: "مجموعة SLS و GES · ريادة التعليم الخاص والحديث بتونس الكبرى",
+                hero_title_1: "المستقبل المشرق",
+                hero_title_2: "الذي يستحقه أطفالكم",
+                hero_subtitle: "من التحضيري إلى الثانوي، توفر <strong>مدرسة سليم</strong> إطاراً تعليمياً حديثاً وآمناً يجمع بين <strong>البرنامج الثنائي التونسي والفرنسي</strong> (العربية، الفرنسية والإنجليزية منذ سن 3 سنوات)، ورعاية طبية دائمة على عين المكان، ومطعماً بـ 170 مقعداً، مع نسبة تميز قياسية بلغت <strong>19.23%</strong> في مناظرات المدارس الإعدادية النموذجية.",
+                hero_cta_apply: "التسجيل الأولي لطفلي",
+                hero_cta_calc: "حساب التكلفة التقديرية",
+                hero_stat_1: "النصر · المروج · باردو",
+                hero_stat_2: "طبيب مدرسي مخصص",
+                hero_stat_3: "نسبة تميز بالمناظرات النموذجية",
+                hero_card_title: "أقسام حديثة وراحة نفسية",
+                hero_card_desc: "فضاءات تعليمية مجهزة ومشرقة تتيح لكل تلميذ التعلم باستمتاع وثقة.",
+                badge_safety: "أمن وصحة",
+                badge_doctor: "طبيب دائم بالمدرسة",
+                campus_badge: "قرب وتميز",
+                campus_title: "فروعنا الثلاثة الرائدة بتونس الكبرى",
+                campus_subtitle: "مؤسسات تعليمية حديثة صُممت لتوفير بيئة تربوية مثالية لنجاح وتفوق أبنائكم.",
+                tab_campus_ennasr: "فرع النصر 2",
+                tab_campus_mourouj: "فرع المروج 6",
+                tab_campus_bardo: "فرع باردو",
+                ennasr_desc: "المقر الرئيسي للمجموعة بـ <strong>30 قاعة تدريس حديثة</strong>، ومخبر إعلامية متطور، ومطعم واسع بـ <strong>170 مقعداً</strong> وطبيب مدرسي قار. كما تضمن <strong>الأقسام التحضيرية الأربعة</strong> انتقالاً نموذجياً نحو السنة الأولى ابتدائي.",
+                mourouj_desc: "في قلب المروج 6، فضاء حديث وآمن للتعليم التحضيري والابتدائي، يقدم إحاطة تربوية شاملة ونتائج تميز مشهود لها في الامتحانات الوطنية.",
+                bardo_desc: "بشارع 2 مارس، مؤسسة عريقة معروفة بانضباطها الصارم ونسبة تميز بلغت <strong>19.23%</strong> في مناظرة السيزيام، مع فرقة مسرحية مدرسية متألقة ومناخ عائلي دافئ.",
+                btn_enroll_campus: "التسجيل في هذا الفرع",
+                services_badge: "راحة بال الأولياء",
+                services_title: "ما بعد الدروس : خدمات متكاملة صُممت لراحة العائلات",
+                services_subtitle: "كل التفاصيل مدروسة لتودعوا أطفالكم بكل ثقة واطمئنان من الصباح حتى المساء في بيئة مدرسية مريحة ومتطورة.",
+                service_canteen_title: "مطعم مدرسي ووجبات ساخنة",
+                service_canteen_desc: "قاعة طعام واسعة ومكيفة بـ 170 مقعداً تقدم يومياً وجبات ساخنة ومتوازنة تحت إشراف أخصائيي تغذية الأطفال.",
+                service_canteen_tag: "نظافة وأغذية طازجة مضمونة",
+                service_daycare_title: "حضانة مدرسية ودراسة موجهة",
+                service_daycare_desc: "توقيت ممتد من 07:30 صباحاً إلى 06:00 مساءً يناسب الأولياء العاملين، مع تأطير مدرسي دقيق لإنجاز الواجبات اليومية.",
+                service_daycare_tag: "تخلصوا من ضغط الواجبات في المنزل",
+                service_doctor_title: "طبيب مدرسي مقيم",
+                service_doctor_desc: "عيادة مدرسية مجهزة وطبيب مدرسي حاضر باستمرار للفحوصات الدورية الوقائية والرعاية الصحية الفورية.",
+                service_doctor_tag: "متابعة صحية طبية متواصلة",
+                service_bus_title: "نقل مدرسي آمن ومراقب",
+                service_bus_desc: "أسطول حافلات حديث ومكيف مع مرافقة متخصصة في كل حافلة تغطي كامل مناطق تونس الكبرى.",
+                service_bus_tag: "مرافقة مخصصة وتتبع مباشر",
+                service_tutor_title: "دعم مدرسي وتدارك فردي",
+                service_tutor_desc: "حصص دعم وتدارك بأفواج مصغرة لترسيخ المكتسبات في الرياضيات، اللغات الحية والمواد العلمية.",
+                service_tutor_tag: "استعادة فورية للثقة والتفوق",
+                service_psy_title: "متابعة نفسية وتربوية",
+                service_psy_desc: "اهتمام براحة التلميذ النفسية والوجدانية، وإدارة الضغوطات، مع حوار دائم وبناء مع الأولياء.",
+                service_psy_tag: "مناخ مدرسي مطمئن وإيجابي",
+                routine_badge: "تنظيم يومي متوازن",
+                routine_title: "يوم نموذجي في مدرسة سليم",
+                routine_subtitle: "من الساعة 07:30 صباحاً إلى 06:00 مساءً، كل دقيقة مدروسة لتجمع بين الدراسة المعمقة، الأنشطة الممتعة، وإنهاء الواجبات بنسبة 100%.",
+                routine_step1_title: "استقبال دافئ وأنشطة هادئة",
+                routine_step1_desc: "استقبال لطيف من المربيات وأنشطة استيقاظ هادئة لتهيئة الطفل نفسياً وذهنياً ليوم دراسي ممتع.",
+                routine_step1_tag: "حضانة صباحية مدمجة",
+                routine_step2_title: "التعلمات الأساسية واللغات",
+                routine_step2_desc: "رياضيات، لغة عربية، فرنسية وإنجليزية باعتماد بيداغوجيا نشطة تشجع التعبير الشفوي وحب الاستكشاف.",
+                routine_step2_tag: "تركيز ذهني عالي",
+                routine_step3_title: "وجبة غداء ساخنة واستراحة",
+                routine_step3_desc: "وجبة غذائية صحية ومتكاملة في مطعمنا بـ 170 مقعداً، تليها استراحة ترفيهية محروسة في الهواء الطلق.",
+                routine_step3_tag: "وجبات صحية طازجة",
+                routine_step4_title: "علوم، برمجة ومشاريع تفاعلية",
+                routine_step4_desc: "مخبر إعلامية، تجارب علمية مبسطة، وتطوير المهارات الحركية واليدوية بأفواج عمل تشاركية.",
+                routine_step4_tag: "مهارات القرن 21",
+                routine_step5_title: "لمجة ودراسة موجهة للمراجعة",
+                routine_step5_desc: "إنجاز الواجبات المنزلية ومراجعة الدروس كاملة بتأطير المعلمين. يعود التلميذ لمنزله مرتاحاً دون أي ضغط دراسي.",
+                routine_step5_tag: "بدون واجبات بالمنزل !",
+                pedagogy_badge: "ابتكار بيداغوجي",
+                pedagogy_title: "بيداغوجيا متميزة تواكب المستقبل",
+                pedagogy_subtitle: "اعتماد أحدث الطرق البيداغوجية النشطة في أقسام عصرية تعزز الاستقلالية، إتقان اللغات والتفكير النقدي.",
+                peda_bilingual_title: "البرنامج الثنائي الهجين",
+                peda_bilingual_desc: "تكامل فعال بين المنهاج الرسمي التونسي والنظام الفرنسي، مع انغماس مبكر في الإنجليزية والفرنسية منذ سن 3 سنوات.",
+                peda_prepa_title: "الأقسام التحضيرية (4 أقسام)",
+                peda_prepa_desc: "مرحلة انتقالية سلسة ومحفزة بين الروضة والابتدائي في فضاءات مهيأة خصيصاً للأطفال من 5 إلى 6 سنوات.",
+                peda_tech_title: "مخبر الإعلامية والبرمجة",
+                peda_tech_desc: "أجهزة حاسوب حديثة وورشات تفاعلية لتمكين التلاميذ من مهارات البرمجة والذكاء الرقمي منذ الصغر.",
+                peda_excellence_title: "الانضباط والمناظرات النموذجية",
+                peda_excellence_desc: "منهجية عمل دقيقة وتأطير فردي مكثف يحقق أعلى نسب القبول والتميز في مناظرات الالتحاق بالإعداديات النموذجية.",
+                clubs_badge: "مواهب وإبداع",
+                clubs_title: "نوادينا : تنمية مواهب وشخصية أطفالكم",
+                clubs_subtitle: "روبوتيك، شطرنج، مسرح، موسيقى، فنون تشكيلية ورياضة لصقل شخصية قيادية متوازنة ومبدعة.",
+                club_robotics_title: "نادي الروبوتيك والبرمجة",
+                club_robotics_desc: "حقائب روبوتيك وبرمجة مبسطة لغرس التفكير المنطقي والهندسي منذ المرحلة الابتدائية.",
+                club_robotics_tag: "مخبر إعلامية مجهز بالكامل",
+                club_chess_title: "نادي الشطرنج والتفكير الاستراتيجي",
+                club_chess_desc: "تنمية الذكاء التحليلي، الصبر والتركيز من خلال بطولات مدرسية دورية محفزة.",
+                club_chess_tag: "مرونة ذهنية وتركيز عالي",
+                club_theater_title: "المسرح والخطابة",
+                club_theater_desc: "القدرة على التحدث أمام الجمهور بثقة، مخارج حروف سليمة ومشاركة في مهرجان المسرح المدرسي.",
+                club_theater_tag: "ثقة مطلقة بالنفس",
+                club_music_title: "الموسيقى والكورال متعدد اللغات",
+                club_music_desc: "اكتشاف الآلات الموسيقية والغناء بلغات متعددة لتعزيز الإدراك السمعي واللغوي الرفيع.",
+                club_music_tag: "عرض سنوي على المسرح",
+                club_art_title: "الفنون التشكيلية والخزف",
+                club_art_desc: "رسم وتشكيل يدوي لإطلاق طاقات الخيال وتطوير المهارات الحركية الدقيقة لدى الطفل.",
+                club_art_tag: "معرض سنوي لإبداعات التلاميذ",
+                club_sport_title: "الرياضات الجماعية واللياقة",
+                club_sport_desc: "كرة قدم، جمباز وألعاب رشاقة لتعزيز الروح الرياضية، الانضباط والصحة البدنية السليمة.",
+                club_sport_tag: "روح الفريق والانضباط",
+                sim_badge: "شفافية وراحة بال",
+                sim_title: "محتسب المصاريف والباقة المخصصة 2026–2027",
+                sim_subtitle: "حددوا الفرع والمستوى الدراسي والخدمات المرغوبة لإعداد تركيبة تربوية شاملة ومناسبة لأبنائكم.",
+                sim_label_campus: "1. اختيار المؤسسة التعليمية",
+                sim_label_level: "2. المستوى الدراسي",
+                sim_label_services: "3. الخدمات الإضافية المطلوبة",
+                sim_canteen: "مطعم مدرسي ووجبات ساخنة (170 مقعداً)",
+                sim_canteen_sub: "تغذية صحية ومتوازنة تحت إشراف طبي",
+                sim_daycare: "حضانة مسائية ودراسة موجهة",
+                sim_daycare_sub: "من 07:30 إلى 18:00 · إنهاء تام للواجبات",
+                sim_bus: "نقل مدرسي آمن ومكيف",
+                sim_bus_sub: "حافلات حديثة مع مرافقات مخصصات",
+                sim_clubs: "نوادي المواهب (روبوتيك، شطرنج)",
+                sim_clubs_sub: "أنشطة لاصفية يومي الأربعاء والسبت",
+                sim_summary_title: "الباقة المتكاملة المقترحة",
+                sim_summary_desc: "صيغة شاملة تضمن التفوق الأكاديمي والرعاية الصحية والراحة النفسية للأولياء طوال العام.",
+                sim_scolarite: "البرنامج الثنائي المعزز :",
+                sim_medical: "طبيب مدرسي مقيم على عين المكان :",
+                sim_options_count: "الخدمات المختارة :",
+                sim_badge_open: "التسجيل الأولي 2026–2027",
+                sim_rate_flexible: "تعريفات تفاضلية وتسهيلات دفع",
+                sim_btn_apply: "تأكيد واستكمال التسجيل",
+                testimonials_badge: "شهادات عائلاتنا",
+                testimonials_title: "ماذا يقول أولياء تلاميذنا ؟",
+                testimonials_subtitle: "شهادات حقيقية وموثقة من أولياء تلاميذ فروعنا بالنصر 2، المروج 6 وباردو.",
+                testi_1_quote: "\"البرنامج الثنائي منذ التحضيري بفرع النصر 2 منح ابني أسبقية لغوية مذهلة. أصبح يتحدث بالفرنسية والإنجليزية والعربية بطلاقة وثقة. ووجود طبيب دائم بالمدرسة يوفر لي راحة بال تامة.\"",
+                testi_2_quote: "\"ابنتي تم قبولها في الإعدادية النموذجية بمعدل 16.75 ! نسبة التميز المرتفعة بمدرسة سليم باردو (19.23%) حقيقة ملموسة بفضل تفاني الإطار التربوي والأنشطة المسرحية التي تعزز الثقة بالذات.\"",
+                testi_3_quote: "\"عملي بوسط العاصمة جعل من الحضانة الممتدة لغاية 18:00 ومطعم الـ 170 مقعداً بالمروج 6 حلاً مثالياً لعائلتنا. يراجع ابني دروسه كاملة مع المعلمة، والمساء في بيتنا مخصص للراحة والراحة العائلية.\"",
+                steps_badge: "إجراءات ميسرة",
+                steps_title: "كيف تسجلون ابنكم للسنة الدراسية 2026–2027 ؟",
+                steps_subtitle: "مسار واضح وسلس في 4 خطوات للانضمام إلى عائلة مدرسة سليم.",
+                step_1_title: "التسجيل الأولي عبر الإنترنت",
+                step_1_desc: "تعبئة الاستمارة في دقيقتين مع اختيار الفرع والخدمات المناسبة.",
+                step_1_sub: "في دقيقتين فقط",
+                step_2_title: "التواصل وتحديد موعد المقابلة",
+                step_2_desc: "تتصل بكم إدارتنا في غضون 24 ساعة لتحديد موعد مقابلة توجيهية إيجابية مع الفريق البيداغوجي.",
+                step_2_sub: "رد سريع في أقل من 24 ساعة",
+                step_3_title: "زيارة مخصصة للمؤسسة",
+                step_3_desc: "اكتشاف قاعات التدريس والمطعم والمخابر ومقابلة المعلمين رفقة ابنكم.",
+                step_3_sub: "زيارة ميدانية شاملة",
+                step_4_title: "تثبيت التسجيل والترحيب",
+                step_4_desc: "استكمال الملف وحجز المقعد رسمياً للموسم 2026–2027 بكل ثقة.",
+                step_4_sub: "مقعد محجوز ومؤكد",
+                faq_badge: "إجابات واضحة",
+                faq_title: "الأسئلة الشائعة للأولياء",
+                faq_subtitle: "كل ما يهمكم معرفته حول الحياة المدرسية، الرعاية الصحية والتنظيم اليومي في مدرسة سليم.",
+                faq_q1: "ما هو المنهاج الرسمي المعتمد (تونسي أم فرنسي) ؟",
+                faq_a1: "نعتمد برنامجاً ثنائياً هجيناً متميزاً يطبق برامج وزارة التربية التونسية الرسمية بدقة مع تعزيز مكثف للغتين الفرنسية والإنجليزية بأساليب تعليمية فرنسية حديثة. يؤهل هذا البرنامج تلاميذنا للنجاح في مناظرات المدارس النموذجية وللاندماج المستقبلي في المسارات الدولية.",
+                faq_q2: "كيف تتم الرعاية الصحية مع الطبيب المدرسي المقيم ؟",
+                faq_a2: "خلافاً للزيارات الطبية المتباعدة، تضم فروعنا عيادة مدرسية مجهزة بطبيب مدرسي قار. يستفيد كل تلميذ من فحوصات وقائية منتظمة للسمع والبصر والنمو، مع تدخل فوري وإعلام فوري للأولياء عند أي طارئ صحي.",
+                faq_q3: "كيف يتم تنظيم الحضانة وماذا عن الواجبات المنزلية ؟",
+                faq_a3: "نستقبل التلاميذ من 07:30 صباحاً إلى 06:00 مساءً. وخلال فترة الدراسة الموجهة المسائية (16:30 - 18:00)، يشرف المعلمون على إنجاز ومراجعة كافة الواجبات. يعود التلميذ إلى منزله مستوفياً كل دروسه لتنعم العائلة بأمسيات هادئة.",
+                faq_q4: "ما هي ضمانات السلامة المتبعة في النقل المدرسي ؟",
+                faq_a4: "يغطي أسطول حافلاتنا الحديث والمكيف معظم مناطق تونس الكبرى. وترافق كل رحلة مرافقة مدرسية مختصة تحرص على ربط أحزمة الأمان والسلامة عند الصعود والنزول، وتسليم التلميذ يداً بيد إلى وليه.",
+                faq_q5: "هل هناك اختبار تقييمي لقبول التلميذ ؟",
+                faq_a5: "بالنسبة لمرحلتي الروضة والتحضيري، نكتفي بمقابلة تواصلية ودية. أما للمرحلة الابتدائية والإعدادية، فيجرى اختبار توجيهي إيجابي لتحديد مستوى التلميذ في اللغات والرياضيات وبناء برنامج دعم ملائم له منذ بداية السنة.",
+                faq_q6: "هل تتوفر تسهيلات في دفع معاليم التمدرس ؟",
+                faq_a6: "نعم بكل تأكيد. توفر مدرسة سليم تسهيلات متعددة تناسب ميزانية العائلات : خلاص سنوي مع تخفيض مميز، أو أقساط ثلاثية أو شهرية لضمان راحة مالية تامة.",
+                form_badge: "الموسم الدراسي 2026–2027",
+                form_title: "التسجيل الأولي السريع عبر الإنترنت",
+                form_subtitle: "احجزوا مقعد ابنكم في الفرع المناسب لكم. تتواصل معكم إدارتنا في غضون 24 ساعة عمل.",
+                label_campus: "المؤسسة المطلوبة *",
+                opt_select_campus: "اختر المؤسسة...",
+                label_level: "المستوى الدراسي 2026-2027 *",
+                opt_select_level: "اختر المستوى...",
+                label_child_name: "الاسم واللقب للتلميذ *",
+                label_parent_name: "اسم الولي / الوصي *",
+                label_phone: "رقم الهاتف *",
+                label_services: "الخدمات الإضافية المطلوبة",
+                service_opt_canteen: "المطعم المدرسي (170 مقعداً)",
+                service_opt_daycare: "الحضانة المدرسية (07:30 - 18:00)",
+                service_opt_bus: "النقل المدرسي",
+                btn_submit_form: "إرسال طلب التسجيل الأولي",
+                form_guarantee: "بيانات محمية ومؤمنة · الرد وتحديد موعد المقابلة في أقل من 24 ساعة.",
+                footer_about: "شبكة تعليم خاص رائدة بتونس الكبرى تحت إشراف GES ومجموعة SLS.",
+                floating_wa: "مساعدة عبر واتساب",
+                floating_apply: "تسجيل"
+            }
+        };
+
+        // Language Switcher Function
+        let currentLang = 'fr';
+        function setLanguage(lang) {
+            currentLang = lang;
+            const dict = i18n[lang];
+            if (!dict) return;
+
+            // Handle RTL/LTR
+            if (lang === 'ar') {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', lang);
+            }
+
+            // Update Active button state
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('lang-' + lang);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Replace all data-i18n elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.innerHTML = dict[key];
+                }
+            });
+
+            // Update Dynamic Placeholders
+            const childInput = document.getElementById('formChildName');
+            const parentInput = document.getElementById('formParentName');
+            const phoneInput = document.getElementById('formPhone');
+
+            if (lang === 'ar') {
+                if (childInput) childInput.placeholder = "مثال: يوسف الطرابلسي";
+                if (parentInput) parentInput.placeholder = "مثال: السيد أو السيدة الطرابلسي";
+                if (phoneInput) phoneInput.placeholder = "مثال: 54 012 230 / 98 000 000";
+            } else if (lang === 'en') {
+                if (childInput) childInput.placeholder = "e.g., Youssef Trabelsi";
+                if (parentInput) parentInput.placeholder = "e.g., Mr. or Mrs. Trabelsi";
+                if (phoneInput) phoneInput.placeholder = "e.g., +216 54 012 230";
+            } else {
+                if (childInput) childInput.placeholder = "Ex: Youssef Trabelsi";
+                if (parentInput) parentInput.placeholder = "Ex: M. ou Mme Trabelsi";
+                if (phoneInput) phoneInput.placeholder = "Ex: 54 012 230 / 98 000 000";
+            }
+
+            // Update Select Options Placeholders
+            const selectCampus = document.getElementById('formCampus');
+            if (selectCampus && selectCampus.options[0]) {
+                selectCampus.options[0].text = dict['opt_select_campus'] || selectCampus.options[0].text;
+            }
+            const selectLevel = document.getElementById('formLevel');
+            if (selectLevel) {
+                if (lang === 'ar') {
+                    selectLevel.options[0].text = "اختر المستوى الدراسي...";
+                    selectLevel.options[1].text = "الروضة / التحضيري (3-4 سنوات)";
+                    selectLevel.options[2].text = "السنة التحضيرية المؤهلة للابتدائي (5-6 سنوات)";
+                    selectLevel.options[3].text = "التعليم الابتدائي (من السنة 1 إلى 5)";
+                    selectLevel.options[4].text = "السنة 6 ابتدائي (إعداد للمناظرة النموذجية)";
+                    selectLevel.options[5].text = "الإعدادي والثانوي (فرع النصر 2)";
+                } else if (lang === 'en') {
+                    selectLevel.options[0].text = "Choose grade level...";
+                    selectLevel.options[1].text = "Preschool / Kindergarten (3-4 yrs)";
+                    selectLevel.options[2].text = "Preparatory Transition Class (5-6 yrs)";
+                    selectLevel.options[3].text = "Primary (Grades 1 to 5)";
+                    selectLevel.options[4].text = "Grade 6 (Pilot Exam Prep)";
+                    selectLevel.options[5].text = "Middle & High School (Ennasr 2)";
+                } else {
+                    selectLevel.options[0].text = "Choisir le niveau...";
+                    selectLevel.options[1].text = "Maternelle (3-4 ans)";
+                    selectLevel.options[2].text = "Classe Préparatoire (Transition CP)";
+                    selectLevel.options[3].text = "Primaire · 1ère à 5ème Année";
+                    selectLevel.options[4].text = "Primaire · 6ème Année (Concours Pilote)";
+                    selectLevel.options[5].text = "Collège / Lycée (Campus Ennasr 2)";
+                }
+            }
+
+            // Recalculate simulator summary texts in current language
+            calculateFee();
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.className = 'fas fa-bars text-lg';
+                } else {
+                    menuIcon.className = 'fas fa-xmark text-lg';
+                }
+            });
+        }
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fas fa-bars text-lg';
+            });
+        });
+
+        // Campus Switcher
+        function switchCampus(campusId) {
+            document.querySelectorAll('.campus-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            const activeEl = document.getElementById('campus-' + campusId);
+            if (activeEl) {
+                activeEl.classList.remove('hidden');
+                activeEl.classList.add('block');
+            }
+
+            document.querySelectorAll('.campus-tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.classList.add('text-slate-700', 'hover:bg-slate-100');
+            });
+            const activeTab = document.getElementById('tab-' + campusId);
+            if (activeTab) {
+                activeTab.classList.add('active');
+                activeTab.classList.remove('text-slate-700', 'hover:bg-slate-100');
+            }
+        }
+
+        function selectCampusForm(campusName) {
+            const select = document.getElementById('formCampus');
+            if (select) {
+                select.value = campusName;
+            }
+        }
+
+        // Horizontal Clubs Scroll
+        function scrollClubs(direction) {
+            const container = document.getElementById('clubsContainer');
+            if (container) {
+                const scrollAmount = 340;
+                container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        // Interactive Simulator Fee Calculator
+        function calculateFee() {
+            const level = document.getElementById('simLevel') ? document.getElementById('simLevel').value : 'primaire';
+            const hasCanteen = document.getElementById('simOptCanteen') && document.getElementById('simOptCanteen').checked;
+            const hasDaycare = document.getElementById('simOptDaycare') && document.getElementById('simOptDaycare').checked;
+            const hasBus = document.getElementById('simOptBus') && document.getElementById('simOptBus').checked;
+            const hasClubs = document.getElementById('simOptClubs') && document.getElementById('simOptClubs').checked;
+
+            let count = 0;
+            if (hasCanteen) count++;
+            if (hasDaycare) count++;
+            if (hasBus) count++;
+            if (hasClubs) count++;
+
+            const countEl = document.getElementById('simResultServicesCount');
+            if (countEl) {
+                if (currentLang === 'ar') {
+                    countEl.textContent = count + ' خدمات مختارة';
+                } else if (currentLang === 'en') {
+                    countEl.textContent = count + ' Services Selected';
+                } else {
+                    countEl.textContent = count + ' Service(s) sélectionné(s)';
+                }
+            }
+        }
+
+        // Transfer Simulation Configuration into Registration Form
+        function applySimulationToForm() {
+            const simCampus = document.getElementById('simCampus').value;
+            const simLevel = document.getElementById('simLevel').value;
+            const hasCanteen = document.getElementById('simOptCanteen').checked;
+            const hasDaycare = document.getElementById('simOptDaycare').checked;
+            const hasBus = document.getElementById('simOptBus').checked;
+
+            // Pre-select campus
+            const formCampus = document.getElementById('formCampus');
+            if (formCampus) {
+                for (let i = 0; i < formCampus.options.length; i++) {
+                    if (formCampus.options[i].value === simCampus) {
+                        formCampus.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            // Map level
+            const formLevel = document.getElementById('formLevel');
+            if (formLevel) {
+                if (simLevel === 'prepa') formLevel.selectedIndex = 2;
+                else if (simLevel === 'primaire') formLevel.selectedIndex = 3;
+                else if (simLevel === 'pilote') formLevel.selectedIndex = 4;
+                else if (simLevel === 'secondaire') formLevel.selectedIndex = 5;
+            }
+
+            // Check checkboxes
+            if (document.getElementById('svcCantine')) document.getElementById('svcCantine').checked = hasCanteen;
+            if (document.getElementById('svcGarderie')) document.getElementById('svcGarderie').checked = hasDaycare;
+            if (document.getElementById('svcBus')) document.getElementById('svcBus').checked = hasBus;
+
+            // Scroll to form smoothly
+            const formEl = document.getElementById('inscription');
+            if (formEl) {
+                formEl.scrollIntoView({ behavior: 'smooth' });
+                // Flash glow effect on form
+                const formCard = formEl.querySelector('.bg-white');
+                if (formCard) {
+                    formCard.classList.add('ring-4', 'ring-gold-400');
+                    setTimeout(() => formCard.classList.remove('ring-4', 'ring-gold-400'), 2000);
+                }
+            }
+        }
+
+        // Form Submit
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const campus = document.getElementById('formCampus').value;
+            const childName = document.getElementById('formChildName').value;
+            const phone = document.getElementById('formPhone').value;
+
+            const randomCode = Math.floor(1000 + Math.random() * 9000);
+            const refCode = 'SLS-2026-' + randomCode;
+
+            document.getElementById('successRefNum').textContent = refCode;
+            document.getElementById('successCampusName').textContent = campus;
+            document.getElementById('successChildName').textContent = childName;
+            
+            // Set current date
+            const today = new Date().toISOString().split('T')[0];
+            const dateEl = document.getElementById('successDate');
+            if (dateEl) dateEl.textContent = today;
+
+            // Prepare WhatsApp pre-filled confirmation link
+            const waLink = document.getElementById('successWhatsAppLink');
+            if (waLink) {
+                const message = encodeURIComponent(`Bonjour Salim School, je viens de finaliser la pré-inscription de mon enfant ${childName} pour le campus ${campus}. Réf dossier : ${refCode}. Merci de me contacter.`);
+                waLink.href = `https://wa.me/21654012230?text=${message}`;
+            }
+
+            document.getElementById('formSuccessMessage').classList.remove('hidden');
+        }
+
+        function resetForm() {
+            document.getElementById('preRegForm').reset();
+            document.getElementById('formSuccessMessage').classList.add('hidden');
+        }
+
+        // Initialize fee calculation on load
+        calculateFee();
+    </script>
+</body>
+</html>
