@@ -1320,20 +1320,20 @@
                 </p>
             </div>
 
-            <div class="max-w-5xl mx-auto bg-navy-900/90 backdrop-blur-xl border border-gold-500/25 rounded-3xl p-6 sm:p-10 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <div class="max-w-5xl mx-auto bg-navy-900/90 backdrop-blur-xl border border-gold-500/25 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
                 
                 <!-- Left: Configuration Controls -->
-                <div class="lg:col-span-7 space-y-6 flex flex-col justify-between">
+                <div class="lg:col-span-7 space-y-5 flex flex-col justify-start">
                     
                     <!-- Campus Selector -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
                             <label class="block text-xs font-black uppercase tracking-wider text-gold-400" data-i18n="sim_label_campus">
                                 1. Choisissez le Campus
                             </label>
                             <span class="text-[10px] text-slate-400 font-semibold">3 Sites au Choix</span>
                         </div>
-                        <select id="simCampus" onchange="calculateFee()" class="w-full px-4 py-3.5 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold transition">
+                        <select id="simCampus" onchange="calculateFee()" class="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold transition">
                             <option value="Salim School Ennasr 2 (Ariana)" class="text-navy-950">Salim School Ennasr 2 — Ariana (Vaisseau Amiral)</option>
                             <option value="Private Salim School (PSS) Mourouj 6" class="text-navy-950">Private Salim School (PSS) — Mourouj 6</option>
                             <option value="Salim School Le Bardo (2 Mars)" class="text-navy-950">Salim School — Le Bardo (Avenue du 2 Mars)</option>
@@ -1341,14 +1341,14 @@
                     </div>
 
                     <!-- Grade Level Selector -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
                             <label class="block text-xs font-black uppercase tracking-wider text-gold-400" data-i18n="sim_label_level">
                                 2. Niveau d'Études
                             </label>
                             <span class="text-[10px] text-slate-400 font-semibold">De la Prépa au Lycée</span>
                         </div>
-                        <select id="simLevel" onchange="calculateFee()" class="w-full px-4 py-3.5 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold transition">
+                        <select id="simLevel" onchange="calculateFee()" class="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold transition">
                             <option value="prepa" class="text-navy-950">Maternelle & Classe Préparatoire (Transition CP)</option>
                             <option value="primaire" selected class="text-navy-950">Cycle Primaire (1ère à 5ème Année)</option>
                             <option value="pilote" class="text-navy-950">6ème Année Primaire (Préparation Concours Pilote)</option>
@@ -1357,46 +1357,57 @@
                     </div>
 
                     <!-- Services Checkboxes -->
-                    <div>
-                        <label class="block text-xs font-black uppercase tracking-wider text-gold-400 mb-2.5" data-i18n="sim_label_services">
+                    <div class="space-y-2">
+                        <label class="block text-xs font-black uppercase tracking-wider text-gold-400" data-i18n="sim_label_services">
                             3. Services Complémentaires Souhaités
                         </label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptCanteen" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs">
+                            <label class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptCanteen" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4 shrink-0">
                                 <div>
-                                    <span class="font-bold block text-white" data-i18n="sim_canteen">Cantine Chaude (170 places)</span>
+                                    <span class="font-bold block text-white text-xs" data-i18n="sim_canteen">Cantine Chaude (170 places)</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_canteen_sub">Repas équilibrés sous contrôle médical</span>
                                 </div>
                             </label>
-                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptDaycare" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
+                            <label class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptDaycare" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4 shrink-0">
                                 <div>
-                                    <span class="font-bold block text-white" data-i18n="sim_daycare">Garderie & Études Dirigées</span>
+                                    <span class="font-bold block text-white text-xs" data-i18n="sim_daycare">Garderie & Études Dirigées</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_daycare_sub">07h30 à 18h00 · Zéro devoirs le soir</span>
                                 </div>
                             </label>
-                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptBus" onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
+                            <label class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptBus" onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4 shrink-0">
                                 <div>
-                                    <span class="font-bold block text-white" data-i18n="sim_bus">Transport Scolaire Sécurisé</span>
+                                    <span class="font-bold block text-white text-xs" data-i18n="sim_bus">Transport Scolaire Sécurisé</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_bus_sub">Minibus climatisés avec accompagnatrices</span>
                                 </div>
                             </label>
-                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptClubs" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
+                            <label class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptClubs" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4 shrink-0">
                                 <div>
-                                    <span class="font-bold block text-white" data-i18n="sim_clubs">Clubs d'Éveil (Robotique, Échecs)</span>
+                                    <span class="font-bold block text-white text-xs" data-i18n="sim_clubs">Clubs d'Éveil (Robotique, Échecs)</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_clubs_sub">Activités parascolaires du mercredi & samedi</span>
                                 </div>
                             </label>
                         </div>
                     </div>
 
+                    <!-- Trust & Guidance Note -->
+                    <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3 text-xs text-slate-300">
+                        <div class="w-8 h-8 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/30">
+                            <i class="fas fa-handshake text-xs"></i>
+                        </div>
+                        <div class="leading-tight">
+                            <strong class="text-white block font-bold text-[11px]" data-i18n="sim_trust_title">Simulation Sans Engagement</strong>
+                            <span class="text-[10px] text-slate-400" data-i18n="sim_trust_desc">Tarifs personnalisés et facilités de paiement échelonné disponibles lors de votre visite.</span>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Right: Estimated Result & Transfer CTA -->
-                <div class="lg:col-span-5 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 p-6 sm:p-7 rounded-2xl border border-gold-500/40 flex flex-col justify-between h-full shadow-2xl relative overflow-hidden">
+                <div class="lg:col-span-5 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 p-5 sm:p-7 rounded-2xl border border-gold-500/40 flex flex-col justify-between shadow-2xl relative overflow-hidden space-y-4">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-600 via-amber-400 to-gold-600"></div>
 
                     <div>
@@ -2094,6 +2105,8 @@
                 sim_badge_open: "Pré-inscriptions 2026–2027",
                 sim_rate_flexible: "Tarifs Préférentiels Disponibles",
                 sim_btn_apply: "Valider ma pré-inscription",
+                sim_trust_title: "Simulation Sans Engagement",
+                sim_trust_desc: "Tarifs personnalisés et facilités de paiement échelonné disponibles lors de votre visite.",
                 testimonials_badge: "La Voix de nos Familles",
                 testimonials_title: "Ce que disent les Parents de nos Élèves",
                 testimonials_subtitle: "Témoignages authentiques de parents sur nos 3 campus d'Ennasr 2, Mourouj 6 et Le Bardo.",
@@ -2291,6 +2304,8 @@
                 sim_badge_open: "2026–2027 Registrations",
                 sim_rate_flexible: "Preferential Rates Available",
                 sim_btn_apply: "Apply to pre-registration",
+                sim_trust_title: "Non-Binding Simulation",
+                sim_trust_desc: "Custom tuition schedules and flexible installment plans finalized during campus visit.",
                 testimonials_badge: "Voices of Our Families",
                 testimonials_title: "What Parents Say About Us",
                 testimonials_subtitle: "Real, heartfelt experiences from parents across our Ennasr 2, Mourouj 6, and Le Bardo campuses.",
@@ -2488,6 +2503,8 @@
                 sim_badge_open: "التسجيل الأولي 2026–2027",
                 sim_rate_flexible: "تعريفات تفاضلية وتسهيلات دفع",
                 sim_btn_apply: "تأكيد واستكمال التسجيل",
+                sim_trust_title: "محاكاة تقديرية بدون التزام",
+                sim_trust_desc: "تعريفات تفاضلية وتسهيلات دفع بأقساط مريحة يتم تثبيتها عند زيارتكم للمؤسسة.",
                 testimonials_badge: "شهادات عائلاتنا",
                 testimonials_title: "ماذا يقول أولياء تلاميذنا ؟",
                 testimonials_subtitle: "شهادات حقيقية وموثقة من أولياء تلاميذ فروعنا بالنصر 2، المروج 6 وباردو.",
