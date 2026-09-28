@@ -24,24 +24,26 @@
                 extend: {
                     colors: {
                         navy: {
-                            50: '#f0f4fc',
-                            100: '#dbe5f7',
-                            200: '#b8cdef',
-                            700: '#1d3b7e',
-                            800: '#142a63',
-                            900: '#0c1b40',
-                            950: '#060f26',
-                            DEFAULT: '#0f2963',
+                            50: '#f2f5fa',
+                            100: '#e2ebf6',
+                            200: '#c5d7ed',
+                            700: '#173471',
+                            800: '#0e224e',
+                            900: '#071530',
+                            950: '#030919',
+                            DEFAULT: '#0b1d44',
                         },
                         gold: {
-                            100: '#fef3c7',
-                            200: '#fde68a',
-                            300: '#fcd34d',
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
-                            700: '#b45309',
-                            DEFAULT: '#f59e0b',
+                            50: '#faf8f2',
+                            100: '#f5eedb',
+                            200: '#ebdeb7',
+                            300: '#dfc788',
+                            400: '#d4af37',
+                            500: '#c59b27',
+                            600: '#ab811a',
+                            700: '#8a6415',
+                            800: '#6a4c10',
+                            DEFAULT: '#c59b27',
                         }
                     },
                     fontFamily: {
@@ -176,38 +178,69 @@
             padding-right: 0.75rem !important;
         }
 
-        /* General Styles */
+        /* ================= LUXURY IMPERIAL STYLING ================= */
         .glass-nav {
-            background: rgba(6, 15, 38, 0.96);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(3, 9, 25, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
         .hero-pattern {
-            background-color: #060f26;
-            background-image: radial-gradient(rgba(245, 158, 11, 0.12) 1.5px, transparent 1.5px), radial-gradient(rgba(255, 255, 255, 0.03) 1.5px, #060f26 1.5px);
-            background-size: 32px 32px;
-            background-position: 0 0, 16px 16px;
+            background-color: #030919;
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+                radial-gradient(rgba(212, 175, 55, 0.08) 1.5px, transparent 1.5px),
+                radial-gradient(rgba(255, 255, 255, 0.02) 1px, #030919 1px);
+            background-size: 100% 100%, 36px 36px, 18px 18px;
+            background-position: center, 0 0, 9px 9px;
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #c59b27 100%);
+        }
+        .bg-gold-subtle {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 100%);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #f7e6a6 0%, #d4af37 50%, #f3e5ab 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        }
+        .glass-card-luxury {
+            background: rgba(7, 21, 48, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
         .card-hover {
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .card-hover:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 35px -10px rgba(6, 15, 38, 0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(3, 9, 25, 0.15);
         }
         .campus-tab.active, .routine-tab.active, .infra-tab.active {
-            background-color: #0f2963;
+            background-color: #071530;
             color: #ffffff;
-            box-shadow: 0 10px 25px -5px rgba(15, 41, 99, 0.35);
-            border-color: #f59e0b;
+            box-shadow: 0 10px 25px -5px rgba(7, 21, 48, 0.4);
+            border-color: #d4af37;
         }
         .lang-btn.active {
-            background-color: #f59e0b;
-            color: #060f26;
+            background: linear-gradient(135deg, #d4af37 0%, #c59b27 100%);
+            color: #030919;
             font-weight: 800;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
         }
         .badge-glow {
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .gold-pill {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #ab811a;
         }
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
@@ -223,7 +256,7 @@
         }
         details[open] summary .faq-icon {
             transform: rotate(180deg);
-            color: #f59e0b;
+            color: #d4af37;
         }
 
         /* Print formatting for confirmation voucher */
@@ -249,10 +282,10 @@
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold-500 selection:text-white overflow-x-hidden">
 
     <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-navy-950 text-white text-xs py-2 px-4 border-b border-white/10 relative z-50">
+    <div class="bg-navy-950 text-white text-xs py-2 px-4 border-b border-gold-500/20 relative z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center gap-3">
             <div class="flex items-center gap-2 font-medium truncate">
-                <span class="inline-flex items-center justify-center bg-gold-500 text-navy-950 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider shrink-0 shadow-sm">
+                <span class="inline-flex items-center justify-center bg-gradient-to-r from-gold-400 to-gold-500 text-navy-950 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider shrink-0 shadow-sm">
                     <i class="fas fa-bullhorn mr-1.5 rtl:ml-1.5 rtl:mr-0 text-[10px]"></i> <span data-i18n="announcement_badge">Campagne 2026–2027</span>
                 </span>
                 <span class="text-slate-300 truncate hidden sm:inline text-xs" data-i18n="announcement_text">
@@ -268,19 +301,19 @@
     </div>
 
     <!-- MAIN CLEAN ONE-LINE NAVBAR -->
-    <nav class="glass-nav text-white sticky top-0 z-40 border-b border-white/10 transition-all duration-300">
+    <nav class="glass-nav text-white sticky top-0 z-40 border-b border-gold-500/20 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
             
             <!-- Left: Clean Logo (Single Line) -->
             <a href="#accueil" class="flex items-center gap-2.5 shrink-0 group">
-                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-gold-500 to-amber-300 flex items-center justify-center text-navy-950 shadow-md group-hover:scale-105 transition-transform duration-200">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-gold-500 via-gold-400 to-gold-300 flex items-center justify-center text-navy-950 shadow-md group-hover:scale-105 transition-transform duration-200 border border-gold-300/40">
                     <i class="fas fa-graduation-cap text-base"></i>
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="text-lg md:text-xl font-black tracking-tight leading-none text-white">
-                        SALIM <span class="text-gold-400">SCHOOL</span>
+                        SALIM <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500">SCHOOL</span>
                     </span>
-                    <span class="hidden sm:inline-block bg-white/10 text-gold-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-white/15">
+                    <span class="hidden sm:inline-block bg-white/10 text-gold-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-gold-500/30">
                         SLS · GES
                     </span>
                 </div>
@@ -314,7 +347,7 @@
                 </div>
 
                 <!-- Registration CTA -->
-                <a href="#inscription" class="hidden sm:inline-flex bg-gradient-to-r from-gold-500 to-amber-400 hover:from-gold-400 hover:to-amber-300 text-navy-950 font-black px-4 py-2 rounded-full text-xs tracking-wide shadow-md hover:shadow-gold-500/25 hover:scale-[1.03] active:scale-[0.98] transition-all items-center gap-1.5 shrink-0 whitespace-nowrap">
+                <a href="#inscription" class="hidden sm:inline-flex bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-navy-950 font-black px-4 py-2 rounded-full text-xs tracking-wide shadow-md hover:shadow-gold-500/30 hover:scale-[1.03] active:scale-[0.98] transition-all items-center gap-1.5 shrink-0 whitespace-nowrap">
                     <i class="fas fa-file-signature text-xs"></i>
                     <span data-i18n="nav_cta">Pré-inscription</span>
                 </a>
@@ -327,7 +360,7 @@
         </div>
 
         <!-- Mobile Drawer -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-navy-950/95 backdrop-blur-md border-t border-white/10 px-6 py-5 space-y-3 shadow-2xl">
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-950/98 backdrop-blur-md border-t border-gold-500/20 px-6 py-5 space-y-3 shadow-2xl">
             <a href="#accueil" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_home">Accueil</a>
             <a href="#campus" class="mobile-link block text-gold-400 font-bold text-sm py-1" data-i18n="nav_campuses">Nos 3 Campus (Ennasr, Mourouj 6, Bardo)</a>
             <a href="#pedagogie" class="mobile-link block text-white font-medium hover:text-gold-400 text-sm py-1" data-i18n="nav_pedagogy">Pédagogie & Bilinguisme Hybride</a>
@@ -344,7 +377,7 @@
                 <a href="tel:71336023" class="text-center font-bold text-slate-200 py-2.5 rounded-xl border border-white/20 text-xs hover:border-gold-400/50 transition">
                     <i class="fas fa-phone text-gold-400 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i> 71 336 023 / 54 012 230
                 </a>
-                <a href="#inscription" class="mobile-link text-center bg-gradient-to-r from-gold-500 to-amber-400 text-navy-950 font-black py-2.5 rounded-xl shadow-md text-xs" data-i18n="nav_cta">
+                <a href="#inscription" class="mobile-link text-center bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 text-navy-950 font-black py-2.5 rounded-xl shadow-md text-xs" data-i18n="nav_cta">
                     Pré-inscription
                 </a>
             </div>
@@ -359,14 +392,14 @@
                 
                 <!-- Left: Compelling Message to Parents -->
                 <div class="lg:col-span-7 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-200 mb-6 backdrop-blur-md">
+                    <div class="inline-flex items-center gap-2 bg-white/5 border border-gold-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-200 mb-6 backdrop-blur-md shadow-sm">
                         <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
                         <span data-i18n="hero_badge">Groupe SLS & GES · Établissements Privés d'Élite au Grand Tunis</span>
                     </div>
 
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] mb-5">
                         <span data-i18n="hero_title_1">L'Avenir Brillant</span> <br class="hidden sm:inline">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-300 to-yellow-200" data-i18n="hero_title_2">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-amber-200" data-i18n="hero_title_2">
                             que vos Enfants Méritent
                         </span>
                     </h1>
@@ -377,7 +410,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-3 mb-10 w-full sm:w-auto">
-                        <a href="#inscription" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-amber-400 hover:from-gold-600 hover:to-amber-500 text-navy-950 font-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm shadow-lg shadow-gold-500/25 hover:scale-[1.02] active:scale-[0.98] transition flex items-center justify-center gap-2 whitespace-nowrap">
+                        <a href="#inscription" class="w-full sm:w-auto bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 hover:from-gold-300 hover:to-gold-400 text-navy-950 font-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm shadow-lg shadow-gold-500/25 hover:scale-[1.02] active:scale-[0.98] transition flex items-center justify-center gap-2 whitespace-nowrap">
                             <i class="fas fa-file-signature text-navy-950 text-xs sm:text-sm"></i>
                             <span data-i18n="hero_cta_apply">Pré-inscrire mon enfant</span>
                         </a>
@@ -389,16 +422,16 @@
 
                     <!-- Quick Trust Indicators -->
                     <div class="grid grid-cols-3 gap-3 pt-6 border-t border-white/10 text-left">
-                        <div>
-                            <p class="text-xl sm:text-2xl font-black text-gold-400">3 Campus</p>
+                        <div class="border-r border-white/10 pr-2">
+                            <p class="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500">3 Campus</p>
                             <p class="text-[11px] text-slate-300 font-medium" data-i18n="hero_stat_1">Ennasr · Mourouj · Bardo</p>
                         </div>
-                        <div>
-                            <p class="text-xl sm:text-2xl font-black text-gold-400">100%</p>
+                        <div class="border-r border-white/10 pr-2">
+                            <p class="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500">100%</p>
                             <p class="text-[11px] text-slate-300 font-medium" data-i18n="hero_stat_2">Médecin Scolaire Dédié</p>
                         </div>
                         <div>
-                            <p class="text-xl sm:text-2xl font-black text-gold-400">19.23%</p>
+                            <p class="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500">19.23%</p>
                             <p class="text-[11px] text-slate-300 font-medium" data-i18n="hero_stat_3">Taux d'Excellence Pilote</p>
                         </div>
                     </div>
@@ -406,14 +439,14 @@
 
                 <!-- Right: Ultra Modern Classroom Imagery -->
                 <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-white/15 group">
+                    <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-gold-500/25 group">
                         <img src="images/classe-pedagogie.jpg" alt="Enseignante et élèves réunis autour d'une table d'apprentissage à Salim School" class="w-full h-[430px] object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
                         
                         <!-- Floating Glass Badges on Image -->
-                        <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+                        <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-navy-950/85 backdrop-blur-md border border-gold-500/30">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center font-black shrink-0">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 text-navy-950 flex items-center justify-center font-black shrink-0 shadow-md">
                                     <i class="fas fa-chalkboard-user"></i>
                                 </div>
                                 <div>
@@ -425,7 +458,7 @@
                     </div>
 
                     <!-- Floating decorative pill -->
-                    <div class="hidden sm:flex absolute -top-4 -left-4 bg-white text-navy-950 p-3 rounded-2xl shadow-xl border border-slate-100 items-center gap-2.5 z-20">
+                    <div class="hidden sm:flex absolute -top-4 -left-4 bg-white text-navy-950 p-3 rounded-2xl shadow-xl border border-gold-500/20 items-center gap-2.5 z-20">
                         <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
                             <i class="fas fa-shield-check"></i>
                         </div>
@@ -441,48 +474,118 @@
         </div>
     </header>
 
+    <!-- INSTITUTIONAL PRESTIGE & ACCREDITATION RIBBON -->
+    <section class="bg-navy-900 border-y border-gold-500/25 relative z-20 shadow-xl overflow-hidden py-4 sm:py-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 items-center">
+                
+                <!-- Item 1: Homologation & Tutelle -->
+                <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 transition">
+                    <div class="w-9 h-9 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-sm shrink-0 border border-gold-500/30">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-[11px] font-black uppercase text-white tracking-wider" data-i18n="ribbon_title_1">Homologation Officielle</h4>
+                        <p class="text-[10px] text-slate-300 font-medium" data-i18n="ribbon_desc_1">Ministère & Cursus Hybride</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Pôle Médical Permanent -->
+                <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 transition">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm shrink-0 border border-emerald-500/30">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-[11px] font-black uppercase text-white tracking-wider" data-i18n="ribbon_title_2">Médecin sur Site</h4>
+                        <p class="text-[10px] text-slate-300 font-medium" data-i18n="ribbon_desc_2">Pôle pédiatrique permanent</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Immersion Trilingue Dès 3 Ans -->
+                <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 transition">
+                    <div class="w-9 h-9 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-sm shrink-0 border border-gold-500/30">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-[11px] font-black uppercase text-white tracking-wider" data-i18n="ribbon_title_3">Immersion Trilingue</h4>
+                        <p class="text-[10px] text-slate-300 font-medium" data-i18n="ribbon_desc_3">Français · Anglais · Arabe</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Taux d'Excellence Pilote -->
+                <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 transition">
+                    <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-gold-300 flex items-center justify-center text-sm shrink-0 border border-gold-500/30">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-[11px] font-black uppercase text-white tracking-wider" data-i18n="ribbon_title_4">19.23% Taux Pilote</h4>
+                        <p class="text-[10px] text-slate-300 font-medium" data-i18n="ribbon_desc_4">Excellence aux concours</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Réseau Élite SLS & GES -->
+                <div class="col-span-2 md:col-span-1 flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 transition">
+                    <div class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-300 flex items-center justify-center text-sm shrink-0 border border-blue-500/30">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-[11px] font-black uppercase text-white tracking-wider" data-i18n="ribbon_title_5">Groupe SLS & GES</h4>
+                        <p class="text-[10px] text-slate-300 font-medium" data-i18n="ribbon_desc_5">Ennasr · Mourouj · Bardo</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION: LES 3 CAMPUS SALIM SCHOOL (MODERN CLASSES & VERIFIED DATA) -->
     <section id="campus" class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="max-w-3xl mx-auto text-center mb-12">
-                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest bg-gold-500/10 px-3.5 py-1.5 rounded-full" data-i18n="campus_badge">
-                    Proximité & Excellence
+                <span class="inline-flex items-center gap-2 text-xs font-black text-gold-600 uppercase tracking-widest bg-gold-500/10 border border-gold-500/25 px-4 py-1.5 rounded-full" data-i18n="campus_badge">
+                    <i class="fas fa-crown text-[11px]"></i> Proximité & Excellence
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="campus_title">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-navy-950 mt-3 mb-3" data-i18n="campus_title">
                     Nos 3 Campus d'Excellence au Grand Tunis
                 </h2>
-                <p class="text-slate-600 text-sm sm:text-base" data-i18n="campus_subtitle">
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="campus_subtitle">
                     Découvrez nos établissements modernes conçus sur mesure pour l'épanouissement et la réussite de vos enfants.
                 </p>
             </div>
 
-            <!-- Campus Navigation Pills -->
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
-                <button onclick="switchCampus('ennasr')" id="tab-ennasr" class="campus-tab active px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 border border-slate-200 whitespace-nowrap">
-                    <i class="fas fa-crown text-gold-400 text-xs"></i>
-                    <span data-i18n="tab_campus_ennasr">Campus Ennasr 2</span>
-                </button>
-                <button onclick="switchCampus('mourouj')" id="tab-mourouj" class="campus-tab px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 border border-slate-200 text-slate-700 hover:bg-slate-100 whitespace-nowrap">
-                    <i class="fas fa-shapes text-gold-500 text-xs"></i>
-                    <span data-i18n="tab_campus_mourouj">Campus El Mourouj 6</span>
-                </button>
-                <button onclick="switchCampus('bardo')" id="tab-bardo" class="campus-tab px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 border border-slate-200 text-slate-700 hover:bg-slate-100 whitespace-nowrap">
-                    <i class="fas fa-graduation-cap text-gold-500 text-xs"></i>
-                    <span data-i18n="tab_campus_bardo">Campus Le Bardo</span>
-                </button>
+            <!-- Campus Navigation Pills (Luxury Segmented Control) -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex p-1.5 rounded-full bg-slate-100 border border-slate-200 shadow-inner flex-wrap justify-center gap-1.5 sm:gap-2">
+                    <button onclick="switchCampus('ennasr')" id="tab-ennasr" class="campus-tab active px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
+                        <i class="fas fa-crown text-gold-400 text-xs"></i>
+                        <span data-i18n="tab_campus_ennasr">Campus Ennasr 2</span>
+                    </button>
+                    <button onclick="switchCampus('mourouj')" id="tab-mourouj" class="campus-tab px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 text-slate-700 hover:text-navy-950 hover:bg-slate-200/60 whitespace-nowrap">
+                        <i class="fas fa-shapes text-gold-500 text-xs"></i>
+                        <span data-i18n="tab_campus_mourouj">Campus El Mourouj 6</span>
+                    </button>
+                    <button onclick="switchCampus('bardo')" id="tab-bardo" class="campus-tab px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-1.5 sm:gap-2 text-slate-700 hover:text-navy-950 hover:bg-slate-200/60 whitespace-nowrap">
+                        <i class="fas fa-graduation-cap text-gold-500 text-xs"></i>
+                        <span data-i18n="tab_campus_bardo">Campus Le Bardo</span>
+                    </button>
+                </div>
             </div>
 
             <!-- ================= CAMPUS 1: ENNASR 2 ================= -->
             <div id="campus-ennasr" class="campus-content block">
-                <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                <div class="bg-slate-50/80 rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 transition-all">
                     
                     <!-- Left: Real Campus Info -->
                     <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
                         <div>
                             <div class="flex flex-wrap items-center gap-2 mb-3">
-                                <span class="bg-navy text-white text-[11px] font-black px-3 py-1 rounded-full uppercase">The Flagship · Tunis Nord</span>
-                                <span class="bg-gold-100 text-gold-800 text-[11px] font-bold px-3 py-1 rounded-full">4 Classes Prépa · Primaire · Lycée</span>
+                                <span class="bg-navy-950 text-gold-300 text-[11px] font-black px-3.5 py-1 rounded-full uppercase border border-gold-500/30 flex items-center gap-1.5">
+                                    <i class="fas fa-star text-[10px] text-gold-400"></i> The Flagship · Tunis Nord
+                                </span>
+                                <span class="bg-gold-500/15 text-gold-800 text-[11px] font-black px-3 py-1 rounded-full border border-gold-500/25">
+                                    4 Classes Prépa · Primaire · Lycée
+                                </span>
                             </div>
                             <h3 class="text-2xl sm:text-3xl font-black text-navy-950 mb-3">Salim School Ennasr 2</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="ennasr_desc">
@@ -491,42 +594,42 @@
 
                             <!-- Mini Features Grid -->
                             <div class="grid grid-cols-2 gap-3 mb-6 text-xs">
-                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
-                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-door-open mr-1"></i> Capacité</span>
+                                <div class="p-3.5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-gold-500/30 transition">
+                                    <span class="text-gold-600 font-black block mb-0.5"><i class="fas fa-door-open mr-1"></i> Capacité</span>
                                     <strong class="text-navy-900 text-sm">30 Salles + 4 Prépas</strong>
                                 </div>
-                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
-                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-utensils mr-1"></i> Cantine Chaude</span>
+                                <div class="p-3.5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-gold-500/30 transition">
+                                    <span class="text-gold-600 font-black block mb-0.5"><i class="fas fa-utensils mr-1"></i> Cantine Chaude</span>
                                     <strong class="text-navy-900 text-sm">170 Places Assises</strong>
                                 </div>
-                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
-                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-user-doctor mr-1"></i> Pôle Santé</span>
+                                <div class="p-3.5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-gold-500/30 transition">
+                                    <span class="text-emerald-600 font-black block mb-0.5"><i class="fas fa-user-doctor mr-1"></i> Pôle Santé</span>
                                     <strong class="text-navy-900 text-sm">Médecin sur Site</strong>
                                 </div>
-                                <div class="p-3 bg-white rounded-2xl border border-slate-200">
-                                    <span class="text-gold-600 font-bold block mb-0.5"><i class="fas fa-microchip mr-1"></i> Informatique</span>
+                                <div class="p-3.5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:border-gold-500/30 transition">
+                                    <span class="text-blue-600 font-black block mb-0.5"><i class="fas fa-microchip mr-1"></i> Informatique</span>
                                     <strong class="text-navy-900 text-sm">Labo & Coding</strong>
                                 </div>
                             </div>
 
                             <p class="text-xs text-slate-500 mb-6 flex items-center gap-1.5">
-                                <i class="fas fa-map-pin text-gold-500"></i>
+                                <i class="fas fa-map-pin text-gold-500 shrink-0"></i>
                                 <span><strong>Adresse :</strong> Lotissement E40, Avenue Hédi Nouira 2001, Cité Ennasr 2, 2037 Ariana.</span>
                             </p>
                         </div>
 
-                        <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                        <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-3">
                             <div>
                                 <span class="text-[10px] uppercase font-bold text-slate-400 block">Contacts Directs Ennasr</span>
                                 <div class="text-sm font-black text-navy-900 flex flex-wrap gap-2">
-                                    <a href="tel:71336023" class="hover:text-gold-600">71 336 023</a>
+                                    <a href="tel:71336023" class="hover:text-gold-600 transition">71 336 023</a>
                                     <span class="text-slate-300">/</span>
-                                    <a href="tel:53961737" class="hover:text-gold-600">53 961 737</a>
+                                    <a href="tel:53961737" class="hover:text-gold-600 transition">53 961 737</a>
                                     <span class="text-slate-300">/</span>
-                                    <a href="tel:53628421" class="hover:text-gold-600 text-gold-600">Lycée : 53 628 421</a>
+                                    <a href="tel:53628421" class="hover:text-gold-600 text-gold-600 font-black transition">Lycée : 53 628 421</a>
                                 </div>
                             </div>
-                            <a href="#inscription" onclick="selectCampusForm('Salim School Ennasr 2 (Ariana)')" class="w-full sm:w-auto justify-center bg-navy text-white hover:bg-navy-900 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5 whitespace-nowrap">
+                            <a href="#inscription" onclick="selectCampusForm('Salim School Ennasr 2 (Ariana)')" class="w-full sm:w-auto justify-center bg-gradient-to-r from-navy-900 to-navy-950 hover:from-navy-950 hover:to-navy text-white hover:text-gold-300 border border-gold-500/30 px-5 py-2.5 rounded-xl text-xs font-black shadow-md transition flex items-center gap-2 whitespace-nowrap">
                                 <i class="fas fa-pencil text-gold-400"></i> <span data-i18n="btn_enroll_campus">Inscrire à Ennasr</span>
                             </a>
                         </div>
@@ -535,7 +638,7 @@
                     <!-- Right: Modern Classrooms Visual -->
                     <div class="lg:col-span-5 relative min-h-[320px]">
                         <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=80" alt="Salle d'études moderne et lumineuse à Salim School Ennasr" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/85 backdrop-blur-md text-white border border-white/10 text-xs">
+                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/90 backdrop-blur-md text-white border border-gold-500/30 text-xs shadow-lg">
                             <p class="font-bold text-gold-400 mb-0.5"><i class="fas fa-check-circle mr-1"></i> Architecture Scolaire Moderne</p>
                             <p class="text-slate-200 text-[11px]">Un cadre spacieux, ergonomique et stimulant propice à la haute concentration.</p>
                         </div>
@@ -546,13 +649,17 @@
 
             <!-- ================= CAMPUS 2: MOUROUJ 6 ================= -->
             <div id="campus-mourouj" class="campus-content hidden">
-                <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                <div class="bg-slate-50/80 rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 transition-all">
                     
                     <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
                         <div>
                             <div class="flex flex-wrap items-center gap-2 mb-3">
-                                <span class="bg-blue-600 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase">Ben Arous · Tunis Sud</span>
-                                <span class="bg-gold-100 text-gold-800 text-[11px] font-bold px-3 py-1 rounded-full">Préscolaire & Primaire</span>
+                                <span class="bg-navy-950 text-gold-300 text-[11px] font-black px-3.5 py-1 rounded-full uppercase border border-gold-500/30 flex items-center gap-1.5">
+                                    <i class="fas fa-location-dot text-[10px] text-gold-400"></i> Ben Arous · Tunis Sud
+                                </span>
+                                <span class="bg-gold-500/15 text-gold-800 text-[11px] font-black px-3 py-1 rounded-full border border-gold-500/25">
+                                    Préscolaire & Primaire
+                                </span>
                             </div>
                             <h3 class="text-2xl sm:text-3xl font-black text-navy-950 mb-3">Private Salim School (PSS) Mourouj 6</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="mourouj_desc">
@@ -560,10 +667,10 @@
                             </p>
 
                             <!-- Official Exam Stats Badge -->
-                            <div class="p-4 bg-white rounded-2xl border border-slate-200 mb-6">
-                                <div class="flex justify-between items-center mb-2 text-xs font-bold text-slate-500 uppercase">
-                                    <span>Résultats Officiels Examens Nationaux (2023)</span>
-                                    <span class="text-emerald-600 font-extrabold">49 Candidats</span>
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200/90 shadow-sm mb-6">
+                                <div class="flex justify-between items-center mb-2.5 text-xs font-bold text-slate-500 uppercase tracking-wide">
+                                    <span class="flex items-center gap-1.5"><i class="fas fa-stamp text-gold-500"></i> Résultats Officiels Examens Nationaux (2023)</span>
+                                    <span class="text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full font-black text-[11px] border border-emerald-200">49 Candidats</span>
                                 </div>
                                 <div class="grid grid-cols-2 gap-3 text-center">
                                     <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
@@ -578,19 +685,19 @@
                             </div>
 
                             <p class="text-xs text-slate-500 mb-6 flex items-center gap-1.5">
-                                <i class="fas fa-map-pin text-gold-500"></i>
+                                <i class="fas fa-map-pin text-gold-500 shrink-0"></i>
                                 <span><strong>Adresse :</strong> El Mourouj 6, 2074 Ben Arous · Email : hamdane.mohamed7@gmail.com</span>
                             </p>
                         </div>
 
-                        <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                        <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-3">
                             <div>
                                 <span class="text-[10px] uppercase font-bold text-slate-400 block">Ligne Directe</span>
-                                <a href="tel:21029252" class="text-lg font-black text-navy-900 hover:text-gold-600 flex items-center gap-1.5">
+                                <a href="tel:21029252" class="text-lg font-black text-navy-900 hover:text-gold-600 flex items-center gap-1.5 transition">
                                     <i class="fas fa-phone-alt text-gold-500 text-sm"></i> 21 029 252
                                 </a>
                             </div>
-                            <a href="#inscription" onclick="selectCampusForm('Private Salim School (PSS) Mourouj 6')" class="w-full sm:w-auto justify-center bg-navy text-white hover:bg-navy-900 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5 whitespace-nowrap">
+                            <a href="#inscription" onclick="selectCampusForm('Private Salim School (PSS) Mourouj 6')" class="w-full sm:w-auto justify-center bg-gradient-to-r from-navy-900 to-navy-950 hover:from-navy-950 hover:to-navy text-white hover:text-gold-300 border border-gold-500/30 px-5 py-2.5 rounded-xl text-xs font-black shadow-md transition flex items-center gap-2 whitespace-nowrap">
                                 <i class="fas fa-pencil text-gold-400"></i> <span data-i18n="btn_enroll_campus">Inscrire à Mourouj</span>
                             </a>
                         </div>
@@ -599,7 +706,7 @@
                     <!-- Right: Modern Primary Classroom Visual -->
                     <div class="lg:col-span-5 relative min-h-[320px]">
                         <img src="images/campus-mourouj.jpg" alt="Espace bibliothèque, lecture et détente à Salim School El Mourouj" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/85 backdrop-blur-md text-white border border-white/10 text-xs">
+                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/90 backdrop-blur-md text-white border border-gold-500/30 text-xs shadow-lg">
                             <p class="font-bold text-gold-400 mb-0.5"><i class="fas fa-child mr-1"></i> Pédagogie Active & Éveil</p>
                             <p class="text-slate-200 text-[11px]">Développement de l'autonomie et de la curiosité dans un cadre coloré et sécurisé.</p>
                         </div>
@@ -610,13 +717,17 @@
 
             <!-- ================= CAMPUS 3: LE BARDO ================= -->
             <div id="campus-bardo" class="campus-content hidden">
-                <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                <div class="bg-slate-50/80 rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 transition-all">
                     
                     <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
                         <div>
                             <div class="flex flex-wrap items-center gap-2 mb-3">
-                                <span class="bg-amber-600 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase">Tunis Ouest · Le Bardo</span>
-                                <span class="bg-gold-100 text-gold-800 text-[11px] font-bold px-3 py-1 rounded-full">Maternelle & Primaire</span>
+                                <span class="bg-navy-950 text-gold-300 text-[11px] font-black px-3.5 py-1 rounded-full uppercase border border-gold-500/30 flex items-center gap-1.5">
+                                    <i class="fas fa-award text-[10px] text-gold-400"></i> Tunis Ouest · Le Bardo
+                                </span>
+                                <span class="bg-gold-500/15 text-gold-800 text-[11px] font-black px-3 py-1 rounded-full border border-gold-500/25">
+                                    Maternelle & Primaire
+                                </span>
                             </div>
                             <h3 class="text-2xl sm:text-3xl font-black text-navy-950 mb-3">Salim School Le Bardo</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="bardo_desc">
@@ -624,10 +735,10 @@
                             </p>
 
                             <!-- Exam Stats Badge Bardo -->
-                            <div class="p-4 bg-white rounded-2xl border border-slate-200 mb-6">
-                                <div class="flex justify-between items-center mb-2 text-xs font-bold text-slate-500 uppercase">
-                                    <span>Résultats Concours 6ème Pilote (2023)</span>
-                                    <span class="text-gold-600 font-extrabold">26 Candidats</span>
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200/90 shadow-sm mb-6">
+                                <div class="flex justify-between items-center mb-2.5 text-xs font-bold text-slate-500 uppercase tracking-wide">
+                                    <span class="flex items-center gap-1.5"><i class="fas fa-trophy text-gold-500"></i> Résultats Concours 6ème Pilote (2023)</span>
+                                    <span class="text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded-full font-black text-[11px] border border-gold-200">26 Candidats</span>
                                 </div>
                                 <div class="grid grid-cols-2 gap-3 text-center">
                                     <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
@@ -642,23 +753,23 @@
                             </div>
 
                             <p class="text-xs text-slate-500 mb-6 flex items-center gap-1.5">
-                                <i class="fas fa-map-pin text-gold-500"></i>
+                                <i class="fas fa-map-pin text-gold-500 shrink-0"></i>
                                 <span><strong>Adresse :</strong> Rue de Skanes, Avenue du 2 Mars, 2000 Le Bardo, Tunis.</span>
                             </p>
                         </div>
 
-                        <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                        <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-3">
                             <div>
                                 <span class="text-[10px] uppercase font-bold text-slate-400 block">Lignes Directes</span>
                                 <div class="text-sm font-black text-navy-900 flex flex-wrap gap-2">
-                                    <a href="tel:58774412" class="hover:text-gold-600">58 77 44 12</a>
+                                    <a href="tel:58774412" class="hover:text-gold-600 transition">58 77 44 12</a>
                                     <span class="text-slate-300">/</span>
-                                    <a href="tel:52582325" class="hover:text-gold-600">52 582 325</a>
+                                    <a href="tel:52582325" class="hover:text-gold-600 transition">52 582 325</a>
                                     <span class="text-slate-300">/</span>
-                                    <a href="tel:71334897" class="hover:text-gold-600">71 33 48 97</a>
+                                    <a href="tel:71334897" class="hover:text-gold-600 transition">71 33 48 97</a>
                                 </div>
                             </div>
-                            <a href="#inscription" onclick="selectCampusForm('Salim School Le Bardo (2 Mars)')" class="w-full sm:w-auto justify-center bg-navy text-white hover:bg-navy-900 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5 whitespace-nowrap">
+                            <a href="#inscription" onclick="selectCampusForm('Salim School Le Bardo (2 Mars)')" class="w-full sm:w-auto justify-center bg-gradient-to-r from-navy-900 to-navy-950 hover:from-navy-950 hover:to-navy text-white hover:text-gold-300 border border-gold-500/30 px-5 py-2.5 rounded-xl text-xs font-black shadow-md transition flex items-center gap-2 whitespace-nowrap">
                                 <i class="fas fa-pencil text-gold-400"></i> <span data-i18n="btn_enroll_campus">Inscrire au Bardo</span>
                             </a>
                         </div>
@@ -667,7 +778,7 @@
                     <!-- Right: Modern Library & Learning Space Visual -->
                     <div class="lg:col-span-5 relative min-h-[320px]">
                         <img src="images/campus-bardo.jpg" alt="Salle multimédia et informatique moderne à Salim School Le Bardo" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/85 backdrop-blur-md text-white border border-white/10 text-xs">
+                        <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-navy-950/90 backdrop-blur-md text-white border border-gold-500/30 text-xs shadow-lg">
                             <p class="font-bold text-gold-400 mb-0.5"><i class="fas fa-book-open mr-1"></i> Culture & Éloquence</p>
                             <p class="text-slate-200 text-[11px]">Amour de la lecture et maîtrise irréprochable de l'expression orale et écrite.</p>
                         </div>
@@ -680,17 +791,17 @@
     </section>
 
     <!-- SECTION: AU-DELÀ DES COURS (PROPERLY FRAMED IMAGES & PARENTAL PEACE OF MIND) -->
-    <section id="vie-scolaire" class="py-20 bg-slate-50 border-y border-slate-200">
+    <section id="vie-scolaire" class="py-20 bg-slate-50/70 border-y border-slate-200/80">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest bg-gold-500/10 px-3.5 py-1.5 rounded-full" data-i18n="services_badge">
-                    La Sérénité des Parents
+                <span class="inline-flex items-center gap-2 text-xs font-black text-gold-600 uppercase tracking-widest bg-gold-500/10 border border-gold-500/25 px-4 py-1.5 rounded-full" data-i18n="services_badge">
+                    <i class="fas fa-heart-pulse text-[11px]"></i> La Sérénité des Parents
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="services_title">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-navy-950 mt-3 mb-3" data-i18n="services_title">
                     Au-delà des Cours : Des Services Scolaires Pensés pour les Familles
                 </h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="services_subtitle">
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto" data-i18n="services_subtitle">
                     Tout est conçu pour que vous puissiez confier vos enfants en toute tranquillité d'esprit du matin au soir.
                 </p>
             </div>
@@ -699,14 +810,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                 
                 <!-- Service 1: Cantine (170 Places) -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="https://images.unsplash.com/photo-1588075592806-bbe6da990469?auto=format&fit=crop&w=800&q=80" alt="Enfants déjeunant à la cantine scolaire" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
                             <i class="fas fa-utensils text-gold-400 mr-1"></i> 170 Places Assises
                         </span>
+                        <span class="absolute top-3 right-3 bg-white/20 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center backdrop-blur-md border border-white/30">
+                            01
+                        </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-black text-gold-600 uppercase tracking-wider block mb-1">Nutrition & Santé</span>
                             <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_canteen_title">Cantine & Restauration Chaude</h3>
@@ -719,14 +834,18 @@
                 </div>
 
                 <!-- Service 2: Garderie (07h30 - 18h00) -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="images/garderie-eveil.jpg" alt="Espace jeux et garderie périscolaire pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
                             <i class="fas fa-clock text-gold-400 mr-1"></i> 07h30 – 18h00
                         </span>
+                        <span class="absolute top-3 right-3 bg-white/20 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center backdrop-blur-md border border-white/30">
+                            02
+                        </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-black text-blue-600 uppercase tracking-wider block mb-1">Tranquillité des Parents</span>
                             <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_daycare_title">Garderie & Études Dirigées</h3>
@@ -739,14 +858,18 @@
                 </div>
 
                 <!-- Service 3: Médecin Scolaire sur Place -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="https://images.unsplash.com/photo-1676313030076-4ac0b37050fd?auto=format&fit=crop&w=800&q=80" alt="Médecin scolaire examinant un enfant avec bienveillance" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
                             <i class="fas fa-user-doctor text-gold-400 mr-1"></i> Infirmerie Permanente
                         </span>
+                        <span class="absolute top-3 right-3 bg-white/20 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center backdrop-blur-md border border-white/30">
+                            03
+                        </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-black text-rose-600 uppercase tracking-wider block mb-1">Santé & Prévention</span>
                             <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_doctor_title">Médecin Scolaire sur Place</h3>
@@ -759,14 +882,18 @@
                 </div>
 
                 <!-- Service 4: Transport Sécurisé -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="images/transport-bus.jpg" alt="Bus scolaire sécurisé pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
                             <i class="fas fa-bus text-gold-400 mr-1"></i> Grand Tunis
                         </span>
+                        <span class="absolute top-3 right-3 bg-white/20 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center backdrop-blur-md border border-white/30">
+                            04
+                        </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-black text-amber-600 uppercase tracking-wider block mb-1">Sécurité Routière</span>
                             <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_bus_title">Transport Scolaire Sécurisé</h3>
@@ -779,14 +906,18 @@
                 </div>
 
                 <!-- Service 5: Soutien & Remédiation -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Soutien scolaire individuel" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
                             <i class="fas fa-user-graduate text-gold-400 mr-1"></i> Tutorat Personnalisé
                         </span>
+                        <span class="absolute top-3 right-3 bg-white/20 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center backdrop-blur-md border border-white/30">
+                            05
+                        </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-black text-indigo-600 uppercase tracking-wider block mb-1">Progression Assurée</span>
                             <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_tutor_title">Soutien & Remédiation</h3>
@@ -799,14 +930,18 @@
                 </div>
 
                 <!-- Service 6: Psychopédagogie -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Écoute et bienveillance psychopédagogique" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-navy-950/85 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-white text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
                             <i class="fas fa-heart text-gold-400 mr-1"></i> Bien-être Global
                         </span>
+                        <span class="absolute top-3 right-3 bg-white/20 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center backdrop-blur-md border border-white/30">
+                            06
+                        </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-black text-purple-600 uppercase tracking-wider block mb-1">Écoute Active</span>
                             <h3 class="text-lg font-bold text-navy-950 mb-2" data-i18n="service_psy_title">Suivi Psychopédagogique</h3>
@@ -828,23 +963,23 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/15 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="routine_badge">
-                    Rythme de Vie Idéal
+                <span class="inline-flex items-center gap-2 text-xs font-black text-navy bg-navy-50 border border-navy/15 px-4 py-1.5 rounded-full uppercase tracking-wider" data-i18n="routine_badge">
+                    <i class="fas fa-calendar-day text-[11px] text-gold-500"></i> Rythme de Vie Idéal
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="routine_title">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-navy-950 mt-3 mb-3" data-i18n="routine_title">
                     Une Journée Type à Salim School
                 </h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="routine_subtitle">
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto" data-i18n="routine_subtitle">
                     De 07h30 à 18h00, chaque heure est structurée pour allier apprentissage bilingue rigoureux, détente active et devoirs complétés à 100%.
                 </p>
             </div>
 
-            <!-- Visual Chronological Flow -->
+            <!-- Visual Chronological Flow with Connected Hierarchy -->
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4 lg:gap-6 relative">
                 
                 <!-- Step 1: 07h30 - 08h30 -->
-                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
-                    <div class="w-8 h-8 rounded-full bg-gold-500 text-navy-950 font-black flex items-center justify-center text-xs mb-3 shadow-md">1</div>
+                <div class="bg-slate-50/80 rounded-3xl p-5 border border-slate-200/90 card-hover flex flex-col justify-between relative overflow-hidden group shadow-sm">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-500 to-gold-300 text-navy-950 font-black flex items-center justify-center text-xs mb-3 shadow-md border border-gold-300/40">1</div>
                     <div>
                         <span class="text-xs font-black text-gold-600 block mb-1">07h30 – 08h30</span>
                         <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step1_title">Accueil Doux & Petit Déjeuner</h4>
@@ -856,8 +991,8 @@
                 </div>
 
                 <!-- Step 2: 08h30 - 12h00 -->
-                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
-                    <div class="w-8 h-8 rounded-full bg-navy text-white font-black flex items-center justify-center text-xs mb-3 shadow-md">2</div>
+                <div class="bg-slate-50/80 rounded-3xl p-5 border border-slate-200/90 card-hover flex flex-col justify-between relative overflow-hidden group shadow-sm">
+                    <div class="w-8 h-8 rounded-full bg-navy text-white font-black flex items-center justify-center text-xs mb-3 shadow-md border border-navy-700">2</div>
                     <div>
                         <span class="text-xs font-black text-blue-600 block mb-1">08h30 – 12h00</span>
                         <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step2_title">Fondamentaux & Cursus Bilingue</h4>
@@ -869,8 +1004,8 @@
                 </div>
 
                 <!-- Step 3: 12h00 - 13h30 -->
-                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
-                    <div class="w-8 h-8 rounded-full bg-emerald-600 text-white font-black flex items-center justify-center text-xs mb-3 shadow-md">3</div>
+                <div class="bg-slate-50/80 rounded-3xl p-5 border border-slate-200/90 card-hover flex flex-col justify-between relative overflow-hidden group shadow-sm">
+                    <div class="w-8 h-8 rounded-full bg-emerald-600 text-white font-black flex items-center justify-center text-xs mb-3 shadow-md border border-emerald-400">3</div>
                     <div>
                         <span class="text-xs font-black text-emerald-600 block mb-1">12h00 – 13h30</span>
                         <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step3_title">Cantine Chaude & Récréation</h4>
@@ -882,8 +1017,8 @@
                 </div>
 
                 <!-- Step 4: 13h30 - 16h15 -->
-                <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 card-hover flex flex-col justify-between relative overflow-hidden group">
-                    <div class="w-8 h-8 rounded-full bg-purple-600 text-white font-black flex items-center justify-center text-xs mb-3 shadow-md">4</div>
+                <div class="bg-slate-50/80 rounded-3xl p-5 border border-slate-200/90 card-hover flex flex-col justify-between relative overflow-hidden group shadow-sm">
+                    <div class="w-8 h-8 rounded-full bg-purple-600 text-white font-black flex items-center justify-center text-xs mb-3 shadow-md border border-purple-400">4</div>
                     <div>
                         <span class="text-xs font-black text-purple-600 block mb-1">13h30 – 16h15</span>
                         <h4 class="text-base font-bold text-navy-950 mb-2" data-i18n="routine_step4_title">Sciences, Coding & Pratique</h4>
@@ -894,9 +1029,9 @@
                     <span class="text-[11px] font-bold text-navy-800 flex items-center gap-1.5"><i class="fas fa-laptop-code text-purple-500"></i> <span data-i18n="routine_step4_tag">Compétences d'avenir</span></span>
                 </div>
 
-                <!-- Step 5: 16h30 - 18h00 -->
-                <div class="bg-gradient-to-b from-navy-950 to-navy-900 text-white rounded-3xl p-5 border border-white/10 card-hover flex flex-col justify-between relative overflow-hidden shadow-lg">
-                    <div class="w-8 h-8 rounded-full bg-gold-400 text-navy-950 font-black flex items-center justify-center text-xs mb-3 shadow-md">5</div>
+                <!-- Step 5: 16h30 - 18h00 (Luxury Highlight Card) -->
+                <div class="bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 text-white rounded-3xl p-5 border border-gold-500/35 card-hover flex flex-col justify-between relative overflow-hidden shadow-xl gold-border-glow">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-400 to-gold-300 text-navy-950 font-black flex items-center justify-center text-xs mb-3 shadow-md">5</div>
                     <div>
                         <span class="text-xs font-black text-gold-400 block mb-1">16h30 – 18h00</span>
                         <h4 class="text-base font-bold text-white mb-2" data-i18n="routine_step5_title">Goûter & Études Dirigées</h4>
@@ -904,7 +1039,7 @@
                             Devoirs du soir 100% encadrés et vérifiés par les enseignants. L'enfant rentre à la maison totalement libre et détendu.
                         </p>
                     </div>
-                    <span class="text-[11px] font-black text-gold-400 flex items-center gap-1.5"><i class="fas fa-circle-check"></i> <span data-i18n="routine_step5_tag">Zéro devoirs à la maison !</span></span>
+                    <span class="text-[11px] font-black text-gold-300 flex items-center gap-1.5"><i class="fas fa-circle-check text-gold-400"></i> <span data-i18n="routine_step5_tag">Zéro devoirs à la maison !</span></span>
                 </div>
 
             </div>
@@ -913,17 +1048,17 @@
     </section>
 
     <!-- SECTION: PÉDAGOGIE MODERNE & CURSUS BILINGUE HYBRIDE -->
-    <section id="pedagogie" class="py-20 bg-slate-50 border-t border-slate-200">
+    <section id="pedagogie" class="py-20 bg-slate-50/70 border-t border-slate-200/80">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/15 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="pedagogy_badge">
-                    Innovation Pédagogique
+                <span class="inline-flex items-center gap-2 text-xs font-black text-navy bg-navy-50 border border-navy/15 px-4 py-1.5 rounded-full uppercase tracking-wider" data-i18n="pedagogy_badge">
+                    <i class="fas fa-brain text-[11px] text-gold-500"></i> Innovation Pédagogique
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-3" data-i18n="pedagogy_title">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-navy-950 mt-3 mb-3" data-i18n="pedagogy_title">
                     Une Pédagogie d'Excellence Tournée vers le Futur
                 </h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="pedagogy_subtitle">
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto" data-i18n="pedagogy_subtitle">
                     Des méthodes actives dans des salles de classe modernes, favorisant l'autonomie, le trilinguisme précoce et l'esprit critique.
                 </p>
             </div>
@@ -932,14 +1067,15 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Pillar 1: Cursus Bilingue Hybride -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="images/cursus-bilingue-langues.jpg" alt="Bulles multilingues illustrant le cursus bilingue et l'immersion linguistique précoce" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-navy/90 text-white text-[10px] font-black px-2.5 py-1 rounded-full backdrop-blur-md">
-                            FR · EN · AR
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-gold-300 text-[10px] font-black px-2.5 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
+                            PILIER I · FR · EN · AR
                         </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_bilingual_title">Cursus Bilingue Hybride</h3>
                             <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_bilingual_desc">
@@ -951,14 +1087,15 @@
                 </div>
 
                 <!-- Pillar 2: 4 Classes Préparatoires -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="images/classes-preparatoires.jpg" alt="Enfants en classe préparatoire lors d'une activité manuelle et d'éveil" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-gold-500 text-navy-950 text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
-                            Ennasr 2
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-gold-300 text-[10px] font-black px-2.5 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
+                            PILIER II · Ennasr 2
                         </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_prepa_title">Classes Préparatoires (4 Classes)</h3>
                             <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_prepa_desc">
@@ -970,14 +1107,15 @@
                 </div>
 
                 <!-- Pillar 3: Laboratoire Informatique & Tech -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="images/labo-informatique-coding.jpg" alt="Mains d'enfant apprenant à coder et naviguer sur ordinateur au laboratoire informatique" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full">
-                            High-Tech
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-gold-300 text-[10px] font-black px-2.5 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
+                            PILIER III · High-Tech
                         </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_tech_title">Laboratoire Informatique & IA</h3>
                             <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_tech_desc">
@@ -989,14 +1127,15 @@
                 </div>
 
                 <!-- Pillar 4: Rigueur & Concours Pilotes -->
-                <div class="bg-white rounded-3xl p-3 border border-slate-200 shadow-sm card-hover flex flex-col group">
+                <div class="bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl card-hover flex flex-col group transition-all duration-300">
                     <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4">
                         <img src="images/concours-pilote-rigueur.jpg" alt="Élève appliqué et concentré lors de la préparation des concours d'excellence" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full">
-                            19.23% Pilote
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-navy-950/90 text-gold-300 text-[10px] font-black px-2.5 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
+                            PILIER IV · 19.23% Pilote
                         </span>
                     </div>
-                    <div class="px-3 pb-3 flex-1 flex flex-col justify-between">
+                    <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="text-base font-bold text-navy-950 mb-2" data-i18n="peda_excellence_title">Rigueur & Concours Pilotes</h3>
                             <p class="text-slate-600 text-xs leading-relaxed mb-4" data-i18n="peda_excellence_desc">
@@ -1018,10 +1157,10 @@
             
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
-                    <span class="text-xs font-bold text-navy bg-navy-50 border border-navy/10 px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-i18n="clubs_badge">
-                        Éveil & Talents
+                    <span class="inline-flex items-center gap-1.5 text-xs font-black text-gold-600 bg-gold-500/10 border border-gold-500/25 px-4 py-1.5 rounded-full uppercase tracking-widest" data-i18n="clubs_badge">
+                        <i class="fas fa-sparkles text-[10px]"></i> Éveil & Talents
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-navy-950 mt-3 mb-2" data-i18n="clubs_title">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-navy-950 mt-3 mb-2" data-i18n="clubs_title">
                         Nos Clubs : Révéler les Talents de vos Enfants
                     </h2>
                     <p class="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed" data-i18n="clubs_subtitle">
@@ -1031,10 +1170,10 @@
 
                 <!-- Carousel Controls -->
                 <div class="flex items-center gap-2 shrink-0">
-                    <button onclick="scrollClubs(-1)" class="w-10 h-10 rounded-full border border-slate-300 hover:border-navy text-slate-700 hover:text-navy hover:bg-slate-100 flex items-center justify-center transition shadow-sm" aria-label="Précédent">
+                    <button onclick="scrollClubs(-1)" class="w-10 h-10 rounded-full border border-slate-300 hover:border-gold-500 text-slate-700 hover:text-gold-600 hover:bg-gold-50 flex items-center justify-center transition shadow-sm" aria-label="Précédent">
                         <i class="fas fa-chevron-left text-xs"></i>
                     </button>
-                    <button onclick="scrollClubs(1)" class="w-10 h-10 rounded-full bg-navy text-white hover:bg-navy-900 flex items-center justify-center transition shadow-md" aria-label="Suivant">
+                    <button onclick="scrollClubs(1)" class="w-10 h-10 rounded-full bg-navy-950 text-white hover:bg-navy-900 border border-gold-500/40 flex items-center justify-center transition shadow-md" aria-label="Suivant">
                         <i class="fas fa-chevron-right text-gold-400 text-xs"></i>
                     </button>
                 </div>
@@ -1044,8 +1183,8 @@
             <div id="clubsContainer" class="flex gap-5 overflow-x-auto pb-6 pt-2 hide-scrollbar scroll-smooth snap-x snap-mandatory">
                 
                 <!-- Club 1: Robotique -->
-                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
-                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4 shadow-inner">
                         <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robotique éducative pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
                             Tech & Logique
@@ -1063,8 +1202,8 @@
                 </div>
 
                 <!-- Club 2: Échecs -->
-                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
-                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4 shadow-inner">
                         <img src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?auto=format&fit=crop&w=600&q=80" alt="Jeu d'échecs et réflexion pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
                             Stratégie
@@ -1082,8 +1221,8 @@
                 </div>
 
                 <!-- Club 3: Théâtre -->
-                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
-                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4 shadow-inner">
                         <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=600&q=80" alt="Scène de théâtre pour le festival scolaire" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
                             Art Oratoire
@@ -1101,8 +1240,8 @@
                 </div>
 
                 <!-- Club 4: Musique -->
-                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
-                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4 shadow-inner">
                         <img src="https://images.unsplash.com/photo-1498601752063-38ea333690ed?auto=format&fit=crop&w=600&q=80" alt="Initiation au piano et musique pour enfants" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
                             Chorale
@@ -1120,8 +1259,8 @@
                 </div>
 
                 <!-- Club 5: Arts Plastiques -->
-                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
-                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4 shadow-inner">
                         <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Enfants peignant avec créativité" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
                             Créativité
@@ -1139,8 +1278,8 @@
                 </div>
 
                 <!-- Club 6: Sports Co -->
-                <div class="snap-start shrink-0 w-72 sm:w-80 bg-slate-50 rounded-3xl p-3 border border-slate-200 card-hover flex flex-col shadow-sm group">
-                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-white relative mb-4">
+                <div class="snap-start shrink-0 w-72 sm:w-80 bg-white rounded-3xl p-3.5 border border-slate-200/90 hover:border-gold-500/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 relative mb-4 shadow-inner">
                         <img src="images/club-sports.jpg" alt="Enfants attentifs lors d'une séance de motricité et gymnastique sportive" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm">
                             Motricité
@@ -1162,15 +1301,18 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: SIMULATEUR DE FORFAIT SCOLAIRE INTERACTIF (HIGH CONVERSION TOOL) -->
-    <section id="simulateur" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <!-- SECTION: SIMULATEUR DE FORFAIT SCOLAIRE INTERACTIF (HIGH CONVERSION TOOL) -->
+    <section id="simulateur" class="py-24 bg-navy-950 text-white relative overflow-hidden border-t border-gold-500/20">
+        <!-- Ambient Radial Light -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.12),rgba(255,255,255,0))] pointer-events-none"></div>
+
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <div class="max-w-3xl mx-auto text-center mb-14">
-                <span class="text-xs font-bold text-gold-400 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-md" data-i18n="sim_badge">
-                    Transparence & Sérénité
+                <span class="inline-flex items-center gap-2 text-xs font-black text-gold-300 bg-gold-500/15 border border-gold-500/30 px-4 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-md" data-i18n="sim_badge">
+                    <i class="fas fa-calculator text-gold-400"></i> Transparence & Sérénité
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black mt-3 mb-3" data-i18n="sim_title">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mt-3 mb-3 text-white" data-i18n="sim_title">
                     Simulateur de Forfait Personnalisé 2026–2027
                 </h2>
                 <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="sim_subtitle">
@@ -1178,17 +1320,20 @@
                 </p>
             </div>
 
-            <div class="max-w-4xl mx-auto bg-navy-950/80 backdrop-blur-xl border border-white/15 rounded-3xl p-6 sm:p-10 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="max-w-5xl mx-auto bg-navy-900/90 backdrop-blur-xl border border-gold-500/25 rounded-3xl p-6 sm:p-10 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 
                 <!-- Left: Configuration Controls -->
-                <div class="lg:col-span-7 space-y-5">
+                <div class="lg:col-span-7 space-y-6 flex flex-col justify-between">
                     
                     <!-- Campus Selector -->
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" data-i18n="sim_label_campus">
-                            1. Choisissez le Campus
-                        </label>
-                        <select id="simCampus" onchange="calculateFee()" class="w-full px-3.5 py-3 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold">
+                        <div class="flex items-center justify-between mb-2">
+                            <label class="block text-xs font-black uppercase tracking-wider text-gold-400" data-i18n="sim_label_campus">
+                                1. Choisissez le Campus
+                            </label>
+                            <span class="text-[10px] text-slate-400 font-semibold">3 Sites au Choix</span>
+                        </div>
+                        <select id="simCampus" onchange="calculateFee()" class="w-full px-4 py-3.5 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold transition">
                             <option value="Salim School Ennasr 2 (Ariana)" class="text-navy-950">Salim School Ennasr 2 — Ariana (Vaisseau Amiral)</option>
                             <option value="Private Salim School (PSS) Mourouj 6" class="text-navy-950">Private Salim School (PSS) — Mourouj 6</option>
                             <option value="Salim School Le Bardo (2 Mars)" class="text-navy-950">Salim School — Le Bardo (Avenue du 2 Mars)</option>
@@ -1197,10 +1342,13 @@
 
                     <!-- Grade Level Selector -->
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5" data-i18n="sim_label_level">
-                            2. Niveau d'Études
-                        </label>
-                        <select id="simLevel" onchange="calculateFee()" class="w-full px-3.5 py-3 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold">
+                        <div class="flex items-center justify-between mb-2">
+                            <label class="block text-xs font-black uppercase tracking-wider text-gold-400" data-i18n="sim_label_level">
+                                2. Niveau d'Études
+                            </label>
+                            <span class="text-[10px] text-slate-400 font-semibold">De la Prépa au Lycée</span>
+                        </div>
+                        <select id="simLevel" onchange="calculateFee()" class="w-full px-4 py-3.5 rounded-xl border border-white/20 bg-white/10 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 font-semibold transition">
                             <option value="prepa" class="text-navy-950">Maternelle & Classe Préparatoire (Transition CP)</option>
                             <option value="primaire" selected class="text-navy-950">Cycle Primaire (1ère à 5ème Année)</option>
                             <option value="pilote" class="text-navy-950">6ème Année Primaire (Préparation Concours Pilote)</option>
@@ -1210,35 +1358,35 @@
 
                     <!-- Services Checkboxes -->
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2" data-i18n="sim_label_services">
+                        <label class="block text-xs font-black uppercase tracking-wider text-gold-400 mb-2.5" data-i18n="sim_label_services">
                             3. Services Complémentaires Souhaités
                         </label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
-                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptCanteen" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptCanteen" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
                                 <div>
-                                    <span class="font-bold block" data-i18n="sim_canteen">Cantine Chaude (170 places)</span>
+                                    <span class="font-bold block text-white" data-i18n="sim_canteen">Cantine Chaude (170 places)</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_canteen_sub">Repas équilibrés sous contrôle médical</span>
                                 </div>
                             </label>
-                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptDaycare" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptDaycare" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
                                 <div>
-                                    <span class="font-bold block" data-i18n="sim_daycare">Garderie & Études Dirigées</span>
+                                    <span class="font-bold block text-white" data-i18n="sim_daycare">Garderie & Études Dirigées</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_daycare_sub">07h30 à 18h00 · Zéro devoirs le soir</span>
                                 </div>
                             </label>
-                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptBus" onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptBus" onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
                                 <div>
-                                    <span class="font-bold block" data-i18n="sim_bus">Transport Scolaire Sécurisé</span>
+                                    <span class="font-bold block text-white" data-i18n="sim_bus">Transport Scolaire Sécurisé</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_bus_sub">Minibus climatisés avec accompagnatrices</span>
                                 </div>
                             </label>
-                            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer transition">
-                                <input type="checkbox" id="simOptClubs" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400">
+                            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-gold-500/40 hover:bg-white/10 cursor-pointer transition">
+                                <input type="checkbox" id="simOptClubs" checked onchange="calculateFee()" class="rounded text-gold-500 focus:ring-gold-400 w-4 h-4">
                                 <div>
-                                    <span class="font-bold block" data-i18n="sim_clubs">Clubs d'Éveil (Robotique, Échecs)</span>
+                                    <span class="font-bold block text-white" data-i18n="sim_clubs">Clubs d'Éveil (Robotique, Échecs)</span>
                                     <span class="text-[10px] text-slate-400" data-i18n="sim_clubs_sub">Activités parascolaires du mercredi & samedi</span>
                                 </div>
                             </label>
@@ -1248,39 +1396,56 @@
                 </div>
 
                 <!-- Right: Estimated Result & Transfer CTA -->
-                <div class="lg:col-span-5 bg-gradient-to-br from-navy-900 to-navy-950 p-6 rounded-2xl border border-gold-500/30 flex flex-col justify-between h-full shadow-inner">
+                <div class="lg:col-span-5 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 p-6 sm:p-7 rounded-2xl border border-gold-500/40 flex flex-col justify-between h-full shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-600 via-amber-400 to-gold-600"></div>
+
                     <div>
-                        <span class="bg-gold-500/20 text-gold-400 text-[10px] font-black px-2.5 py-1 rounded-full uppercase mb-2 inline-block border border-gold-500/30">
-                            Simulation Instantanée
-                        </span>
-                        <h4 class="text-base font-bold text-white mb-1" data-i18n="sim_summary_title">Forfait Tout-en-Un Recommandé</h4>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-gold-500/20 text-gold-300 text-[10px] font-black px-3 py-1 rounded-full uppercase border border-gold-500/30 flex items-center gap-1">
+                                <i class="fas fa-file-invoice text-gold-400"></i> Fiche d'Estimation Officielle
+                            </span>
+                            <span class="text-[10px] font-mono text-slate-400">SLS-EST</span>
+                        </div>
+                        <h4 class="text-lg font-black text-white mb-1" data-i18n="sim_summary_title">Forfait Tout-en-Un Recommandé</h4>
                         <p class="text-xs text-slate-300 leading-relaxed mb-4" data-i18n="sim_summary_desc">
                             Une formule complète assurant l'excellence académique, le suivi de santé et la sérénité des parents au quotidien.
                         </p>
 
-                        <div class="p-4 bg-white/5 rounded-xl border border-white/10 mb-4 space-y-2 text-xs">
+                        <!-- Breakdown items -->
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/10 mb-4 space-y-2.5 text-xs">
                             <div class="flex justify-between items-center text-slate-300">
-                                <span data-i18n="sim_scolarite">Cursus Bilingue Hybride :</span>
+                                <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-gold-400 text-[11px]"></i> <span data-i18n="sim_scolarite">Cursus Bilingue Hybride :</span></span>
                                 <span class="font-bold text-white" id="simResultCurriculum">Inclus</span>
                             </div>
                             <div class="flex justify-between items-center text-slate-300">
-                                <span data-i18n="sim_medical">Médecin Dédié sur Site :</span>
+                                <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-emerald-400 text-[11px]"></i> <span data-i18n="sim_medical">Médecin Dédié sur Site :</span></span>
                                 <span class="font-bold text-emerald-400">100% Inclus</span>
                             </div>
                             <div class="flex justify-between items-center text-slate-300">
-                                <span data-i18n="sim_options_count">Services sélectionnés :</span>
+                                <span class="flex items-center gap-1.5"><i class="fas fa-layer-group text-blue-400 text-[11px]"></i> <span data-i18n="sim_options_count">Services sélectionnés :</span></span>
                                 <span class="font-bold text-gold-400" id="simResultServicesCount">3 Services</span>
                             </div>
+                            <div class="flex justify-between items-center text-slate-300 pt-2 border-t border-white/10">
+                                <span class="flex items-center gap-1.5"><i class="fas fa-shield-check text-gold-400 text-[11px]"></i> Suivi Devoirs le Soir :</span>
+                                <span class="font-bold text-gold-300">100% Réalisés</span>
+                            </div>
+                        </div>
+
+                        <!-- Sibling Advantage Callout -->
+                        <div class="p-3 bg-gold-500/10 border border-gold-500/25 rounded-xl mb-4 text-center">
+                            <span class="text-[11px] font-bold text-gold-300 block">
+                                <i class="fas fa-percent text-gold-400 mr-1"></i> Avantage Fratrie : -10% dès le 2ème enfant inscrit
+                            </span>
                         </div>
                     </div>
 
                     <div>
-                        <div class="p-3 bg-gold-500/10 border border-gold-500/20 rounded-xl mb-4 text-center">
+                        <div class="p-3 bg-white/5 border border-white/10 rounded-xl mb-4 text-center">
                             <span class="text-[11px] text-slate-300 block mb-0.5" data-i18n="sim_badge_open">Pré-inscriptions 2026–2027</span>
-                            <span class="text-lg font-black text-gold-400" data-i18n="sim_rate_flexible">Tarifs Préférentiels Disponibles</span>
+                            <span class="text-base sm:text-lg font-black text-gold-400" data-i18n="sim_rate_flexible">Tarifs Préférentiels Disponibles</span>
                         </div>
 
-                        <button onclick="applySimulationToForm()" class="w-full bg-gradient-to-r from-gold-500 to-amber-400 hover:from-gold-600 hover:to-amber-500 text-navy-950 font-black py-2.5 sm:py-3 px-3 rounded-xl text-xs shadow-lg hover:scale-[1.01] active:scale-[0.99] transition flex items-center justify-center gap-2 whitespace-nowrap">
+                        <button onclick="applySimulationToForm()" class="w-full bg-gradient-to-r from-gold-500 via-amber-400 to-gold-500 hover:from-gold-600 hover:to-amber-500 text-navy-950 font-black py-3 sm:py-3.5 px-4 rounded-xl text-xs sm:text-sm shadow-xl hover:shadow-gold-500/25 hover:scale-[1.01] active:scale-[0.99] transition flex items-center justify-center gap-2 whitespace-nowrap">
                             <i class="fas fa-check-to-slot"></i>
                             <span data-i18n="sim_btn_apply">Valider ma pré-inscription</span>
                         </button>
@@ -1548,16 +1713,19 @@
     </section>
 
     <!-- SECTION: FORMULAIRE DE PRÉ-INSCRIPTION 2026-2027 (WITH INSTANT RECEIPT) -->
-    <section id="inscription" class="py-20 bg-navy-950 text-white relative overflow-hidden">
+    <section id="inscription" class="py-24 bg-navy-950 text-white relative overflow-hidden border-t border-gold-500/20">
+        <!-- Ambient Radial Light -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.12),rgba(255,255,255,0))] pointer-events-none"></div>
+
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <div class="max-w-4xl mx-auto">
                 
                 <div class="text-center mb-10">
-                    <span class="inline-flex items-center gap-2 bg-gold-500 text-navy-950 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-3">
-                        <i class="fas fa-user-plus"></i> <span data-i18n="form_badge">Session 2026–2027</span>
+                    <span class="inline-flex items-center gap-2 bg-gradient-to-r from-gold-500 to-amber-400 text-navy-950 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-3 shadow-md">
+                        <i class="fas fa-user-plus"></i> <span data-i18n="form_badge">Session Officielle 2026–2027</span>
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-black mb-3" data-i18n="form_title">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-3 text-white" data-i18n="form_title">
                         Pré-inscription en Ligne Simplifiée
                     </h2>
                     <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed" data-i18n="form_subtitle">
@@ -1565,8 +1733,27 @@
                     </p>
                 </div>
 
-                <div class="bg-white rounded-3xl p-6 sm:p-10 text-slate-800 shadow-2xl relative">
+                <div class="bg-white rounded-3xl p-6 sm:p-10 text-slate-800 shadow-2xl relative border border-slate-100">
                     
+                    <!-- 3-Step Progress Indicator -->
+                    <div class="grid grid-cols-3 gap-2 pb-6 mb-6 border-b border-slate-200/80 text-center">
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-1.5 text-navy-950 font-black text-xs">
+                            <span class="w-6 h-6 rounded-full bg-gold-500 text-navy-950 text-[11px] font-black flex items-center justify-center shrink-0">1</span>
+                            <span class="hidden sm:inline">Campus & Niveau</span>
+                            <span class="sm:hidden">Campus</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-1.5 text-slate-700 font-bold text-xs">
+                            <span class="w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-[11px] font-black flex items-center justify-center shrink-0">2</span>
+                            <span class="hidden sm:inline">Élève & Famille</span>
+                            <span class="sm:hidden">Famille</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-1.5 text-slate-500 font-bold text-xs">
+                            <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-500 text-[11px] font-black flex items-center justify-center shrink-0">3</span>
+                            <span class="hidden sm:inline">Services & Validation</span>
+                            <span class="sm:hidden">Validation</span>
+                        </div>
+                    </div>
+
                     <form id="preRegForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
                         
                         <!-- Campus Selection -->
@@ -1574,7 +1761,7 @@
                             <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_campus">
                                 Établissement Souhaité *
                             </label>
-                            <select id="formCampus" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50 font-semibold">
+                            <select id="formCampus" required class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 bg-slate-50 font-semibold transition">
                                 <option value="" disabled selected data-i18n="opt_select_campus">Sélectionnez un établissement...</option>
                                 <optgroup label="Salim School (3 Campus Principaux)">
                                     <option value="Salim School Ennasr 2 (Ariana)">Salim School Ennasr 2 — Ariana (Prépa, Primaire, Lycée)</option>
@@ -1595,7 +1782,7 @@
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_level">
                                     Niveau Scolaire 2026-2027 *
                                 </label>
-                                <select id="formLevel" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50 font-semibold">
+                                <select id="formLevel" required class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 bg-slate-50 font-semibold transition">
                                     <option value="" disabled selected data-i18n="opt_select_level">Choisir le niveau...</option>
                                     <option value="Maternelle (3-4 ans)">Maternelle (3-4 ans)</option>
                                     <option value="Classe Préparatoire (Transition CP)">Classe Préparatoire (5-6 ans)</option>
@@ -1608,7 +1795,7 @@
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_child_name">
                                     Nom & Prénom de l'Élève *
                                 </label>
-                                <input type="text" id="formChildName" required placeholder="Ex: Youssef Trabelsi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50">
+                                <input type="text" id="formChildName" required placeholder="Ex: Youssef Trabelsi" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 bg-slate-50 transition">
                             </div>
                         </div>
 
@@ -1618,45 +1805,45 @@
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_parent_name">
                                     Nom du Parent / Tuteur *
                                 </label>
-                                <input type="text" id="formParentName" required placeholder="Ex: M. ou Mme Trabelsi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50">
+                                <input type="text" id="formParentName" required placeholder="Ex: M. ou Mme Trabelsi" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 bg-slate-50 transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_phone">
                                     Numéro de Téléphone *
                                 </label>
-                                <input type="tel" id="formPhone" required placeholder="Ex: 54 012 230 / 98 000 000" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-navy bg-slate-50">
+                                <input type="tel" id="formPhone" required placeholder="Ex: 54 012 230 / 98 000 000" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 bg-slate-50 transition">
                             </div>
                         </div>
 
                         <!-- Checkbox services -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" data-i18n="label_services">
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5" data-i18n="label_services">
                                 Services Souhaités
                             </label>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs font-semibold text-slate-700">
-                                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
-                                    <input type="checkbox" id="svcCantine" class="rounded text-navy focus:ring-navy">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs font-semibold text-slate-700">
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-gold-500/40 cursor-pointer transition">
+                                    <input type="checkbox" id="svcCantine" class="rounded text-navy-950 focus:ring-gold-400">
                                     <span data-i18n="service_opt_canteen">Cantine (170 places)</span>
                                 </label>
-                                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
-                                    <input type="checkbox" id="svcGarderie" class="rounded text-navy focus:ring-navy">
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-gold-500/40 cursor-pointer transition">
+                                    <input type="checkbox" id="svcGarderie" class="rounded text-navy-950 focus:ring-gold-400">
                                     <span data-i18n="service_opt_daycare">Garderie (07h30-18h00)</span>
                                 </label>
-                                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
-                                    <input type="checkbox" id="svcBus" class="rounded text-navy focus:ring-navy">
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-gold-500/40 cursor-pointer transition">
+                                    <input type="checkbox" id="svcBus" class="rounded text-navy-950 focus:ring-gold-400">
                                     <span data-i18n="service_opt_bus">Transport Scolaire</span>
                                 </label>
                             </div>
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="w-full bg-gradient-to-r from-navy to-navy-900 hover:from-navy-950 hover:to-navy text-white font-black py-3 px-4 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-xs sm:text-sm whitespace-nowrap">
+                        <button type="submit" class="w-full bg-gradient-to-r from-gold-500 via-amber-400 to-gold-500 hover:from-gold-600 hover:to-amber-500 text-navy-950 font-black py-3.5 px-4 rounded-xl shadow-xl hover:shadow-gold-500/25 transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-xs sm:text-sm whitespace-nowrap">
                             <span data-i18n="btn_submit_form">Envoyer ma pré-inscription</span>
-                            <i class="fas fa-arrow-right text-gold-400 text-xs"></i>
+                            <i class="fas fa-arrow-right text-navy-950 text-xs"></i>
                         </button>
 
-                        <p class="text-[10px] text-center text-slate-500" data-i18n="form_guarantee">
-                            <i class="fas fa-lock mr-1 text-slate-400"></i> Données sécurisées · Réponse et convocation à l'entretien sous 24h ouvrées.
+                        <p class="text-[11px] text-center text-slate-500 font-medium" data-i18n="form_guarantee">
+                            <i class="fas fa-shield-halved mr-1 text-emerald-600"></i> Données sécurisées · Réponse et convocation à l'entretien sous 24h ouvrées.
                         </p>
                     </form>
 
@@ -1711,44 +1898,44 @@
     </section>
 
     <!-- COMPACT FOOTER -->
-    <footer class="bg-navy-950 text-slate-400 pt-14 pb-20 sm:pb-12 border-t border-white/10 text-xs">
+    <footer class="bg-navy-950 text-slate-400 pt-16 pb-24 sm:pb-14 border-t border-gold-500/20 text-xs">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-white/10">
                 <div class="md:col-span-1">
                     <div class="flex items-center gap-2 mb-3">
-                        <div class="w-8 h-8 rounded-lg bg-gold-500 flex items-center justify-center text-navy-950 font-bold">
-                            <i class="fas fa-graduation-cap"></i>
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-500 to-amber-600 flex items-center justify-center text-navy-950 font-bold shadow-md">
+                            <i class="fas fa-graduation-cap text-sm"></i>
                         </div>
-                        <span class="text-base font-black text-white">SALIM SCHOOL</span>
+                        <span class="text-base font-black text-white tracking-wide">SALIM <span class="text-gold-gradient">SCHOOL</span></span>
                     </div>
-                    <p class="text-slate-300 text-[11px] leading-relaxed mb-3" data-i18n="footer_about">
+                    <p class="text-slate-300 text-[11px] leading-relaxed mb-4" data-i18n="footer_about">
                         Réseau d'enseignement privé d'excellence au Grand Tunis adossé au GES et au Groupe SLS.
                     </p>
                     <div class="flex items-center gap-3 text-gold-400 text-sm">
-                        <a href="https://facebook.com" target="_blank" class="hover:text-white transition"><i class="fab fa-facebook"></i></a>
-                        <a href="https://instagram.com" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                        <a href="tel:71336023" class="hover:text-white transition"><i class="fas fa-phone"></i></a>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-navy-950 transition"><i class="fab fa-facebook-f text-xs"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-navy-950 transition"><i class="fab fa-instagram text-xs"></i></a>
+                        <a href="tel:71336023" aria-label="Téléphone" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-navy-950 transition"><i class="fas fa-phone text-xs"></i></a>
                     </div>
                 </div>
                 <div>
-                    <h5 class="text-white font-bold uppercase tracking-wider mb-2 border-l-2 border-gold-500 pl-2">Ennasr 2 (Ariana)</h5>
+                    <h5 class="text-white font-bold uppercase tracking-wider mb-2.5 border-l-2 border-gold-500 pl-2">Ennasr 2 (Ariana)</h5>
                     <p class="text-slate-300">Avenue Hédi Nouira</p>
                     <p class="text-gold-400 font-bold mt-1">71 336 023 / 54 012 230</p>
                 </div>
                 <div>
-                    <h5 class="text-white font-bold uppercase tracking-wider mb-2 border-l-2 border-gold-500 pl-2">El Mourouj 6</h5>
+                    <h5 class="text-white font-bold uppercase tracking-wider mb-2.5 border-l-2 border-gold-500 pl-2">El Mourouj 6</h5>
                     <p class="text-slate-300">Ben Arous · PSS</p>
                     <p class="text-gold-400 font-bold mt-1">21 029 252</p>
                 </div>
                 <div>
-                    <h5 class="text-white font-bold uppercase tracking-wider mb-2 border-l-2 border-gold-500 pl-2">Le Bardo</h5>
+                    <h5 class="text-white font-bold uppercase tracking-wider mb-2.5 border-l-2 border-gold-500 pl-2">Le Bardo</h5>
                     <p class="text-slate-300">Avenue du 2 Mars</p>
                     <p class="text-gold-400 font-bold mt-1">58 77 44 12 / 71 33 48 97</p>
                 </div>
             </div>
             
             <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px]">
-                <p>&copy; 2026 Salim School · Groupe SLS & GES Tunisie.</p>
+                <p>&copy; 2026 Salim School · Groupe SLS & GES Tunisie. Tous droits réservés.</p>
                 <p class="text-slate-400">Propulsé par <strong class="text-slate-200">AntiGravity Agency</strong> • Growly Growth Project</p>
             </div>
         </div>
@@ -1961,7 +2148,17 @@
                 form_guarantee: "Données sécurisées · Réponse et convocation à l'entretien sous 24h ouvrées.",
                 footer_about: "Réseau d'enseignement privé d'excellence au Grand Tunis adossé au GES et au Groupe SLS.",
                 floating_wa: "Assistance WhatsApp",
-                floating_apply: "Inscrire"
+                floating_apply: "Inscrire",
+                ribbon_title_1: "Homologation Officielle",
+                ribbon_desc_1: "Ministère & Cursus Hybride",
+                ribbon_title_2: "Médecin sur Site",
+                ribbon_desc_2: "Pôle pédiatrique permanent",
+                ribbon_title_3: "Immersion Trilingue",
+                ribbon_desc_3: "Français · Anglais · Arabe",
+                ribbon_title_4: "19.23% Taux Pilote",
+                ribbon_desc_4: "Excellence aux concours",
+                ribbon_title_5: "Groupe SLS & GES",
+                ribbon_desc_5: "Ennasr · Mourouj · Bardo"
             },
             en: {
                 announcement_badge: "2026–2027 Admissions",
@@ -2148,7 +2345,17 @@
                 form_guarantee: "Secure information · Guaranteed reply and interview appointment within 24h.",
                 footer_about: "Leading private educational network in Greater Tunis backed by GES and Groupe SLS.",
                 floating_wa: "WhatsApp Support",
-                floating_apply: "Enroll"
+                floating_apply: "Enroll",
+                ribbon_title_1: "Official Accreditation",
+                ribbon_desc_1: "Ministry & Hybrid Program",
+                ribbon_title_2: "On-Site Doctor",
+                ribbon_desc_2: "Permanent Pediatric Clinic",
+                ribbon_title_3: "Trilingual Immersion",
+                ribbon_desc_3: "French · English · Arabic",
+                ribbon_title_4: "19.23% Pilot School Rate",
+                ribbon_desc_4: "National Exam Excellence",
+                ribbon_title_5: "SLS & GES Network",
+                ribbon_desc_5: "Ennasr · Mourouj · Bardo"
             },
             ar: {
                 announcement_badge: "حملة 2026–2027",
@@ -2335,7 +2542,17 @@
                 form_guarantee: "بيانات محمية ومؤمنة · الرد وتحديد موعد المقابلة في أقل من 24 ساعة.",
                 footer_about: "شبكة تعليم خاص رائدة بتونس الكبرى تحت إشراف GES ومجموعة SLS.",
                 floating_wa: "مساعدة عبر واتساب",
-                floating_apply: "تسجيل"
+                floating_apply: "تسجيل",
+                ribbon_title_1: "اعتماد وزاري رسمي",
+                ribbon_desc_1: "منهاج ثنائي ومتابعة رسمية",
+                ribbon_title_2: "طبيب دائم بالمدرسة",
+                ribbon_desc_2: "عيادة أطفال وقائية",
+                ribbon_title_3: "تعليم ثلاثي اللغات",
+                ribbon_desc_3: "فرنسية · إنجليزية · عربية",
+                ribbon_title_4: "19.23% نسبة النموذجيات",
+                ribbon_desc_4: "ريادة بمناظرات السيزيام",
+                ribbon_title_5: "مجموعة SLS و GES",
+                ribbon_desc_5: "النصر · المروج · باردو"
             }
         };
 
